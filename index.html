@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3rd AI for Math Workshop @ ICML 2026</title>
+  <meta name="description" content="3rd AI for Math Workshop: Toward Self-Evolving Scientific Agents at ICML 2026, July 10, 2026." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="3rd AI for Math Workshop @ ICML 2026" />
+  <meta property="og:description" content="Toward Self-Evolving Scientific Agents — July 10, 2026 at ICML 2026." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="3rd AI for Math Workshop @ ICML 2026" />
+  <meta name="twitter:description" content="Toward Self-Evolving Scientific Agents — July 10, 2026 at ICML 2026." />
+
+  <!-- Favicon (inline SVG as data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236B21A8'/><text y='72' x='50' text-anchor='middle' font-size='56' fill='white'>∑</text></svg>" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ======= Navigation ======= -->
+<nav id="navbar" class="navbar">
+  <div class="nav-container">
+    <a class="nav-logo" href="#hero">AI4Math @ ICML 2026</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#speakers">Speakers</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#cfp">Call for Papers</a></li>
+      <li><a href="#challenge">Challenge</a></li>
+      <li><a href="#organizers">Organizers</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ======= Hero ======= -->
+<section id="hero" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">ICML 2026 Workshop</div>
+    <h1 class="hero-title">
+      3rd AI for Math Workshop<br/>
+      <span class="hero-subtitle-text">Toward Self-Evolving Scientific Agents</span>
+    </h1>
+    <div class="hero-meta">
+      <span class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        July 10, 2026
+      </span>
+      <span class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        ICML 2026
+      </span>
+    </div>
+    <div class="hero-actions">
+      <a href="#cfp" class="btn btn-primary">Submit a Paper</a>
+      <a href="#challenge" class="btn btn-secondary">Join the Challenge</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= News ======= -->
+<section id="news" class="section section-light">
+  <div class="container">
+    <h2 class="section-title">News &amp; Announcements</h2>
+    <ul class="news-list">
+      <li class="news-item">
+        <span class="news-date">March 27, 2026</span>
+        <span class="news-text">Our workshop has been <strong>accepted</strong> at ICML 2026! See you in July.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">March 20, 2026</span>
+        <span class="news-text">Paper <strong>submission portal</strong> is now open on OpenReview.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">March 20, 2026</span>
+        <span class="news-text"><strong>Challenge tracks</strong> are now open. Register on Codabench to participate.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======= About ======= -->
+<section id="about" class="section section-white">
+  <div class="container">
+    <h2 class="section-title">About the Workshop</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="about-lead">
+          Mathematics has long served as a foundation for scientific discovery and a benchmark for reasoning systems.
+          Recent advances in LLMs and formal methods have enabled AI agents to achieve IMO-level performance in theorem
+          proving and demonstrate strong capabilities in end-to-end natural language mathematical reasoning.
+        </p>
+        <p>
+          Against this backdrop, our workshop explores the next generation of automated research agents capable of
+          reasoning across mathematics and broader scientific domains. We aim to investigate how these agents can achieve
+          <strong>self-evolution</strong> to advance scientific knowledge.
+        </p>
+        <p>We invite diverse participants from academia and industry to discuss areas including:</p>
+        <ul class="topic-list">
+          <li>
+            <strong>Formal theorem proving:</strong> How can LLM theorem provers transcend Olympiad questions to support
+            real-world mathematics research and teaching, and self-evolve to propose and solve innovative conjectures?
+          </li>
+          <li>
+            <strong>Precise autoformalization:</strong> How to close the gap between formal and informal mathematical
+            reasoning? How can natural language mathematics be reliably translated into formal languages?
+          </li>
+          <li>
+            <strong>Automated mathematics in natural language:</strong> How to achieve frontier mathematical reasoning
+            performances with a pure natural language pipeline, including data, generation, and verification?
+          </li>
+          <li>
+            <strong>Scientific problem solving:</strong> How do the advances of mathematical reasoning benefit broader
+            scientific fields, e.g., theoretical computer science and physics?
+          </li>
+          <li>
+            <strong>Multimodal reasoning:</strong> How do current reasoning systems use visual information? How can we
+            develop methods to tackle problems in multimodal mathematical and scientific reasoning?
+          </li>
+        </ul>
+        <p>We also welcome research on verification and measurement, human-AI collaboration, and scientific agents in
+           systems science, causality, finance, bioinformatics, and related areas.</p>
+      </div>
+      <div class="about-sidebar">
+        <div class="info-card">
+          <h3>Key Dates</h3>
+          <ul class="dates-list">
+            <li>
+              <span class="date-label">Submission Opens</span>
+              <span class="date-value">March 20, 2026</span>
+            </li>
+            <li>
+              <span class="date-label">Paper Deadline</span>
+              <span class="date-value highlight">May 30, 2026 (AOE)</span>
+            </li>
+            <li>
+              <span class="date-label">Author Notification</span>
+              <span class="date-value">June 26, 2026</span>
+            </li>
+            <li>
+              <span class="date-label">Workshop Date</span>
+              <span class="date-value highlight">July 10, 2026</span>
+            </li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>Workshop History</h3>
+          <ul class="history-list">
+            <li>
+              <a href="https://sites.google.com/view/ai4mathworkshopicml2025" target="_blank" rel="noopener">
+                2nd AI4Math @ ICML 2025
+              </a>
+              <span>Vancouver, Canada</span>
+            </li>
+            <li>
+              <a href="https://sites.google.com/view/ai4mathworkshopicml2024" target="_blank" rel="noopener">
+                1st AI4Math @ ICML 2024
+              </a>
+              <span>Vienna, Austria</span>
+            </li>
+            <li>
+              <a href="https://mathai2025.github.io" target="_blank" rel="noopener">
+                MATH-AI @ NeurIPS 2025
+              </a>
+              <span>San Diego, USA</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Invited Speakers ======= -->
+<section id="speakers" class="section section-tinted">
+  <div class="container">
+    <h2 class="section-title">Invited Speakers &amp; Panelists</h2>
+    <p class="section-subtitle">All speakers are confirmed and will present in person.</p>
+    <div class="people-grid">
+
+      <div class="person-card">
+        <div class="person-avatar" data-initials="JL">
+          <img src="assets/images/speakers/jia_li.jpg" alt="Jia Li" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">JL</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://projectnumina.ai/about-us" target="_blank" rel="noopener">Jia Li</a></h3>
+          <p class="person-affil">Project Numina</p>
+          <p class="person-bio">Founder of Project Numina; led development of Kimina-Prover and the first AIMO Progress Prize winner. Prev. researcher at Mistral AI, Founder &amp; CTO of Cardiologs (acquired by Philips).</p>
+        </div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar" data-initials="DS">
+          <img src="assets/images/speakers/dawn_song.jpg" alt="Dawn Song" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">DS</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://dawnsong.io/" target="_blank" rel="noopener">Dawn Song</a></h3>
+          <p class="person-affil">UC Berkeley</p>
+          <p class="person-bio">Professor of Computer Science and Co-Director of Berkeley Center for Responsible Decentralized Intelligence. MacArthur Fellow, Guggenheim Fellow, ACM Fellow, IEEE Fellow.</p>
+        </div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar" data-initials="EF">
+          <img src="assets/images/speakers/emily_first.jpg" alt="Emily First" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">EF</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://efirst.github.io/" target="_blank" rel="noopener">Emily First</a></h3>
+          <p class="person-affil">Rutgers University</p>
+          <p class="person-bio">Assistant Professor in Computer Science. Research focuses on AI for theorem proving in Rocq, Isabelle/HOL, and Lean, and on human-AI interaction for formal proofs.</p>
+        </div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar" data-initials="YH">
+          <img src="assets/images/speakers/yinya_huang.jpg" alt="Yinya Huang" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">YH</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://eleanor-h.github.io/" target="_blank" rel="noopener">Yinya Huang</a></h3>
+          <p class="person-affil">ETH AI Center, ETH Zurich</p>
+          <p class="person-bio">Postdoc Fellow at ETH AI Center. Research on AI for mathematics and science, formal theorem proving with LLMs. ETH Career Seed Award 2025, ACM SIGCSE China Outstanding Doctoral Dissertation Award 2024.</p>
+        </div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar" data-initials="JT">
+          <img src="assets/images/speakers/joseph_tooby_smith.jpg" alt="Joseph Tooby-Smith" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">JT</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://josephtoobysmith.com/" target="_blank" rel="noopener">Joseph Tooby-Smith</a></h3>
+          <p class="person-affil">University of Bath</p>
+          <p class="person-bio">Assistant Professor in Computer Science. Founder and maintainer of the PhysLean project, bridging interactive theorem provers and the physical sciences.</p>
+        </div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar" data-initials="SY">
+          <img src="assets/images/speakers/sorrachai.jpg" alt="Sorrachai Yingchareonthawornchai" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">SY</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://sites.google.com/view/sorrachai/" target="_blank" rel="noopener">Sorrachai Yingchareonthawornchai</a></h3>
+          <p class="person-affil">ETH Zurich</p>
+          <p class="person-bio">Junior Fellow at the Institute for Theoretical Studies and Technical Lead of CSLib. Expert in fast graph algorithms, combinatorial optimization, and formal TCS reasoning. Doctoral Thesis Award 2023.</p>
+        </div>
+      </div>
+
+      <div class="person-card">
+        <div class="person-avatar" data-initials="SG">
+          <img src="assets/images/speakers/siyuan_guo.jpg" alt="Siyuan Guo" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">SG</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://siyuanguo.com/" target="_blank" rel="noopener">Siyuan Guo</a></h3>
+          <p class="person-affil">University of Cambridge / MPI-IS</p>
+          <p class="person-bio">ML researcher at Cambridge and Max Planck Institute. Focus on physics of learning, causal inference, and AI for scientific discovery. MIT EECS Rising Star, G-Research PhD Prize.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= Schedule ======= -->
+<section id="schedule" class="section section-white">
+  <div class="container">
+    <h2 class="section-title">Program Schedule</h2>
+    <p class="section-subtitle">July 10, 2026 &mdash; Full Day Workshop</p>
+    <div class="schedule-grid">
+      <div class="schedule-column">
+        <div class="schedule-item talk">
+          <span class="schedule-time">8:00 – 8:05</span>
+          <div class="schedule-content">
+            <span class="schedule-tag opening">Opening</span>
+            <span class="schedule-title">Opening Remarks</span>
+          </div>
+        </div>
+        <div class="schedule-item talk">
+          <span class="schedule-time">8:05 – 8:35</span>
+          <div class="schedule-content">
+            <span class="schedule-tag invited">Invited Talk</span>
+            <span class="schedule-title">TBA</span>
+          </div>
+        </div>
+        <div class="schedule-item talk">
+          <span class="schedule-time">8:35 – 9:05</span>
+          <div class="schedule-content">
+            <span class="schedule-tag invited">Invited Talk</span>
+            <span class="schedule-title">TBA</span>
+          </div>
+        </div>
+        <div class="schedule-item talk">
+          <span class="schedule-time">9:05 – 9:35</span>
+          <div class="schedule-content">
+            <span class="schedule-tag invited">Invited Talk</span>
+            <span class="schedule-title">TBA</span>
+          </div>
+        </div>
+        <div class="schedule-item break">
+          <span class="schedule-time">9:35 – 10:00</span>
+          <div class="schedule-content">
+            <span class="schedule-tag coffee">Coffee Break</span>
+            <span class="schedule-title">Coffee Break</span>
+          </div>
+        </div>
+        <div class="schedule-item poster">
+          <span class="schedule-time">10:00 – 11:00</span>
+          <div class="schedule-content">
+            <span class="schedule-tag poster-tag">Poster Session</span>
+            <span class="schedule-title">Poster Session I</span>
+          </div>
+        </div>
+      </div>
+      <div class="schedule-column">
+        <div class="schedule-item talk">
+          <span class="schedule-time">11:00 – 11:30</span>
+          <div class="schedule-content">
+            <span class="schedule-tag invited">Invited Talk</span>
+            <span class="schedule-title">TBA</span>
+          </div>
+        </div>
+        <div class="schedule-item talk">
+          <span class="schedule-time">11:30 – 12:00</span>
+          <div class="schedule-content">
+            <span class="schedule-tag invited">Invited Talk</span>
+            <span class="schedule-title">TBA</span>
+          </div>
+        </div>
+        <div class="schedule-item talk">
+          <span class="schedule-time">12:00 – 12:30</span>
+          <div class="schedule-content">
+            <span class="schedule-tag invited">Invited Talk</span>
+            <span class="schedule-title">TBA</span>
+          </div>
+        </div>
+        <div class="schedule-item break">
+          <span class="schedule-time">12:30 – 13:00</span>
+          <div class="schedule-content">
+            <span class="schedule-tag lunch">Lunch</span>
+            <span class="schedule-title">Lunch Break</span>
+          </div>
+        </div>
+        <div class="schedule-item talk">
+          <span class="schedule-time">13:00 – 13:30</span>
+          <div class="schedule-content">
+            <span class="schedule-tag invited">Invited Talk</span>
+            <span class="schedule-title">TBA</span>
+          </div>
+        </div>
+        <div class="schedule-item contributed">
+          <span class="schedule-time">13:30 – 14:30</span>
+          <div class="schedule-content">
+            <span class="schedule-tag contrib">Contributed Talks</span>
+            <span class="schedule-title">Contributed Talks (6 × 10 min)</span>
+          </div>
+        </div>
+        <div class="schedule-item panel">
+          <span class="schedule-time">14:30 – 15:30</span>
+          <div class="schedule-content">
+            <span class="schedule-tag panel-tag">Panel</span>
+            <span class="schedule-title">Group Panel Discussion</span>
+          </div>
+        </div>
+        <div class="schedule-item break">
+          <span class="schedule-time">15:30 – 15:55</span>
+          <div class="schedule-content">
+            <span class="schedule-tag coffee">Coffee Break</span>
+            <span class="schedule-title">Coffee Break</span>
+          </div>
+        </div>
+        <div class="schedule-item poster">
+          <span class="schedule-time">15:55 – 16:55</span>
+          <div class="schedule-content">
+            <span class="schedule-tag poster-tag">Poster Session</span>
+            <span class="schedule-title">Poster Session II</span>
+          </div>
+        </div>
+        <div class="schedule-item closing">
+          <span class="schedule-time">16:55 – 17:00</span>
+          <div class="schedule-content">
+            <span class="schedule-tag opening">Closing</span>
+            <span class="schedule-title">Closing Remarks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Call for Papers ======= -->
+<section id="cfp" class="section section-tinted">
+  <div class="container">
+    <h2 class="section-title">Call for Papers</h2>
+    <div class="cfp-grid">
+      <div class="cfp-main">
+        <p class="cfp-intro">
+          We invite submissions on, but not limited to, the following topics:
+        </p>
+        <div class="topics-grid">
+          <div class="topic-card">
+            <h4>Formal Theorem Proving</h4>
+            <p>LLM-based theorem provers, tactic generation, proof search, interactive proof assistants (Lean, Rocq, Isabelle).</p>
+          </div>
+          <div class="topic-card">
+            <h4>Autoformalization</h4>
+            <p>Translating natural language mathematics into formal languages, semantic alignment, and faithfulness verification.</p>
+          </div>
+          <div class="topic-card">
+            <h4>NL Mathematical Reasoning</h4>
+            <p>Large language models for math, chain-of-thought reasoning, synthetic data generation, and self-improvement.</p>
+          </div>
+          <div class="topic-card">
+            <h4>Scientific Problem Solving</h4>
+            <p>Transfer of math AI techniques to TCS, physics, and other scientific domains; formal methods in science.</p>
+          </div>
+          <div class="topic-card">
+            <h4>Multimodal Reasoning</h4>
+            <p>Vision-language models for mathematical and scientific reasoning; diagrams, figures, and geometry.</p>
+          </div>
+          <div class="topic-card">
+            <h4>Verification &amp; Evaluation</h4>
+            <p>Benchmarks, metrics, and methods for verifying AI-generated mathematical solutions and proofs.</p>
+          </div>
+          <div class="topic-card">
+            <h4>Human-AI Collaboration</h4>
+            <p>Effective methods for scientific human-AI collaboration, interactive tools, and AI-assisted discovery.</p>
+          </div>
+          <div class="topic-card">
+            <h4>Scientific Agents</h4>
+            <p>AI agents for systems science, causality, finance, bioinformatics, and adjacent areas.</p>
+          </div>
+        </div>
+
+        <div class="cfp-details">
+          <h3>Submission Details</h3>
+          <ul>
+            <li>Papers should be <strong>2–8 pages</strong> (excluding references and supplementary materials)</li>
+            <li>All submissions must follow the <strong>ICML 2026 format</strong></li>
+            <li>Review process via <strong>OpenReview</strong>, double-blind</li>
+            <li>Work published at the main ICML 2026 conference is <strong>not eligible</strong></li>
+            <li>Accepted papers will be presented as posters; select papers invited for contributed talks</li>
+          </ul>
+          <div class="cfp-actions">
+            <a href="https://openreview.net" target="_blank" rel="noopener" class="btn btn-primary">Submit on OpenReview</a>
+            <a href="#" class="btn btn-outline">Download CFP (PDF)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cfp-sidebar">
+        <div class="info-card accent">
+          <h3>Important Dates</h3>
+          <ul class="dates-list">
+            <li>
+              <span class="date-label">Submission Open</span>
+              <span class="date-value">March 20, 2026</span>
+            </li>
+            <li>
+              <span class="date-label">Submission Deadline</span>
+              <span class="date-value highlight">May 30, 2026 (AOE)</span>
+            </li>
+            <li>
+              <span class="date-label">Notification</span>
+              <span class="date-value">June 26, 2026</span>
+            </li>
+            <li>
+              <span class="date-label">Workshop</span>
+              <span class="date-value highlight">July 10, 2026</span>
+            </li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>Best Paper Award</h3>
+          <p>We will present a <strong>Best Paper Award</strong> and <strong>Best Paper Runner-Up</strong> at the workshop.</p>
+          <p class="mt-sm">Past winners:</p>
+          <ul class="history-list">
+            <li>
+              <a href="https://limit-of-rlvr.github.io/" target="_blank" rel="noopener">Limit of RLVR</a>
+              <span>Best Paper 2025</span>
+            </li>
+            <li>
+              <a href="https://trishullab.github.io/PutnamBench/leaderboard.html" target="_blank" rel="noopener">PutnamBench</a>
+              <span>Best Paper 2024</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Challenge ======= -->
+<section id="challenge" class="section section-white">
+  <div class="container">
+    <h2 class="section-title">Challenge Tracks</h2>
+    <p class="section-subtitle">
+      Three competitive tracks — join on <a href="https://www.codabench.org/" target="_blank" rel="noopener">Codabench</a>.
+      Winners will present at the workshop.
+    </p>
+    <div class="challenge-grid">
+
+      <div class="challenge-card">
+        <div class="challenge-header">
+          <span class="challenge-number">Track 1</span>
+          <h3 class="challenge-title">Semantic Alignment Evaluation for Autoformalization</h3>
+        </div>
+        <div class="challenge-body">
+          <p>
+            Autoformalization translates natural language mathematics into formal proof assistant code. This track
+            challenges participants to evaluate whether formal statements faithfully preserve the original mathematical
+            intent, using the <strong>FormalRx dataset</strong> built on the SCI Error Taxonomy (28 categories across
+            Semantic, Constraint, and Implementation dimensions).
+          </p>
+          <h4>Tasks</h4>
+          <ol class="challenge-tasks">
+            <li><strong>Verdict:</strong> Is the formalization semantically aligned?</li>
+            <li><strong>Categorization:</strong> Identify the error type from the SCI taxonomy</li>
+            <li><strong>Localization:</strong> Identify the code segment containing the error</li>
+            <li><strong>Correction:</strong> Provide a corrected formal statement</li>
+          </ol>
+          <p class="challenge-metric"><strong>Evaluation:</strong> Macro F1 (Tasks 1–2); exact match + LLM-as-judge (Tasks 3–4)</p>
+        </div>
+        <div class="challenge-footer">
+          <a href="https://www.codabench.org/" target="_blank" rel="noopener" class="btn btn-small btn-primary">Leaderboard (Coming Soon)</a>
+        </div>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-header">
+          <span class="challenge-number">Track 2</span>
+          <h3 class="challenge-title">Theoretical Computer Science Proving in Lean</h3>
+        </div>
+        <div class="challenge-body">
+          <p>
+            Formal theorem proving in TCS presents a unique frontier for AI reasoning. Unlike competition math, TCS
+            theorems require intricate combinatorial arguments, algorithmic insights, and careful asymptotic reasoning.
+            Problems are drawn from <strong>CSLib</strong>, an open-source Lean 4 library for computer science.
+          </p>
+          <h4>Topics</h4>
+          <ul class="challenge-tasks">
+            <li>Graph theory &amp; combinatorics</li>
+            <li>Computational complexity</li>
+            <li>Algorithm correctness</li>
+          </ul>
+          <p class="challenge-metric"><strong>Evaluation:</strong> Pass Rate (fraction of verified proofs)</p>
+          <p class="challenge-metric">Cheating prevention via <code>leanprover/comparator</code></p>
+        </div>
+        <div class="challenge-footer">
+          <a href="https://www.codabench.org/" target="_blank" rel="noopener" class="btn btn-small btn-primary">Leaderboard (Coming Soon)</a>
+        </div>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-header">
+          <span class="challenge-number">Track 3</span>
+          <h3 class="challenge-title">Visual Grounded Physics Problem Solving</h3>
+        </div>
+        <div class="challenge-body">
+          <p>
+            Physics reasoning requires precise alignment of abstract physical laws with complex visual scenarios.
+            This track uses the <strong>SeePhys Pro</strong> dataset — 5,000 samples spanning middle school through
+            research-level physics, with five levels of visual dependency ablation.
+          </p>
+          <h4>Challenge</h4>
+          <ul class="challenge-tasks">
+            <li>Given a problem + diagram, derive the correct solution</li>
+            <li>Pure text-based reasoning will fail — visual perception is required</li>
+          </ul>
+          <p class="challenge-metric"><strong>Evaluation:</strong> Accuracy + Visual Understanding Ratio</p>
+        </div>
+        <div class="challenge-footer">
+          <a href="https://www.codabench.org/" target="_blank" rel="noopener" class="btn btn-small btn-primary">Leaderboard (Coming Soon)</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= Organizers ======= -->
+<section id="organizers" class="section section-tinted">
+  <div class="container">
+    <h2 class="section-title">Organizers</h2>
+
+    <h3 class="subsection-title">Workshop Organizers</h3>
+    <div class="people-grid organizers-grid">
+
+      <div class="person-card compact">
+        <div class="person-avatar" data-initials="HW">
+          <img src="assets/images/organizers/haocheng_wang.jpg" alt="Haocheng Wang" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">HW</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name">
+            <a href="https://haocheng.wang/" target="_blank" rel="noopener">Haocheng Wang</a>
+            <span class="contact-badge">Contact</span>
+          </h3>
+          <p class="person-affil">HKUST(GZ) / ETH Zurich</p>
+        </div>
+      </div>
+
+      <div class="person-card compact">
+        <div class="person-avatar" data-initials="KX">
+          <img src="assets/images/organizers/kun_xiang.jpg" alt="Kun Xiang" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">KX</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name">
+            <a href="https://kun-xiang.github.io/" target="_blank" rel="noopener">Kun Xiang</a>
+            <span class="contact-badge">Contact</span>
+          </h3>
+          <p class="person-affil">Sun Yat-sen University</p>
+        </div>
+      </div>
+
+      <div class="person-card compact">
+        <div class="person-avatar" data-initials="XL">
+          <img src="assets/images/organizers/xiaodan_liang.jpg" alt="Xiaodan Liang" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">XL</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://mbzuai.ac.ae/study/faculty/xiaodan-liang/" target="_blank" rel="noopener">Xiaodan Liang</a></h3>
+          <p class="person-affil">MBZUAI / Sun Yat-sen University</p>
+        </div>
+      </div>
+
+      <div class="person-card compact">
+        <div class="person-avatar" data-initials="ZQ">
+          <img src="assets/images/organizers/zhizhen_qin.jpg" alt="Zhizhen Qin" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">ZQ</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://zhizhenqin.github.io/" target="_blank" rel="noopener">Zhizhen Qin</a></h3>
+          <p class="person-affil">Amazon Web Services</p>
+        </div>
+      </div>
+
+      <div class="person-card compact">
+        <div class="person-avatar" data-initials="DH">
+          <img src="assets/images/organizers/donghoon_hyeon.jpg" alt="Donghoon Hyeon" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">DH</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://www.math.snu.ac.kr/~hyeon/" target="_blank" rel="noopener">Donghoon Hyeon</a></h3>
+          <p class="person-affil">Seoul National University</p>
+        </div>
+      </div>
+
+      <div class="person-card compact">
+        <div class="person-avatar" data-initials="BP">
+          <img src="assets/images/organizers/bartosz_piotrowski.jpg" alt="Bartosz Piotrowski" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">BP</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://bartosz.cc/" target="_blank" rel="noopener">Bartosz Piotrowski</a></h3>
+          <p class="person-affil">Axiom Math</p>
+        </div>
+      </div>
+
+      <div class="person-card compact">
+        <div class="person-avatar" data-initials="LA">
+          <img src="assets/images/organizers/leni_aniva.jpg" alt="Leni Aniva" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">LA</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://leni.sh/" target="_blank" rel="noopener">Leni Aniva</a></h3>
+          <p class="person-affil">Stanford University</p>
+        </div>
+      </div>
+
+      <div class="person-card compact">
+        <div class="person-avatar" data-initials="ZG">
+          <img src="assets/images/organizers/zhijiang_guo.jpg" alt="Zhijiang Guo" onerror="this.style.display='none'; this.parentNode.querySelector('.initials').style.display='flex'" />
+          <span class="initials" style="display:none">ZG</span>
+        </div>
+        <div class="person-info">
+          <h3 class="person-name"><a href="https://cartus.github.io/" target="_blank" rel="noopener">Zhijiang Guo</a></h3>
+          <p class="person-affil">HKUST(GZ)</p>
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="subsection-title mt-lg">Volunteer Area Chairs &amp; Competition Chairs</h3>
+    <div class="volunteers-grid">
+      <div class="volunteer-item"><a href="https://xinhuajian.wordpress.com/" target="_blank" rel="noopener">Huajian Xin</a><span>University of Edinburgh / ByteDance</span></div>
+      <div class="volunteer-item"><a href="https://vinyesm.github.io/" target="_blank" rel="noopener">Marina Vinyes</a><span>Project Numina</span></div>
+      <div class="volunteer-item"><a href="http://www.cs.mcgill.ca/~xueliu/" target="_blank" rel="noopener">Steve Liu</a><span>MBZUAI</span></div>
+      <div class="volunteer-item"><a href="https://rasmuskyng.com/" target="_blank" rel="noopener">Rasmus Kyng</a><span>ETH Zurich</span></div>
+      <div class="volunteer-item"><a href="https://yilunzhou.github.io/" target="_blank" rel="noopener">Yilun Zhou</a><span>Salesforce</span></div>
+      <div class="volunteer-item"><a href="https://soonhokong.github.io/" target="_blank" rel="noopener">Soonho Kong</a><span>Amazon Web Services</span></div>
+      <div class="volunteer-item"><a href="https://yangzhch6.github.io/" target="_blank" rel="noopener">Zhicheng Yang</a><span>HKUST(GZ)</span></div>
+      <div class="volunteer-item"><a href="https://jxhe.github.io/" target="_blank" rel="noopener">Junxian He</a><span>HKUST</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Sponsors ======= -->
+<section id="sponsors" class="section section-white">
+  <div class="container">
+    <h2 class="section-title">Sponsors</h2>
+    <p class="section-subtitle">We are actively seeking sponsors to support challenge prizes and invited speakers.
+      <a href="mailto:hcwang942@gmail.com">Contact us</a> if you are interested in sponsoring.
+    </p>
+    <div class="sponsors-placeholder">
+      <p>Sponsorship information coming soon.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Footer ======= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>3rd AI for Math Workshop</h4>
+        <p>Toward Self-Evolving Scientific Agents<br/>
+          ICML 2026 &mdash; July 10, 2026
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#cfp">Call for Papers</a></li>
+          <li><a href="#challenge">Challenge</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Previous Editions</h4>
+        <ul>
+          <li><a href="https://sites.google.com/view/ai4mathworkshopicml2025/" target="_blank" rel="noopener">ICML 2025</a></li>
+          <li><a href="https://sites.google.com/view/ai4mathworkshopicml2024" target="_blank" rel="noopener">ICML 2024</a></li>
+          <li><a href="https://mathai2025.github.io" target="_blank" rel="noopener">MATH-AI @ NeurIPS 2025</a></li>
+          <li><a href="https://mathai2024.github.io" target="_blank" rel="noopener">MATH-AI @ NeurIPS 2024</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>For inquiries, please contact:</p>
+        <p><a href="mailto:hcwang942@gmail.com">hcwang942@gmail.com</a></p>
+        <p><a href="mailto:xiangk123@gmail.com">xiangk123@gmail.com</a></p>
+        <div class="social-links">
+          <a href="https://x.com/" target="_blank" rel="noopener" title="X / Twitter">𝕏</a>
+          <a href="https://bsky.app/" target="_blank" rel="noopener" title="Bluesky">🦋</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AI for Math Workshop Organizers. Website source on
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
