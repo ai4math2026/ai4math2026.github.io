@@ -154,12 +154,10 @@ ul { list-style: none; }
    ============================================================ */
 .hero {
   min-height: 100vh;
-  background-image:
-    linear-gradient(125deg, rgba(10,16,24,0.74) 0%, rgba(28,43,60,0.56) 50%, rgba(84,104,126,0.42) 100%),
-    url('../images/background.png');
-  background-size: cover, cover;
-  background-position: center center, center center;
-  background-repeat: no-repeat, no-repeat;
+  background-image: url('../images/background.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-color: var(--color-hero-start);
   display: flex;
   align-items: center;
@@ -173,10 +171,7 @@ ul { list-style: none; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 82% 18%, rgba(207, 223, 255, 0.18), transparent 28%),
-    radial-gradient(circle at 14% 88%, rgba(255, 255, 255, 0.08), transparent 30%),
-    linear-gradient(180deg, rgba(255,255,255,0.04), transparent 32%);
+  background: transparent;
   pointer-events: none;
 }
 
@@ -185,7 +180,7 @@ ul { list-style: none; }
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(7, 12, 18, 0.18) 0%, rgba(7, 12, 18, 0.04) 36%, rgba(7, 12, 18, 0.24) 100%);
+  background: transparent;
 }
 
 .hero-content {
