@@ -805,9 +805,19 @@ ul { list-style: none; }
   border: 1px solid rgba(201, 212, 225, 0.88);
 }
 
+.schedule-cluster-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.schedule-cluster-row .schedule-item {
+  height: 100%;
+}
+
 .schedule-cluster .schedule-item.closing {
-  align-self: center;
-  width: min(100%, 420px);
+  width: 100%;
 }
 
 .schedule-item {
@@ -1186,6 +1196,7 @@ ul { list-style: none; }
   .about-panels { grid-template-columns: 1fr; }
   .cfp-grid { grid-template-columns: 1fr; }
   .schedule-grid { grid-template-columns: 1fr; }
+  .schedule-cluster-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
   #speakers .person-card {
     flex-basis: calc(50% - 11px);
