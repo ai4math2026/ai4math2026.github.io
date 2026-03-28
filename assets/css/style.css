@@ -638,6 +638,40 @@ ul { list-style: none; }
   min-height: calc(1.6em * 3);
 }
 
+#speakers .people-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+#speakers .person-card {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+#speakers .person-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#speakers .person-name {
+  justify-content: center;
+}
+
+#speakers .person-avatar {
+  width: 128px;
+  height: 128px;
+  margin: 0 auto;
+}
+
+#speakers .person-bio {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+  min-height: 0;
+}
+
 /* ============================================================
    Schedule
    ============================================================ */
