@@ -776,12 +776,6 @@ ul { list-style: none; }
   border: 1px solid rgba(201, 212, 225, 0.88);
 }
 
-.schedule-poster-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
 .schedule-cluster .schedule-item.closing {
   align-self: center;
   width: min(100%, 420px);
@@ -1156,7 +1150,6 @@ ul { list-style: none; }
   .about-panels { grid-template-columns: 1fr; }
   .cfp-grid { grid-template-columns: 1fr; }
   .schedule-grid { grid-template-columns: 1fr; }
-  .schedule-poster-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
