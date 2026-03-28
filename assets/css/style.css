@@ -434,6 +434,9 @@ ul { list-style: none; }
    ============================================================ */
 .section {
   padding: 80px 24px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
 }
 .section-white  { background: rgba(255, 255, 255, 0.88); }
 .section-light  { background: linear-gradient(180deg, rgba(248,250,252,0.96) 0%, rgba(244,247,250,0.98) 100%); }
@@ -443,6 +446,94 @@ ul { list-style: none; }
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section::before,
+.section::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section::before {
+  top: -190px;
+  right: -170px;
+  width: min(34vw, 430px);
+  height: min(34vw, 430px);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 35%, rgba(47, 111, 237, 0.10) 0%, rgba(47, 111, 237, 0.05) 28%, rgba(47, 111, 237, 0) 72%);
+  opacity: 0.9;
+}
+
+.section::after {
+  left: -160px;
+  bottom: -220px;
+  width: min(32vw, 380px);
+  height: min(32vw, 380px);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 60% 40%, rgba(142, 163, 184, 0.12) 0%, rgba(142, 163, 184, 0.05) 34%, rgba(142, 163, 184, 0) 74%);
+  opacity: 0.85;
+}
+
+.section-light::before {
+  background:
+    radial-gradient(circle at 35% 35%, rgba(47, 111, 237, 0.09) 0%, rgba(47, 111, 237, 0.035) 30%, rgba(47, 111, 237, 0) 74%);
+}
+
+.section-tinted::after {
+  background:
+    radial-gradient(circle at 55% 40%, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0.16) 24%, rgba(255, 255, 255, 0) 68%),
+    radial-gradient(circle at 60% 40%, rgba(47, 111, 237, 0.08) 0%, rgba(47, 111, 237, 0.04) 26%, rgba(47, 111, 237, 0) 72%);
+}
+
+#news::before {
+  top: auto;
+  bottom: -180px;
+  right: -140px;
+}
+
+#about::after {
+  bottom: auto;
+  top: 18%;
+  left: -170px;
+}
+
+#speakers::before {
+  top: -150px;
+  right: -130px;
+}
+
+#schedule::after {
+  bottom: -140px;
+  left: auto;
+  right: -120px;
+}
+
+#cfp::before {
+  top: 10%;
+  right: -150px;
+}
+
+#challenge::after {
+  left: -120px;
+  bottom: -150px;
+}
+
+#organizers::before {
+  top: auto;
+  bottom: -180px;
+  right: -120px;
+}
+
+#sponsors::after {
+  left: auto;
+  right: -150px;
+  bottom: -190px;
 }
 
 .section-title {
@@ -1329,6 +1420,11 @@ ul { list-style: none; }
   .schedule-grid { grid-template-columns: 1fr; }
   .schedule-cluster-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .section::before,
+  .section::after {
+    width: min(46vw, 300px);
+    height: min(46vw, 300px);
+  }
   #speakers .person-card {
     flex-basis: calc(50% - 11px);
     max-width: calc(50% - 11px);
