@@ -56,30 +56,63 @@
   window.addEventListener('scroll', setActiveLink, { passive: true });
   setActiveLink();
 
-  // ---- Smooth reveal on scroll ----
-  if ('IntersectionObserver' in window) {
-    const style = document.createElement('style');
-    style.textContent = `
-      .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
-      .reveal.visible { opacity: 1; transform: none; }
-    `;
-    document.head.appendChild(style);
+  // ---- Scroll reveal and ambient motion ----
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    document.body.classList.add('motion-ready');
+  }
+
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    const heroNodes = document.querySelectorAll('.hero-badge, .hero-title, .hero-meta, .hero-actions');
+    heroNodes.forEach(function(el, index) {
+      el.dataset.reveal = 'hero';
+      el.style.setProperty('--reveal-delay', index * 110 + 'ms');
+    });
+
+    [
+      ['.section-title', 'soft', 0],
+      ['.section-subtitle', 'soft', 70],
+      ['.subsection-title', 'soft', 0],
+      ['.news-item', 'soft', 85],
+      ['.about-panel', 'card', 90],
+      ['.about-bridge, .about-footnote', 'soft', 90],
+      ['#speakers .person-card', 'card', 85],
+      ['#organizers .person-card.compact', 'card', 65],
+      ['.schedule-column:first-child .schedule-item', 'left', 55],
+      ['.schedule-column:last-child .schedule-item', 'right', 55],
+      ['.schedule-cluster .schedule-item.poster', 'left', 80],
+      ['.schedule-cluster .schedule-item.closing', 'right', 120],
+      ['.topic-card', 'card', 70],
+      ['.cfp-sidebar', 'right', 80],
+      ['.challenge-card', 'card', 90],
+      ['.sponsors-placeholder', 'soft', 0],
+      ['.footer-col', 'soft', 55]
+    ].forEach(function(config) {
+      document.querySelectorAll(config[0]).forEach(function(el, index) {
+        el.dataset.reveal = config[1];
+        el.style.setProperty('--reveal-delay', index * config[2] + 'ms');
+      });
+    });
+
+    requestAnimationFrame(function() {
+      heroNodes.forEach(function(el) {
+        el.classList.add('is-visible');
+      });
+    });
 
     const observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.14, rootMargin: '0px 0px -12% 0px' });
 
-    document.querySelectorAll(
-      '.person-card, .challenge-card, .topic-card, .schedule-item, .news-item, .volunteer-item'
-    ).forEach(function(el, i) {
-      el.classList.add('reveal');
-      el.style.transitionDelay = (i % 6) * 0.06 + 's';
-      observer.observe(el);
+    document.querySelectorAll('[data-reveal]').forEach(function(el) {
+      if (!el.closest('.hero')) {
+        observer.observe(el);
+      }
     });
   }
 
