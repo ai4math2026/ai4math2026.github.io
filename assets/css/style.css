@@ -153,9 +153,13 @@ ul { list-style: none; }
    ============================================================ */
 .hero {
   min-height: 100vh;
-  background:
-    linear-gradient(125deg, rgba(15,23,32,0.96) 0%, rgba(47,67,87,0.92) 56%, rgba(158,177,196,0.88) 100%),
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96"><path d="M0 24H96M0 72H96M24 0V96M72 0V96" stroke="%23F6EFE6" stroke-opacity="0.08"/><text x="12" y="60" font-size="32" fill="%23F6EFE6" fill-opacity="0.07">∫ ∑</text></svg>') repeat;
+  background-image:
+    linear-gradient(125deg, rgba(10,16,24,0.82) 0%, rgba(28,43,60,0.68) 50%, rgba(84,104,126,0.56) 100%),
+    url('../images/background.png'),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96"><path d="M0 24H96M0 72H96M24 0V96M72 0V96" stroke="%23F6EFE6" stroke-opacity="0.08"/><text x="12" y="60" font-size="32" fill="%23F6EFE6" fill-opacity="0.07">∫ ∑</text></svg>');
+  background-size: cover, cover, 96px 96px;
+  background-position: center center, center center, center center;
+  background-repeat: no-repeat, no-repeat, repeat;
   background-color: var(--color-hero-start);
   display: flex;
   align-items: center;
@@ -170,9 +174,9 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 82% 18%, rgba(207, 223, 255, 0.24), transparent 28%),
-    radial-gradient(circle at 14% 88%, rgba(255, 255, 255, 0.12), transparent 30%),
-    linear-gradient(180deg, rgba(255,255,255,0.06), transparent 32%);
+    radial-gradient(circle at 82% 18%, rgba(207, 223, 255, 0.18), transparent 28%),
+    radial-gradient(circle at 14% 88%, rgba(255, 255, 255, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(255,255,255,0.04), transparent 32%);
   pointer-events: none;
 }
 
@@ -620,6 +624,15 @@ ul { list-style: none; }
   font-size: 13px;
   color: var(--color-text-muted);
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  min-height: calc(1.6em * 4);
+}
+.person-card.compact .person-bio {
+  -webkit-line-clamp: 3;
+  min-height: calc(1.6em * 3);
 }
 
 /* ============================================================
