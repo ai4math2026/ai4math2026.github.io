@@ -714,30 +714,42 @@ ul { list-style: none; }
 }
 
 #speakers .people-grid {
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
 }
 
 #speakers .person-card {
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: left;
   gap: 16px;
+  flex: 0 1 calc(25% - 17px);
+  max-width: calc(25% - 17px);
+  min-width: 250px;
 }
 
 #speakers .person-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  width: 100%;
 }
 
 #speakers .person-name {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 #speakers .person-avatar {
   width: 112px;
   height: 112px;
   margin: 0 auto;
+}
+
+#speakers .person-affil,
+#speakers .person-bio {
+  text-align: left;
 }
 
 #speakers .person-bio {
@@ -1162,12 +1174,23 @@ ul { list-style: none; }
 /* ============================================================
    Responsive
    ============================================================ */
+@media (max-width: 1180px) {
+  #speakers .person-card {
+    flex-basis: calc(33.333% - 15px);
+    max-width: calc(33.333% - 15px);
+  }
+}
+
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; }
   .about-panels { grid-template-columns: 1fr; }
   .cfp-grid { grid-template-columns: 1fr; }
   .schedule-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  #speakers .person-card {
+    flex-basis: calc(50% - 11px);
+    max-width: calc(50% - 11px);
+  }
 }
 
 @media (max-width: 700px) {
@@ -1195,6 +1218,10 @@ ul { list-style: none; }
   .organizers-grid { grid-template-columns: repeat(2, 1fr); }
   .person-card { flex-direction: column; align-items: center; text-align: center; }
   .person-name { justify-content: center; }
+  #speakers .person-card {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 
