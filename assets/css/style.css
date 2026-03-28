@@ -524,7 +524,7 @@ ul { list-style: none; }
 }
 
 .organizers-grid {
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
 .person-card {
@@ -547,6 +547,14 @@ ul { list-style: none; }
   align-items: center;
   text-align: center;
   padding: 20px;
+}
+.person-card.compact .person-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.person-card.compact .person-bio {
+  margin-top: 6px;
 }
 
 .person-avatar {
