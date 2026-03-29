@@ -97,7 +97,7 @@
   syncScrollState();
 
   if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-    const heroNodes = document.querySelectorAll('.hero-badge, .hero-title, .hero-meta, .hero-actions');
+    const heroNodes = document.querySelectorAll('.hero-mark, .hero-badge, .hero-title, .hero-meta, .hero-actions');
     heroNodes.forEach(function(el, index) {
       el.dataset.reveal = 'hero';
       el.style.setProperty('--reveal-delay', index * 85 + 'ms');
