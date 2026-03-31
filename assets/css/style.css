@@ -910,6 +910,30 @@ ul { list-style: none; }
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
+.competition-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.competition-grid .person-card.compact {
+  padding: 18px 14px;
+}
+
+.competition-grid .person-card.compact .person-avatar {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 10px;
+}
+
+.competition-grid .person-name {
+  font-size: 17px;
+}
+
+.competition-grid .person-role,
+.competition-grid .person-affil {
+  font-size: 13px;
+}
+
 .person-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,252,0.96) 100%);
   border: 1px solid var(--color-border);
@@ -1551,6 +1575,9 @@ ul { list-style: none; }
     flex-basis: calc(33.333% - 15px);
     max-width: calc(33.333% - 15px);
   }
+  .competition-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 900px) {
@@ -1564,6 +1591,9 @@ ul { list-style: none; }
   .section::after {
     width: min(46vw, 300px);
     height: min(46vw, 300px);
+  }
+  .competition-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   #speakers .person-card {
     flex-basis: calc(50% - 11px);
@@ -1594,6 +1624,7 @@ ul { list-style: none; }
 
   .people-grid { grid-template-columns: 1fr; }
   .organizers-grid { grid-template-columns: repeat(2, 1fr); }
+  .competition-grid { grid-template-columns: 1fr; }
   .person-card { flex-direction: column; align-items: center; text-align: center; }
   .person-name { justify-content: center; }
   #speakers .person-card {
@@ -1611,6 +1642,7 @@ ul { list-style: none; }
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
   .organizers-grid { grid-template-columns: 1fr; }
+  .competition-grid { grid-template-columns: 1fr; }
   .schedule-time { width: 90px; font-size: 12px; }
   .nav-logo { gap: 8px; font-size: 14px; }
   .nav-logo img { width: 24px; height: 24px; border-radius: 7px; }
