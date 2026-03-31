@@ -1074,6 +1074,40 @@ ul { list-style: none; }
   -webkit-line-clamp: 5;
   overflow: hidden;
   min-height: calc(1.65em * 5);
+  cursor: pointer;
+  position: relative;
+}
+
+#speakers .person-bio.is-expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+  min-height: 0;
+}
+
+#speakers .person-bio.is-static {
+  cursor: default;
+}
+
+.speaker-bio-toggle {
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-primary-dark);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+
+.speaker-bio-toggle:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+.speaker-bio-toggle[hidden] {
+  display: none;
 }
 
 /* ============================================================

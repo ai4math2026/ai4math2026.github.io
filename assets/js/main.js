@@ -152,6 +152,86 @@
     });
   }
 
+  // ---- Expandable speaker bios ----
+  (function setupSpeakerBioToggles() {
+    const bios = document.querySelectorAll('#speakers .person-bio');
+    if (!bios.length) {
+      return;
+    }
+
+    const refreshers = [];
+
+    bios.forEach(function(bio, index) {
+      const bioId = bio.id || ('speaker-bio-' + (index + 1));
+      bio.id = bioId;
+      bio.classList.add('is-collapsed');
+
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'speaker-bio-toggle';
+      toggle.textContent = 'Show full bio';
+      toggle.setAttribute('aria-controls', bioId);
+      toggle.setAttribute('aria-expanded', 'false');
+      bio.insertAdjacentElement('afterend', toggle);
+
+      function syncState(expanded) {
+        bio.classList.toggle('is-expanded', expanded);
+        bio.setAttribute('aria-expanded', String(expanded));
+        toggle.setAttribute('aria-expanded', String(expanded));
+        toggle.textContent = expanded ? 'Show less' : 'Show full bio';
+      }
+
+      function handleToggle() {
+        if (toggle.hidden) {
+          return;
+        }
+        syncState(!bio.classList.contains('is-expanded'));
+      }
+
+      bio.setAttribute('role', 'button');
+      bio.setAttribute('tabindex', '0');
+      bio.setAttribute('aria-expanded', 'false');
+
+      bio.addEventListener('click', handleToggle);
+      bio.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          handleToggle();
+        }
+      });
+      toggle.addEventListener('click', handleToggle);
+
+      refreshers.push(function() {
+        const isExpanded = bio.classList.contains('is-expanded');
+        if (isExpanded) {
+          syncState(false);
+        }
+
+        const needsToggle = bio.scrollHeight > bio.clientHeight + 4;
+        toggle.hidden = !needsToggle;
+        bio.classList.toggle('is-static', !needsToggle);
+
+        if (needsToggle) {
+          bio.setAttribute('role', 'button');
+          bio.setAttribute('tabindex', '0');
+        } else {
+          bio.removeAttribute('role');
+          bio.removeAttribute('tabindex');
+          bio.removeAttribute('aria-expanded');
+        }
+      });
+    });
+
+    function refreshSpeakerBios() {
+      refreshers.forEach(function(refresh) {
+        refresh();
+      });
+    }
+
+    window.addEventListener('resize', refreshSpeakerBios);
+    window.requestAnimationFrame(refreshSpeakerBios);
+  })();
+
   // ---- Hamburger animation ----
   if (navToggle) {
     navToggle.addEventListener('click', function() {
