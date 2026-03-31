@@ -154,26 +154,38 @@
 
   // ---- Expandable speaker bios ----
   (function setupSpeakerBioToggles() {
-    const bios = document.querySelectorAll('#speakers .person-bio');
+    const bios = Array.from(document.querySelectorAll('#speakers .person-bio'));
     if (!bios.length) {
       return;
     }
 
     const refreshers = [];
+    let allExpanded = false;
+
+    function syncState(bio, expanded) {
+      bio.classList.toggle('is-expanded', expanded);
+      if (!bio.classList.contains('is-static')) {
+        bio.setAttribute('aria-expanded', String(expanded));
+      }
+    }
+
+    function setAllBios(expanded) {
+      allExpanded = expanded;
+      bios.forEach(function(bio) {
+        if (!bio.classList.contains('is-static')) {
+          syncState(bio, expanded);
+        }
+      });
+    }
 
     bios.forEach(function(bio) {
       bio.classList.add('is-collapsed');
-
-      function syncState(expanded) {
-        bio.classList.toggle('is-expanded', expanded);
-        bio.setAttribute('aria-expanded', String(expanded));
-      }
 
       function handleToggle() {
         if (bio.classList.contains('is-static')) {
           return;
         }
-        syncState(!bio.classList.contains('is-expanded'));
+        setAllBios(!allExpanded);
       }
 
       bio.setAttribute('role', 'button');
@@ -189,17 +201,14 @@
       });
 
       refreshers.push(function() {
-        const isExpanded = bio.classList.contains('is-expanded');
-        if (isExpanded) {
-          syncState(false);
-        }
-
+        syncState(bio, false);
         const needsToggle = bio.scrollHeight > bio.clientHeight + 4;
         bio.classList.toggle('is-static', !needsToggle);
 
         if (needsToggle) {
           bio.setAttribute('role', 'button');
           bio.setAttribute('tabindex', '0');
+          syncState(bio, allExpanded);
         } else {
           bio.removeAttribute('role');
           bio.removeAttribute('tabindex');
