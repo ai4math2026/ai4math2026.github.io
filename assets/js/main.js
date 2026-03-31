@@ -174,12 +174,22 @@
       bios.forEach(function(bio) {
         if (!bio.classList.contains('is-static')) {
           syncState(bio, expanded);
+          const toggle = bio.nextElementSibling;
+          if (toggle && toggle.classList.contains('speaker-bio-toggle')) {
+            toggle.textContent = expanded ? 'Less' : 'More';
+          }
         }
       });
     }
 
     bios.forEach(function(bio) {
       bio.classList.add('is-collapsed');
+
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'speaker-bio-toggle';
+      toggle.textContent = 'More';
+      bio.insertAdjacentElement('afterend', toggle);
 
       function handleToggle() {
         if (bio.classList.contains('is-static')) {
@@ -199,16 +209,20 @@
           handleToggle();
         }
       });
+      toggle.addEventListener('click', handleToggle);
 
       refreshers.push(function() {
         syncState(bio, false);
         const needsToggle = bio.scrollHeight > bio.clientHeight + 4;
         bio.classList.toggle('is-static', !needsToggle);
+        toggle.hidden = !needsToggle;
+        toggle.textContent = allExpanded ? 'Less' : 'More';
 
         if (needsToggle) {
           bio.setAttribute('role', 'button');
           bio.setAttribute('tabindex', '0');
           syncState(bio, allExpanded);
+          toggle.textContent = allExpanded ? 'Less' : 'More';
         } else {
           bio.removeAttribute('role');
           bio.removeAttribute('tabindex');
