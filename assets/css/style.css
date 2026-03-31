@@ -1113,27 +1113,6 @@ ul { list-style: none; }
   cursor: default;
 }
 
-.speaker-bio-toggle {
-  margin-top: 10px;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--color-primary-dark);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  cursor: pointer;
-}
-
-.speaker-bio-toggle:hover {
-  color: var(--color-link-hover);
-  text-decoration: underline;
-}
-
-.speaker-bio-toggle[hidden] {
-  display: none;
-}
-
 /* ============================================================
    Schedule
    ============================================================ */

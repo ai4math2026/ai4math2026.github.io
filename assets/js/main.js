@@ -161,28 +161,16 @@
 
     const refreshers = [];
 
-    bios.forEach(function(bio, index) {
-      const bioId = bio.id || ('speaker-bio-' + (index + 1));
-      bio.id = bioId;
+    bios.forEach(function(bio) {
       bio.classList.add('is-collapsed');
-
-      const toggle = document.createElement('button');
-      toggle.type = 'button';
-      toggle.className = 'speaker-bio-toggle';
-      toggle.textContent = 'Show full bio';
-      toggle.setAttribute('aria-controls', bioId);
-      toggle.setAttribute('aria-expanded', 'false');
-      bio.insertAdjacentElement('afterend', toggle);
 
       function syncState(expanded) {
         bio.classList.toggle('is-expanded', expanded);
         bio.setAttribute('aria-expanded', String(expanded));
-        toggle.setAttribute('aria-expanded', String(expanded));
-        toggle.textContent = expanded ? 'Show less' : 'Show full bio';
       }
 
       function handleToggle() {
-        if (toggle.hidden) {
+        if (bio.classList.contains('is-static')) {
           return;
         }
         syncState(!bio.classList.contains('is-expanded'));
@@ -199,7 +187,6 @@
           handleToggle();
         }
       });
-      toggle.addEventListener('click', handleToggle);
 
       refreshers.push(function() {
         const isExpanded = bio.classList.contains('is-expanded');
@@ -208,7 +195,6 @@
         }
 
         const needsToggle = bio.scrollHeight > bio.clientHeight + 4;
-        toggle.hidden = !needsToggle;
         bio.classList.toggle('is-static', !needsToggle);
 
         if (needsToggle) {
