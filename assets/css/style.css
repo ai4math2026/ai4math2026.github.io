@@ -903,11 +903,15 @@ ul { list-style: none; }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 22px;
-  margin-top: 34px;
+  margin-top: 16px;
 }
 
 .organizers-grid {
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.volunteers-grid {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .competition-grid {
@@ -920,7 +924,7 @@ ul { list-style: none; }
 }
 
 .competition-grid .person-card.compact {
-  padding: 16px 12px;
+  padding: 10px 12px 8px;
 }
 
 .competition-grid .person-card.compact .person-avatar {
@@ -964,7 +968,8 @@ ul { list-style: none; }
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 20px 18px;
+  padding: 14px 14px 14px;
+  gap: 4px;
 }
 .person-card.compact .person-info {
   display: flex;
@@ -987,8 +992,8 @@ ul { list-style: none; }
   position: relative;
 }
 .person-card.compact .person-avatar {
-  width: 92px; height: 92px;
-  margin: 0 auto 12px;
+  width: 110px; height: 110px;
+  margin: 0 auto 0;
 }
 .person-avatar img {
   width: 100%; height: 100%;
@@ -1008,7 +1013,7 @@ ul { list-style: none; }
 .person-name {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1041,7 +1046,7 @@ ul { list-style: none; }
   font-size: 13px;
   color: var(--color-text);
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 1px;
 }
 
 .person-affil {
@@ -1474,8 +1479,12 @@ ul { list-style: none; }
    ============================================================ */
 .volunteers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 12px;
+}
+
+.volunteers-grid .person-card.compact {
+  padding: 14px 14px 8px;
 }
 
 .volunteer-item {
