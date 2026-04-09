@@ -1347,11 +1347,31 @@ ul { list-style: none; }
 /* ============================================================
    Challenge
    ============================================================ */
+#challenge .container {
+  max-width: 1400px;
+}
+
 .challenge-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 22px;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
   margin-top: 34px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.challenge-grid::-webkit-scrollbar {
+  height: 6px;
+}
+.challenge-grid::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+  border-radius: 3px;
+}
+.challenge-grid::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.18);
+  border-radius: 3px;
 }
 
 .challenge-card {
@@ -1361,6 +1381,9 @@ ul { list-style: none; }
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  flex: 1 1 260px;
+  min-width: 260px;
+  scroll-snap-align: start;
   box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition), transform var(--transition);
 }

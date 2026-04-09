@@ -555,7 +555,7 @@
   <div class="container">
     <h2 class="section-title">Challenge Tracks</h2>
     <p class="section-subtitle">
-      Three competitive tracks — join on <a href="https://www.codabench.org/" target="_blank" rel="noopener">Codabench</a>.
+      Four competitive tracks — join on <a href="https://www.codabench.org/" target="_blank" rel="noopener">Codabench</a>.
       Challenge period: <strong>May 1 - June 15, 2026</strong>. Winners will present at the workshop.
     </p>
     <div class="challenge-grid">
@@ -566,19 +566,14 @@
           <h3 class="challenge-title">Semantic Alignment Evaluation for Autoformalization</h3>
         </div>
         <div class="challenge-body">
-          <p class="challenge-lead">Autoformalization turns natural-language mathematics into proof-assistant code; this track evaluates whether that translation preserves the original mathematical intent.</p>
-          <ul class="challenge-highlights">
-            <li><strong>Dataset:</strong> <strong>FormalRx</strong>, built on the SCI Error Taxonomy</li>
-            <li><strong>Focus:</strong> semantic, constraint, and implementation errors across 28 categories</li>
-          </ul>
-          <h4>Tasks</h4>
+          <p class="challenge-lead">Evaluate whether autoformalization preserves mathematical intent, using the <strong>FormalRx</strong> dataset built on the SCI Error Taxonomy (28 error categories).</p>
           <ol class="challenge-tasks">
             <li><strong>Verdict:</strong> Is the formalization semantically aligned?</li>
-            <li><strong>Categorization:</strong> Identify the error type from the SCI taxonomy</li>
-            <li><strong>Localization:</strong> Identify the code segment containing the error</li>
-            <li><strong>Correction:</strong> Provide a corrected formal statement</li>
+            <li><strong>Categorization:</strong> Identify the error type</li>
+            <li><strong>Localization:</strong> Find the erroneous code segment</li>
+            <li><strong>Correction:</strong> Provide a corrected statement</li>
           </ol>
-          <p class="challenge-metric"><strong>Evaluation:</strong> Macro F1 (Tasks 1–2); exact match + LLM-as-judge (Tasks 3–4)</p>
+          <p class="challenge-metric"><strong>Metric:</strong> Macro F1 (Tasks 1–2); exact match + LLM-as-judge (Tasks 3–4)</p>
         </div>
         <div class="challenge-footer">
           <a href="https://www.codabench.org/" target="_blank" rel="noopener" class="btn btn-small btn-primary">Leaderboard (Coming Soon)</a>
@@ -591,18 +586,13 @@
           <h3 class="challenge-title">Theoretical Computer Science Proving in Lean</h3>
         </div>
         <div class="challenge-body">
-          <p class="challenge-lead">This track targets formal theorem proving in theoretical computer science, where proofs demand combinatorial arguments, algorithmic insight, and careful asymptotic reasoning.</p>
-          <ul class="challenge-highlights">
-            <li><strong>Source:</strong> problems drawn from <strong>CSLib</strong>, an open-source Lean 4 library for computer science</li>
-            <li><strong>Emphasis:</strong> proofs that go beyond Olympiad-style competition math</li>
-          </ul>
-          <h4>Topics</h4>
+          <p class="challenge-lead">Formal theorem proving in TCS using <strong>CSLib</strong>, an open-source Lean 4 library covering problems that go beyond Olympiad-style competition math.</p>
           <ul class="challenge-tasks">
             <li>Graph theory &amp; combinatorics</li>
             <li>Computational complexity</li>
             <li>Algorithm correctness</li>
           </ul>
-          <p class="challenge-metric"><strong>Evaluation:</strong> Pass Rate (fraction of verified proofs)</p>
+          <p class="challenge-metric"><strong>Metric:</strong> Pass Rate (fraction of verified proofs)</p>
           <p class="challenge-metric">Cheating prevention via <code>leanprover/comparator</code></p>
         </div>
         <div class="challenge-footer">
@@ -616,18 +606,30 @@
           <h3 class="challenge-title">Visual Grounded Physics Problem Solving</h3>
         </div>
         <div class="challenge-body">
-          <p class="challenge-lead">This track studies physics reasoning with genuine visual dependency, where abstract physical laws must be aligned with diagrams and complex scenes.</p>
-          <ul class="challenge-highlights">
-            <li><strong>Dataset:</strong> <strong>SeePhys Pro</strong> with 1,000 samples from middle school to research level</li>
-            <li><strong>Design:</strong> different levels of visual dependency ablation to measure perception-driven reasoning</li>
-            <li><strong>Robustness:</strong> includes a subset of real hand-drawn images to test genuine out-of-distribution generalization</li>
-          </ul>
-          <h4>Challenge</h4>
+          <p class="challenge-lead">Physics reasoning with genuine visual dependency using <strong>SeePhys Pro</strong> — 1,000 problems from middle school to research level, including real hand-drawn images.</p>
           <ul class="challenge-tasks">
             <li>Given a problem + diagram, derive the correct solution</li>
             <li>Pure text-based reasoning will fail — visual perception is required</li>
           </ul>
-          <p class="challenge-metric"><strong>Evaluation:</strong> Exact Match + LLM-as-Judge</p>
+          <p class="challenge-metric"><strong>Metric:</strong> Exact Match + LLM-as-Judge</p>
+        </div>
+        <div class="challenge-footer">
+          <a href="https://www.codabench.org/" target="_blank" rel="noopener" class="btn btn-small btn-primary">Leaderboard (Coming Soon)</a>
+        </div>
+      </div>
+
+      <div class="challenge-card">
+        <div class="challenge-header">
+          <span class="challenge-number">Track 4</span>
+          <h3 class="challenge-title">End-to-End Autoformalization and Proof Generation in Lean 4</h3>
+        </div>
+        <div class="challenge-body">
+          <p class="challenge-lead">Full autoformalization pipeline using the <strong>SNU Autoformalization Benchmark</strong> — 250+ problems across 8 mathematical areas, tiered L1/L2/L3.</p>
+          <ol class="challenge-tasks">
+            <li><strong>Full Mode:</strong> Natural language → complete Lean 4 proof script</li>
+            <li><strong>Completion Mode:</strong> Given formal statement, produce the verifiable proof</li>
+          </ol>
+          <p class="challenge-metric"><strong>Metric:</strong> Pass Rate against the Lean 4 proof verifier</p>
         </div>
         <div class="challenge-footer">
           <a href="https://www.codabench.org/" target="_blank" rel="noopener" class="btn btn-small btn-primary">Leaderboard (Coming Soon)</a>
