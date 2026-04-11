@@ -1356,14 +1356,14 @@ ul { list-style: none; }
    Challenge
    ============================================================ */
 #challenge .container {
-  max-width: 1200px;
+  max-width: 1220px;
 }
 
 .challenge-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(320px, 1fr));
   gap: 24px;
-  max-width: 1088px;
+  max-width: 1120px;
   margin: 34px auto 0;
   align-items: stretch;
 }
@@ -1431,11 +1431,13 @@ ul { list-style: none; }
 }
 
 .challenge-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: #fff;
-  line-height: 1.46;
-  max-width: 30ch;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  max-width: none;
 }
 
 .challenge-body {
@@ -1686,6 +1688,10 @@ ul { list-style: none; }
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 720px;
   }
+  .challenge-title {
+    font-size: 15px;
+    white-space: normal;
+  }
   .schedule-grid { grid-template-columns: 1fr 1fr; }
   .schedule-cluster-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1708,6 +1714,9 @@ ul { list-style: none; }
   .challenge-grid {
     grid-template-columns: 1fr;
     max-width: 640px;
+  }
+  .challenge-title {
+    white-space: normal;
   }
 }
 
