@@ -917,12 +917,12 @@ ul { list-style: none; }
 .competition-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
   gap: 14px;
   max-width: 1180px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .competition-grid .person-card {
@@ -1356,14 +1356,14 @@ ul { list-style: none; }
    Challenge
    ============================================================ */
 #challenge .container {
-  max-width: 1180px;
+  max-width: 1200px;
 }
 
 .challenge-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-  max-width: 1040px;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 1088px;
   margin: 34px auto 0;
   align-items: stretch;
 }
@@ -1431,11 +1431,11 @@ ul { list-style: none; }
 }
 
 .challenge-title {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   color: #fff;
-  line-height: 1.5;
-  max-width: 26ch;
+  line-height: 1.46;
+  max-width: 30ch;
 }
 
 .challenge-body {
@@ -1445,16 +1445,16 @@ ul { list-style: none; }
   z-index: 1;
 }
 .challenge-body p {
-  font-size: 14px;
+  font-size: 14.5px;
   color: var(--color-text-muted);
-  line-height: 1.7;
+  line-height: 1.72;
   margin-bottom: 14px;
 }
 
 .challenge-lead {
   color: var(--color-text) !important;
   font-weight: 600;
-  margin-bottom: 13px !important;
+  margin-bottom: 14px !important;
 }
 
 .challenge-highlights {
@@ -1486,8 +1486,8 @@ ul { list-style: none; }
   padding-left: 18px;
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  margin-bottom: 16px;
+  gap: 8px;
+  margin-bottom: 18px;
 }
 .challenge-body ol.challenge-tasks { list-style: decimal; }
 .challenge-body ul.challenge-tasks { list-style: disc; }
@@ -1683,7 +1683,7 @@ ul { list-style: none; }
   .about-panels { grid-template-columns: 1fr; }
   .cfp-grid { grid-template-columns: 1fr; }
   .challenge-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 720px;
   }
   .schedule-grid { grid-template-columns: 1fr 1fr; }
@@ -1701,6 +1701,13 @@ ul { list-style: none; }
   #speakers .person-card {
     flex-basis: calc(50% - 11px);
     max-width: calc(50% - 11px);
+  }
+}
+
+@media (max-width: 760px) {
+  .challenge-grid {
+    grid-template-columns: 1fr;
+    max-width: 640px;
   }
 }
 
