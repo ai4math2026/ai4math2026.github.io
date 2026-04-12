@@ -915,12 +915,20 @@ ul { list-style: none; }
 }
 
 .competition-grid {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
   gap: 14px;
+  max-width: 1180px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .competition-grid .person-card {
   min-width: 0;
+  flex: 0 1 calc((100% - 56px) / 5);
+  max-width: calc((100% - 56px) / 5);
 }
 
 .competition-grid .person-card.compact {
@@ -1348,53 +1356,65 @@ ul { list-style: none; }
    Challenge
    ============================================================ */
 #challenge .container {
-  max-width: 1400px;
+  max-width: 1220px;
 }
 
 .challenge-grid {
-  display: flex;
-  flex-direction: row;
-  gap: 18px;
-  margin-top: 34px;
-  overflow-x: auto;
-  padding-bottom: 12px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.challenge-grid::-webkit-scrollbar {
-  height: 6px;
-}
-.challenge-grid::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.05);
-  border-radius: 3px;
-}
-.challenge-grid::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.18);
-  border-radius: 3px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 1120px;
+  margin: 34px auto 0;
+  align-items: stretch;
 }
 
 .challenge-card {
+  position: relative;
   background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,252,0.96) 100%);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border: 1px solid rgba(217, 226, 236, 0.92);
+  border-radius: 18px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  flex: 1 1 260px;
-  min-width: 260px;
-  scroll-snap-align: start;
-  box-shadow: var(--shadow-sm);
+  min-height: 100%;
+  box-shadow: 0 14px 34px rgba(15, 23, 32, 0.07);
   transition: box-shadow var(--transition), transform var(--transition);
 }
+
+.challenge-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.24) 0%, rgba(255,255,255,0) 20%),
+    radial-gradient(circle at 88% 14%, rgba(47, 111, 237, 0.08) 0%, rgba(47, 111, 237, 0) 26%);
+  opacity: 0.9;
+}
+
 .challenge-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  box-shadow: 0 22px 48px rgba(15, 23, 32, 0.12);
+  transform: translateY(-3px);
+  border-color: rgba(47, 111, 237, 0.22);
 }
 
 .challenge-header {
-  padding: 18px 20px 16px;
+  position: relative;
+  padding: 19px 22px 18px;
   background: linear-gradient(135deg, #1F2D3B 0%, #6B8FBE 100%);
+}
+
+.challenge-header::after {
+  content: '';
+  position: absolute;
+  top: -48px;
+  right: -28px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.08) 26%, rgba(255,255,255,0) 64%);
 }
 
 .challenge-number {
@@ -1411,27 +1431,32 @@ ul { list-style: none; }
 }
 
 .challenge-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: #fff;
-  line-height: 1.45;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  max-width: none;
 }
 
 .challenge-body {
-  padding: 18px 20px;
+  padding: 20px 22px 18px;
   flex: 1;
+  position: relative;
+  z-index: 1;
 }
 .challenge-body p {
-  font-size: 14px;
+  font-size: 14.5px;
   color: var(--color-text-muted);
-  line-height: 1.7;
+  line-height: 1.72;
   margin-bottom: 14px;
 }
 
 .challenge-lead {
   color: var(--color-text) !important;
   font-weight: 600;
-  margin-bottom: 12px !important;
+  margin-bottom: 14px !important;
 }
 
 .challenge-highlights {
@@ -1463,8 +1488,8 @@ ul { list-style: none; }
   padding-left: 18px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-bottom: 14px;
+  gap: 8px;
+  margin-bottom: 18px;
 }
 .challenge-body ol.challenge-tasks { list-style: decimal; }
 .challenge-body ul.challenge-tasks { list-style: disc; }
@@ -1478,10 +1503,11 @@ ul { list-style: none; }
   font-size: 13px !important;
   color: var(--color-text) !important;
   background: var(--color-bg-light);
-  padding: 8px 12px;
-  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  border-radius: 12px;
   margin-bottom: 8px !important;
   border: 1px solid var(--color-border-light);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.65);
 }
 .challenge-metric code {
   font-family: monospace;
@@ -1492,9 +1518,11 @@ ul { list-style: none; }
 }
 
 .challenge-footer {
-  padding: 16px 24px;
+  padding: 16px 22px 18px;
   border-top: 1px solid var(--color-border);
-  background: rgba(245,248,252,0.88);
+  background: linear-gradient(180deg, rgba(245,248,252,0.84) 0%, rgba(241,245,249,0.94) 100%);
+  position: relative;
+  z-index: 1;
 }
 
 /* ============================================================
@@ -1646,8 +1674,9 @@ ul { list-style: none; }
     flex-basis: calc(33.333% - 15px);
     max-width: calc(33.333% - 15px);
   }
-  .competition-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .competition-grid .person-card {
+    flex-basis: calc((100% - 28px) / 3);
+    max-width: calc((100% - 28px) / 3);
   }
 }
 
@@ -1655,6 +1684,14 @@ ul { list-style: none; }
   .about-grid { grid-template-columns: 1fr; }
   .about-panels { grid-template-columns: 1fr; }
   .cfp-grid { grid-template-columns: 1fr; }
+  .challenge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 720px;
+  }
+  .challenge-title {
+    font-size: 15px;
+    white-space: normal;
+  }
   .schedule-grid { grid-template-columns: 1fr 1fr; }
   .schedule-cluster-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1663,12 +1700,23 @@ ul { list-style: none; }
     width: min(46vw, 300px);
     height: min(46vw, 300px);
   }
-  .competition-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .competition-grid .person-card {
+    flex-basis: calc((100% - 14px) / 2);
+    max-width: calc((100% - 14px) / 2);
   }
   #speakers .person-card {
     flex-basis: calc(50% - 11px);
     max-width: calc(50% - 11px);
+  }
+}
+
+@media (max-width: 760px) {
+  .challenge-grid {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+  }
+  .challenge-title {
+    white-space: normal;
   }
 }
 
@@ -1695,7 +1743,10 @@ ul { list-style: none; }
 
   .people-grid { grid-template-columns: 1fr; }
   .organizers-grid { grid-template-columns: repeat(2, 1fr); }
-  .competition-grid { grid-template-columns: 1fr; }
+  .competition-grid .person-card {
+    flex-basis: 100%;
+    max-width: 360px;
+  }
   .person-card { flex-direction: column; align-items: center; text-align: center; }
   .person-name { justify-content: center; }
   #speakers .person-card {
@@ -1714,7 +1765,10 @@ ul { list-style: none; }
   .footer-grid { grid-template-columns: 1fr; }
   .organizers-grid { grid-template-columns: repeat(2, 1fr); }
   .volunteers-grid { grid-template-columns: repeat(2, 1fr); }
-  .competition-grid { grid-template-columns: repeat(2, 1fr); }
+  .competition-grid .person-card {
+    flex-basis: calc((100% - 14px) / 2);
+    max-width: calc((100% - 14px) / 2);
+  }
   .schedule-time { width: auto; font-size: 11px; flex: 0 0 auto; }
   .schedule-item { flex-wrap: wrap; align-items: center; }
   .schedule-content { display: contents; }
