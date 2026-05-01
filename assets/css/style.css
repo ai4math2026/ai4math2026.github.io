@@ -1242,7 +1242,7 @@ ul { list-style: none; }
 .schedule-time {
   flex-shrink: 0;
   width: 104px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--color-text-muted);
   padding-top: 3px;
@@ -1257,7 +1257,7 @@ ul { list-style: none; }
 
 .schedule-tag {
   display: inline-block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1273,7 +1273,7 @@ ul { list-style: none; }
 .schedule-tag.contrib    { background: #E1F0E9; color: #336154; }
 
 .schedule-title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--color-text);
   line-height: 1.6;
@@ -1471,7 +1471,7 @@ ul { list-style: none; }
   z-index: 1;
 }
 .challenge-body p {
-  font-size: 14.5px;
+  font-size: 17px;
   color: var(--color-text-muted);
   line-height: 1.72;
   margin-bottom: 14px;
@@ -1496,7 +1496,7 @@ ul { list-style: none; }
 }
 
 .challenge-highlights li {
-  font-size: 13px;
+  font-size: 15.5px;
   line-height: 1.6;
   color: var(--color-text-muted);
 }
@@ -1518,13 +1518,13 @@ ul { list-style: none; }
 .challenge-body ol.challenge-tasks { list-style: decimal; }
 .challenge-body ul.challenge-tasks { list-style: disc; }
 .challenge-tasks li {
-  font-size: 14px;
+  font-size: 16.5px;
   line-height: 1.65;
   color: var(--color-text);
 }
 
 .challenge-metric {
-  font-size: 13px !important;
+  font-size: 15.5px !important;
   color: var(--color-text) !important;
   background: var(--color-bg-light);
   padding: 10px 12px;
