@@ -1608,6 +1608,13 @@ ul { list-style: none; }
   height: 34px;
 }
 
+.logo-wall-sponsors img {
+  height: 64px;
+}
+.logo-wall-sponsors img[alt="ByteDance"] {
+  height: 52px;
+}
+
 .logo-wall img[alt="ETH Zurich"] {
   height: 30px;
 }
