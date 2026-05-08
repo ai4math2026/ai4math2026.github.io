@@ -1611,6 +1611,15 @@ ul { list-style: none; }
 .logo-wall-sponsors img {
   height: 64px;
 }
+.logo-wall-sponsors img[alt="Amazon Web Services"] {
+  height: 60px;
+}
+.logo-wall-sponsors img[alt="ByteDance"] {
+  height: 54px;
+}
+.logo-wall-sponsors img[alt="Harmonic"] {
+  height: 82px;
+}
 
 .logo-wall img[alt="ETH Zurich"] {
   height: 30px;
