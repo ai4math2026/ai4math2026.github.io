@@ -468,6 +468,7 @@
     </div>
     <div class="cfp-grid">
       <div class="cfp-main">
+        <h3>Topics</h3>
         <p class="cfp-intro">
           We invite submissions on, but not limited to, the following topics:
         </p>
@@ -508,11 +509,11 @@
 
         <div class="cfp-details">
           <h3>Submission Details</h3>
-          <ul>
+          <ul class="cfp-detail-list">
             <li>Papers should be <strong>2–8 pages</strong> (excluding references and supplementary materials)</li>
             <li>All submissions must follow the <strong>ICML 2026 format</strong></li>
             <li>Review process via <strong>OpenReview</strong>, double-blind</li>
-            <li>This workshop is <strong>non-archival</strong>; papers submitted to or accepted at other conferences are also welcome</li>
+            <li>This workshop is <strong>non-archival</strong>, submissions to or accepted at other venues are welcome</li>
             <li>Accepted papers will be presented as posters; select papers invited for contributed talks</li>
           </ul>
           <div class="cfp-actions">
@@ -589,7 +590,7 @@
           <h3 class="challenge-title">Semantic Alignment Evaluation for Autoformalization</h3>
         </div>
         <div class="challenge-body">
-          <p class="challenge-lead">Evaluate whether autoformalization preserves mathematical intent, using the <strong>FormalRx</strong> dataset built on the SCI Error Taxonomy (28 error categories).</p>
+          <p class="challenge-lead">Evaluate whether autoformalization preserves mathematical intent, using the <a href="https://huggingface.co/datasets/LARK-Lab/FormalRx-Test" target="_blank" rel="noopener"><strong>FormalRx-Test</strong></a> dataset built on the SCI Error Taxonomy (28 error categories).</p>
           <ol class="challenge-tasks">
             <li><strong>Verdict:</strong> Is the formalization semantically aligned?</li>
             <li><strong>Categorization:</strong> Identify the error type</li>
@@ -610,14 +611,14 @@
           <h3 class="challenge-title">Theoretical Computer Science Proving in Lean</h3>
         </div>
         <div class="challenge-body">
-          <p class="challenge-lead">Formal theorem proving in TCS using <strong>CSLib</strong>, an open-source Lean 4 library covering problems that go beyond Olympiad-style competition math.</p>
+          <p class="challenge-lead">Formal theorem proving in TCS using <a href="https://www.cslib.io/" target="_blank" rel="noopener"><strong>CSLib</strong></a>, an open-source Lean 4 library covering problems that go beyond Olympiad-style competition math.</p>
           <ul class="challenge-tasks">
             <li>Graph theory &amp; combinatorics</li>
             <li>Computational complexity</li>
             <li>Algorithm correctness</li>
           </ul>
+          <p style="color:var(--color-text); font-size:16.5px; line-height:1.65; margin-bottom:10px;">Cheating prevention is enforced via leanprover/comparator.</p>
           <p class="challenge-metric"><strong>Metric:</strong> Pass Rate (fraction of verified proofs)</p>
-          <p class="challenge-metric">Cheating prevention via <code>leanprover/comparator</code></p>
         </div>
         <div class="challenge-footer">
           <a href="https://www.codabench.org/competitions/16161/" target="_blank" rel="noopener" class="btn btn-small btn-primary">📄 Challenge Page</a>
