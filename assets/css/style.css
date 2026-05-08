@@ -1581,57 +1581,97 @@ ul { list-style: none; }
 /* ============================================================
    Sponsors
    ============================================================ */
-.sponsors-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: stretch;
-  gap: 18px;
-  margin-top: 40px;
-}
-
-.sponsor-card {
+.logo-wall {
+  margin-top: 38px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  min-height: 124px;
-  padding: 22px 24px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,252,0.96) 100%);
-  box-shadow: var(--shadow-sm);
+  align-items: center;
+  gap: 18px 26px;
+  padding: 24px 28px;
+  border: 1px solid rgba(47, 91, 167, 0.10);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,253,0.95) 100%);
+  box-shadow: 0 12px 28px rgba(24, 49, 88, 0.06);
 }
 
-.sponsor-card img {
-  max-width: 100%;
-  max-height: 56px;
+.logo-wall img {
+  display: block;
   width: auto;
-  height: auto;
+  height: 42px;
   object-fit: contain;
+  opacity: 0.98;
 }
 
-.sponsor-card img[alt="ByteDance"] {
-  max-height: 44px;
+.logo-wall img[alt="ByteDance"] {
+  height: 34px;
 }
 
-.sponsors-placeholder {
-  text-align: center;
-  padding: 48px 24px;
-  border: 2px dashed var(--color-border);
-  border-radius: var(--radius-lg);
-  background: rgba(255,255,255,0.72);
-  color: var(--color-text-muted);
-  margin-top: 40px;
+.logo-wall img[alt="ETH Zurich"] {
+  height: 30px;
 }
 
-@media (max-width: 1100px) {
-  .sponsors-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+.logo-wall img[alt="Stanford University"] {
+  height: 40px;
+}
+
+.logo-wall img[alt="The University of Edinburgh"] {
+  height: 62px;
+}
+
+@media (max-width: 900px) {
+  .logo-wall {
+    gap: 16px 22px;
+    padding: 22px 20px;
+  }
+
+  .logo-wall img {
+    height: 38px;
+  }
+
+  .logo-wall img[alt="ByteDance"] {
+    height: 30px;
+  }
+
+  .logo-wall img[alt="ETH Zurich"] {
+    height: 28px;
+  }
+
+  .logo-wall img[alt="Stanford University"] {
+    height: 36px;
+  }
+
+.logo-wall img[alt="The University of Edinburgh"] {
+    height: 54px;
   }
 }
 
 @media (max-width: 640px) {
-  .sponsors-grid {
-    grid-template-columns: 1fr;
+  .logo-wall {
+    gap: 14px 18px;
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .logo-wall img {
+    height: 34px;
+  }
+
+  .logo-wall img[alt="ByteDance"] {
+    height: 28px;
+  }
+
+  .logo-wall img[alt="ETH Zurich"] {
+    height: 24px;
+  }
+
+  .logo-wall img[alt="Stanford University"] {
+    height: 32px;
+  }
+
+  .logo-wall img[alt="The University of Edinburgh"] {
+    height: 46px;
   }
 }
 
