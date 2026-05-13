@@ -2,7 +2,7 @@
 
 **3rd AI for Math Workshop: Toward Self-Evolving Scientific Agents**
 
-Website for the AI for Math workshop at ICML 2026, held on July 10, 2026.
+Website for the AI for Math workshop at ICML 2026, held on July 11, 2026.
 
 ## Deploying to GitHub Pages
 
