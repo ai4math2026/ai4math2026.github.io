@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>allenzhu - Track 2 Leaderboard</title>
+  <meta name="description" content="Per submission detail for allenzhu on the AI4Math 2026 Track 2 leaderboard." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="icon" type="image/png" href="../../../assets/images/logo_small.png" />
+  <link rel="apple-touch-icon" href="../../../assets/images/logo_small.png" />
+  <link rel="stylesheet" href="../../../assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+
+  <style>
+    .det-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+    .det-back:hover { color: var(--color-link); }
+
+    .det-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 820px;
+      margin: 32px auto;
+    }
+    @media (max-width: 700px) {
+      .det-stats { grid-template-columns: 1fr; }
+    }
+    .det-stat {
+      background: var(--color-surface);
+      box-shadow: var(--shadow-sm);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      text-align: left;
+    }
+    .det-stat-value {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--color-primary);
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+    .det-stat-label {
+      margin-top: 8px;
+      font-size: 12.5px;
+      color: var(--color-text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .det-card {
+      background: var(--color-surface);
+      box-shadow: var(--shadow-sm);
+      border-radius: var(--radius-lg);
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    table.det-table { width: 100%; border-collapse: collapse; min-width: 880px; }
+    table.det-table thead th {
+      background: var(--color-bg-tinted);
+      color: var(--color-text);
+      text-align: left;
+      font-weight: 600;
+      font-size: 12.5px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    table.det-table tbody td {
+      padding: 12px 16px;
+      font-size: 14px;
+      border-bottom: 1px solid var(--color-border-light);
+      color: var(--color-text);
+    }
+    table.det-table tbody tr:last-child td { border-bottom: none; }
+    table.det-table tbody tr:hover { background: var(--color-bg-light); }
+    .det-file {
+      font-size: 14px;
+      color: var(--color-text);
+      white-space: nowrap;
+      padding-left: 32px !important;
+    }
+    .det-thm {
+      font-family: "SFMono-Regular", "Menlo", "Consolas", monospace;
+      font-size: 12.5px;
+      color: var(--color-text);
+      white-space: nowrap;
+    }
+    .det-score {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+      width: 90px;
+      white-space: nowrap;
+    }
+    .det-status { width: 96px; white-space: nowrap; }
+    .det-pill {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .det-pill.pending { background: #FFF3CD; color: #856404; }
+    .det-pill.pass    { background: #E8F5E9; color: #2E7D32; }
+    .det-pill.fail    { background: #FDECEA; color: #B71C1C; }
+    .det-pill.miss    { background: #ECEFF1; color: #455A64; }
+
+    .det-section-row td {
+      background: var(--color-bg-tinted) !important;
+      font-weight: 600;
+      font-size: 12.5px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text);
+      padding: 11px 16px !important;
+      box-shadow: inset 3px 0 0 var(--color-primary);
+    }
+
+    .det-phase-row td {
+      background: var(--color-bg-tinted) !important;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-primary-dark);
+      padding: 14px 16px !important;
+      border-top: 2px solid var(--color-border) !important;
+      box-shadow: inset 5px 0 0 var(--color-primary-dark);
+    }
+
+    .det-subtotal-row td {
+      background: var(--color-bg-light) !important;
+      font-weight: 700;
+      font-size: 13.5px;
+      color: var(--color-text);
+      padding: 12px 16px !important;
+    }
+    .det-subtotal-row .det-score {
+      color: var(--color-text);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .det-total-row td {
+      background: var(--color-bg-tinted) !important;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--color-text);
+      padding: 16px 16px !important;
+      border-top: 2px solid var(--color-primary) !important;
+    }
+    .det-total-row .det-score {
+      font-size: 16px;
+      color: var(--color-primary-dark);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .det-foot {
+      max-width: 820px;
+      margin: 28px auto 0;
+      font-size: 13.5px;
+      color: var(--color-text-light);
+      line-height: 1.6;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar" class="navbar">
+  <div class="nav-container">
+    <a class="nav-logo" href="../../../index.html">
+      <img src="../../../assets/images/logo_small.png" alt="AI4Math Workshop logo" />
+      <span>AI4Math @ ICML 2026</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../../../index.html#about">About</a></li>
+      <li><a href="../../../index.html#news">News</a></li>
+      <li><a href="../../../index.html#speakers">Speakers</a></li>
+      <li><a href="../../../index.html#schedule">Schedule</a></li>
+      <li><a href="../../../index.html#cfp">Call for Papers</a></li>
+      <li><a href="../../../index.html#challenge">Challenge</a></li>
+      <li><a href="../../../index.html#committee">Committee</a></li>
+      <li><a href="../../../index.html#sponsors">Partners</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<section class="section section-white" style="padding-top: 140px;">
+  <div class="container">
+    <a class="det-back" href="../index.html">&larr; Back to leaderboard</a>
+
+    <h2 class="section-title">allenzhu</h2>
+    <p class="section-subtitle">Per challenge breakdown for submission <code>719676</code> on 2026-05-09 UTC. Verifier: <code>SafeVerify</code>. Last updated 2026-05-28 10:16 UTC.</p>
+
+    <div class="det-stats">
+      <div class="det-stat">
+        <div class="det-stat-value">320 / 1000</div>
+        <div class="det-stat-label">Total Score</div>
+      </div>
+      <div class="det-stat">
+        <div class="det-stat-value">27 / 34</div>
+        <div class="det-stat-label">Problems Solved</div>
+      </div>
+      <div class="det-stat">
+        <div class="det-stat-value">32.0%</div>
+        <div class="det-stat-label">Score %</div>
+      </div>
+    </div>
+
+    <div class="det-card">
+      <table class="det-table">
+        <thead>
+          <tr>
+            <th>File</th>
+            <th>Theorem</th>
+            <th class="det-score">Score</th>
+            <th class="det-status">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="det-phase-row"><td colspan="4">Phase 1</td></tr>
+          <tr class="det-section-row"><td colspan="4">Binary Heap and Dijkstra</td></tr>
+          <tr><td class="det-file">Challenge_BinaryHeap_1.lean</td><td class="det-thm" title="heapify_correctness">heapify_correctness</td><td class="det-score">25 / 25</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_BinaryHeap_2.lean</td><td class="det-thm" title="extract_min_correctness">extract_min_correctness</td><td class="det-score">25 / 25</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_BinaryHeap_3.lean</td><td class="det-thm" title="insert_correctness">insert_correctness</td><td class="det-score">25 / 25</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_BinaryHeap_4.lean</td><td class="det-thm" title="decrease_priority_correctness">decrease_priority_correctness</td><td class="det-score">25 / 25</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Dijkstra_1.lean</td><td class="det-thm" title="BinaryHeap.extract_min_is_someHeap">extract_min_is_someHeap</td><td class="det-score">10 / 10</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Dijkstra_2.lean</td><td class="det-thm" title="dijkstra_terminate">dijkstra_terminate</td><td class="det-score">10 / 10</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Dijkstra_3.lean</td><td class="det-thm" title="dijkstra_correctness">dijkstra_correctness</td><td class="det-score">0 / 80</td><td class="det-status"><span class="det-pill fail">FAIL</span></td></tr>
+          <tr class="det-section-row"><td colspan="4">Minimum Spanning Tree</td></tr>
+          <tr><td class="det-file">Challenge_Kruskal.lean</td><td class="det-thm" title="kruskal_computes_MST">kruskal_computes_MST</td><td class="det-score">0 / 100</td><td class="det-status"><span class="det-pill fail">FAIL</span></td></tr>
+          <tr class="det-section-row"><td colspan="4">Segment Tree</td></tr>
+          <tr><td class="det-file">Challenge_CoverageIntervalDefs.lean</td><td class="det-thm" title="SegmentTree.coverage_interval">coverage_interval</td><td class="det-score">20 / 20</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Build.lean</td><td class="det-thm" title="build">build</td><td class="det-score">40 / 40</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Query_1.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.query_correctness">query_correctness</td><td class="det-score">20 / 20</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Query_2.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.query_time">query_time</td><td class="det-score">20 / 20</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr class="det-section-row"><td colspan="4">Treap analysis (probabilistic)</td></tr>
+          <tr><td class="det-file">Challenge_Analysis_1.lean</td><td class="det-thm" title="prob_is_ancestor">prob_is_ancestor</td><td class="det-score">10 / 10</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Analysis_2.lean</td><td class="det-thm" title="expected_depth">expected_depth</td><td class="det-score">30 / 30</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr class="det-section-row"><td colspan="4">Treap algorithms</td></tr>
+          <tr><td class="det-file">Challenge_Treap_1.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.all_keys_union_merge">all_keys_union_merge</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_2.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.split_properties">split_properties</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_3.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.split_correct">split_correct</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_4.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.splitUpper_correct">splitUpper_correct</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_5.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.merge_IsBST">merge_IsBST</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_6.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.merge_IsHeap">merge_IsHeap</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_7.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.insert_inserts_element">insert_inserts_element</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_8.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.delete_deletes_element">delete_deletes_element</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_9.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.find_finds_element">find_finds_element</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_10.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.splitT_correctness">splitT_correctness</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_11.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.splitT_time">splitT_time</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_12.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.splitUpperT_correctness">splitUpperT_correctness</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_13.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.splitUpperT_time">splitUpperT_time</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_14.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.mergeT_correctness">mergeT_correctness</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr><td class="det-file">Challenge_Treap_15.lean</td><td class="det-thm" title="Cslib.Algorithms.Lean.TimeM.TreapLogic.mergeT_time">mergeT_time</td><td class="det-score">4 / 4</td><td class="det-status"><span class="det-pill pass">PASS</span></td></tr>
+          <tr class="det-subtotal-row"><td colspan="2">Phase 1 subtotal</td><td class="det-score">320 / 500</td><td></td></tr>
+          <tr class="det-phase-row"><td colspan="4">Phase 2</td></tr>
+          <tr class="det-section-row"><td colspan="4">Splay Tree</td></tr>
+          <tr><td class="det-file">Challenge_Splay_Sequential.lean</td><td class="det-thm" title="Splay.sequential">sequential</td><td class="det-score">0 / 50</td><td class="det-status"><span class="det-pill fail">FAIL</span></td></tr>
+          <tr><td class="det-file">Challenge_Splay_Deque.lean</td><td class="det-thm" title="Splay.deque">deque</td><td class="det-score">0 / 50</td><td class="det-status"><span class="det-pill fail">FAIL</span></td></tr>
+          <tr><td class="det-file">Challenge_Splay_DequeConjecture.lean</td><td class="det-thm" title="Splay.deque_conjecture">deque_conjecture</td><td class="det-score">0 / 100</td><td class="det-status"><span class="det-pill miss">MISSING</span></td></tr>
+          <tr><td class="det-file">Challenge_Splay_TraversalConjecture.lean</td><td class="det-thm" title="Splay.traversal_conjecture">traversal_conjecture</td><td class="det-score">0 / 200</td><td class="det-status"><span class="det-pill miss">MISSING</span></td></tr>
+          <tr class="det-section-row"><td colspan="4">Spanner</td></tr>
+          <tr><td class="det-file">Challenge_Spanner.lean</td><td class="det-thm" title="Spanner.spanner_exists">spanner_exists</td><td class="det-score">0 / 100</td><td class="det-status"><span class="det-pill fail">FAIL</span></td></tr>
+          <tr class="det-subtotal-row"><td colspan="2">Phase 2 subtotal</td><td class="det-score">0 / 500</td><td></td></tr>
+          <tr class="det-total-row"><td colspan="2">Total</td><td class="det-score">320 / 1000</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="det-foot">
+      Each submission must pass <code>lake build</code> against the reference project and the named theorem must use only the permitted axioms <code>propext</code>, <code>Quot.sound</code>, <code>Classical.choice</code>. Files containing <code>sorry</code> score zero on the corresponding problem.
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>3rd AI for Math Workshop</h4>
+        <p>Toward Self-Evolving Scientific Agents<br/>
+          ICML 2026 &mdash; Saturday, July 11, 2026
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../../../index.html#about">About</a></li>
+          <li><a href="../../../index.html#speakers">Speakers</a></li>
+          <li><a href="../../../index.html#cfp">Call for Papers</a></li>
+          <li><a href="../../../index.html#challenge">Challenge</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>For inquiries, please contact:</p>
+        <p><a href="mailto:ai4mathicml@gmail.com">ai4mathicml@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AI for Math Workshop Organizers.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../../../assets/js/main.js"></script>
+</body>
+</html>

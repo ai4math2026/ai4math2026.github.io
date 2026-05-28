@@ -168,7 +168,7 @@
 
     <div class="rules-section">
       <h3>Overview</h3>
-      <p>Track 2 has 32 scored challenges worth 700 points in total, split across two phases.</p>
+      <p>Track 2 has 34 scored challenges worth 1000 points in total, split across two phases.</p>
       <table class="rules-table">
         <thead>
           <tr><th>Phase</th><th>Area</th><th class="num">Challenges</th><th class="num">Points</th></tr>
@@ -179,14 +179,17 @@
           <tr><td>Segment Tree</td><td class="num">4</td><td class="num">100</td></tr>
           <tr><td>Treap analysis (probabilistic)</td><td class="num">2</td><td class="num">40</td></tr>
           <tr><td>Treap algorithms</td><td class="num">15</td><td class="num">60</td></tr>
-          <tr><td rowspan="2">Phase 2</td><td>Splay Tree (sequential, deque)</td><td class="num">2</td><td class="num">100</td></tr>
+          <tr><td rowspan="5">Phase 2</td><td>Splay Tree sequential</td><td class="num">1</td><td class="num">50</td></tr>
+          <tr><td>Splay Tree deque</td><td class="num">1</td><td class="num">50</td></tr>
+          <tr><td>Splay Tree Deque Conjecture (open problem)</td><td class="num">1</td><td class="num">100</td></tr>
+          <tr><td>Splay Tree Traversal Conjecture (open problem)</td><td class="num">1</td><td class="num">200</td></tr>
           <tr><td>Spanner</td><td class="num">1</td><td class="num">100</td></tr>
         </tbody>
         <tfoot>
-          <tr><td colspan="2">Total</td><td class="num">32</td><td class="num">700</td></tr>
+          <tr><td colspan="2">Total</td><td class="num">34</td><td class="num">1000</td></tr>
         </tfoot>
       </table>
-      <p>An additional file <strong>Challenge_Splay_DequeConjecture.lean</strong> ships with Phase 2 as a bonus. It states the classical open Deque Conjecture and is not scored, but a successful proof would be a significant result.</p>
+      <p>The Splay Tree challenges include two long standing open problems in dynamic data structures, both due to Sleator and Tarjan. The <strong>Deque Conjecture</strong> (file <strong>Challenge_Splay_DequeConjecture.lean</strong>, 100 pts) asks for a tighter <code>c · n</code> bound on the same input class as the regular Splay deque challenge (sequences avoiding both <code>213</code> and <code>231</code>). The <strong>Traversal Conjecture</strong> (file <strong>Challenge_Splay_TraversalConjecture.lean</strong>, 200 pts) asks for the same <code>c · n</code> bound on the broader class of sequences avoiding only <code>231</code>, which covers BST preorder, postorder, and other traversal patterns. A successful resolution of either would be a major theoretical result in its own right.</p>
     </div>
 
     <div class="rules-section">
@@ -205,8 +208,10 @@
       <p>The final ranking is computed on the combined Phase 1 and Phase 2 score out of 700. Two submissions are ranked by the first criterion below on which they differ.</p>
       <ol class="rules-cascade">
         <li><strong>Total score (descending).</strong>Higher total wins.</li>
-        <li><strong>Smaller constant on the Splay Tree deque problem (ascending).</strong>If both submissions solved this problem, the one proving the tighter constant in the time bound wins. A submission that did not solve the problem ranks below one that did. If neither solved it, this level is skipped.</li>
-        <li><strong>Smaller constant on the Splay Tree sequential problem (ascending).</strong>Same idea, applied to the other Splay Tree problem.</li>
+        <li><strong>Smaller constant on the Traversal Conjecture (ascending).</strong>If both submissions solved this problem, the one proving the tighter constant in the time bound wins. A submission that did not solve the problem ranks below one that did. If neither solved it, this level is skipped. This is the top quality tie break because the Traversal Conjecture is the hardest scored challenge in the track.</li>
+        <li><strong>Smaller constant on the Deque Conjecture (ascending).</strong>Same idea, applied to the Deque Conjecture.</li>
+        <li><strong>Smaller constant on the Splay Tree deque problem (ascending).</strong>Same idea, applied to the regular Splay deque challenge.</li>
+        <li><strong>Smaller constant on the Splay Tree sequential problem (ascending).</strong>Same idea, applied to the Splay sequential challenge.</li>
         <li><strong>Proof heartbeats (ascending).</strong>Heartbeats are Lean's deterministic measure of elaboration work, machine independent and stable run to run for a fixed toolchain. The more efficient proof wins.</li>
         <li><strong>Proof file size in bytes (ascending).</strong>UTF-8 bytes of the submitted files with all comments stripped. The more concise proof wins.</li>
         <li><strong>Submission time (ascending).</strong>The earlier submission wins.</li>
