@@ -42,7 +42,7 @@
     table.lb-table thead th {
       background: var(--color-bg-tinted);
       color: var(--color-text);
-      text-align: left;
+      text-align: center;
       font-weight: 600;
       font-size: 12.5px;
       letter-spacing: 0.05em;
@@ -82,6 +82,7 @@
       color: var(--color-primary-dark);
       width: 60px;
       font-variant-numeric: tabular-nums;
+      text-align: center;
     }
     .lb-submitter {
       font-weight: 600;
@@ -98,6 +99,11 @@
       font-weight: 600;
       text-align: right;
       font-variant-numeric: tabular-nums;
+    }
+    .lb-subid {
+      text-align: left;
+      color: var(--color-muted);
+      font-size: 0.85em;
     }
     .lb-time {
       color: var(--color-text-muted);
@@ -165,14 +171,14 @@
     <p class="section-subtitle">TCS Proving in Lean. Combined Phase 1 + Phase 2 ranking out of 700 points. See <a href="../scoring-rules/">Scoring Rules</a> for the full per problem scoring criteria and the tie-break cascade.</p>
 
     <div class="lb-note">
-      <strong>Update cadence:</strong> we sweep Codabench for new submissions roughly every 48 hours, evaluate them shortly after (typically minutes to a few hours depending on submission count), and refresh this page as soon as scoring finishes.
+      All times on this page are UTC. We sweep Codabench for new submissions roughly every 48 hours and score each new batch shortly after.
     </div>
 
     <div class="lb-meta">
-      <span><strong>Last updated:</strong> 2026-05-28 11:18 UTC</span>
-      <span><strong>Last collection:</strong> 2026-05-22 UTC</span>
-      <span><strong>Verifier:</strong> SafeVerify</span>
-      <span><strong>Submissions scored:</strong> 50</span>
+      <span><strong>Last updated:</strong> 2026-06-01 19:28</span>
+      <span><strong>Last collection:</strong> 2026-06-01 15:45</span>
+      <span><strong>Verifier:</strong> safeverify</span>
+      <span><strong>Submissions scored:</strong> 75</span>
     </div>
 
     <div class="lb-card">
@@ -187,557 +193,908 @@
             <th class="lb-cell-num sortable" data-type="num-comma">Heartbeats</th>
             <th class="lb-cell-num sortable" data-type="num-comma">Bytes</th>
             <th class="sortable" data-type="string">Submission Time</th>
+            <th class="lb-subid sortable" data-type="num">ID</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td class="lb-rank">1</td>
+            <td class="lb-submitter"><a href="771718/">jasperdekoninck</a></td>
+            <td class="lb-cell-num">30 / 34</td>
+            <td class="lb-cell-num">60.0%</td>
+            <td class="lb-score">600 / 1000</td>
+            <td class="lb-cell-num">368,274</td>
+            <td class="lb-cell-num">348,693</td>
+            <td class="lb-time">2026-05-31 19:03</td>
+            <td class="lb-subid">771718</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">2</td>
+            <td class="lb-submitter"><a href="773936/">allenzhu</a></td>
+            <td class="lb-cell-num">30 / 34</td>
+            <td class="lb-cell-num">60.0%</td>
+            <td class="lb-score">600 / 1000</td>
+            <td class="lb-cell-num">815,411</td>
+            <td class="lb-cell-num">403,086</td>
+            <td class="lb-time">2026-06-01 15:45</td>
+            <td class="lb-subid">773936</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">3</td>
+            <td class="lb-submitter"><a href="763078/">nielstron</a></td>
+            <td class="lb-cell-num">30 / 34</td>
+            <td class="lb-cell-num">60.0%</td>
+            <td class="lb-score">600 / 1000</td>
+            <td class="lb-cell-num">967,370</td>
+            <td class="lb-cell-num">362,059</td>
+            <td class="lb-time">2026-05-28 18:01</td>
+            <td class="lb-subid">763078</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">4</td>
+            <td class="lb-submitter"><a href="765555/">chensun</a></td>
+            <td class="lb-cell-num">30 / 34</td>
+            <td class="lb-cell-num">60.0%</td>
+            <td class="lb-score">600 / 1000</td>
+            <td class="lb-cell-num">967,370</td>
+            <td class="lb-cell-num">362,059</td>
+            <td class="lb-time">2026-05-29 15:53</td>
+            <td class="lb-subid">765555</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">5</td>
+            <td class="lb-submitter"><a href="763640/">ctree4113</a></td>
+            <td class="lb-cell-num">30 / 34</td>
+            <td class="lb-cell-num">60.0%</td>
+            <td class="lb-score">600 / 1000</td>
+            <td class="lb-cell-num">1,299,434</td>
+            <td class="lb-cell-num">230,375</td>
+            <td class="lb-time">2026-05-28 21:44</td>
+            <td class="lb-subid">763640</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">6</td>
+            <td class="lb-submitter"><a href="770105/">allenzhu</a></td>
+            <td class="lb-cell-num">29 / 34</td>
+            <td class="lb-cell-num">50.0%</td>
+            <td class="lb-score">500 / 1000</td>
+            <td class="lb-cell-num">717,950</td>
+            <td class="lb-cell-num">348,924</td>
+            <td class="lb-time">2026-05-31 04:03</td>
+            <td class="lb-subid">770105</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">7</td>
             <td class="lb-submitter"><a href="736166/">jasperdekoninck</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
             <td class="lb-cell-num">782,199</td>
             <td class="lb-cell-num">287,249</td>
-            <td class="lb-time">2026-05-17 14:15 UTC</td>
+            <td class="lb-time">2026-05-17 14:15</td>
+            <td class="lb-subid">736166</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">2</td>
+            <td class="lb-rank">8</td>
+            <td class="lb-submitter"><a href="733268/">jasperdekoninck</a></td>
+            <td class="lb-cell-num">29 / 34</td>
+            <td class="lb-cell-num">50.0%</td>
+            <td class="lb-score">500 / 1000</td>
+            <td class="lb-cell-num">782,200</td>
+            <td class="lb-cell-num">287,249</td>
+            <td class="lb-time">2026-05-15 19:22</td>
+            <td class="lb-subid">733268</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">9</td>
             <td class="lb-submitter"><a href="743754/">robertboy18</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
             <td class="lb-cell-num">822,596</td>
             <td class="lb-cell-num">262,701</td>
-            <td class="lb-time">2026-05-20 UTC</td>
+            <td class="lb-time">2026-05-20 22:29</td>
+            <td class="lb-subid">743754</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">3</td>
+            <td class="lb-rank">10</td>
+            <td class="lb-submitter"><a href="767385/">janko</a></td>
+            <td class="lb-cell-num">29 / 34</td>
+            <td class="lb-cell-num">50.0%</td>
+            <td class="lb-score">500 / 1000</td>
+            <td class="lb-cell-num">849,667</td>
+            <td class="lb-cell-num">228,416</td>
+            <td class="lb-time">2026-05-30 08:25</td>
+            <td class="lb-subid">767385</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">11</td>
             <td class="lb-submitter"><a href="745249/">sunny99</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
             <td class="lb-cell-num">869,102</td>
             <td class="lb-cell-num">288,822</td>
-            <td class="lb-time">2026-05-21 UTC</td>
+            <td class="lb-time">2026-05-21 12:47</td>
+            <td class="lb-subid">745249</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">4</td>
+            <td class="lb-rank">12</td>
             <td class="lb-submitter"><a href="746119/">bhwang</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
             <td class="lb-cell-num">874,207</td>
             <td class="lb-cell-num">373,720</td>
-            <td class="lb-time">2026-05-21 UTC</td>
+            <td class="lb-time">2026-05-21 19:54</td>
+            <td class="lb-subid">746119</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">5</td>
+            <td class="lb-rank">13</td>
+            <td class="lb-submitter"><a href="767156/">janko</a></td>
+            <td class="lb-cell-num">29 / 34</td>
+            <td class="lb-cell-num">50.0%</td>
+            <td class="lb-score">500 / 1000</td>
+            <td class="lb-cell-num">891,959</td>
+            <td class="lb-cell-num">231,854</td>
+            <td class="lb-time">2026-05-30 06:56</td>
+            <td class="lb-subid">767156</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">14</td>
             <td class="lb-submitter"><a href="740372/">jszhang</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
             <td class="lb-cell-num">942,144</td>
             <td class="lb-cell-num">287,126</td>
-            <td class="lb-time">2026-05-19 08:48 UTC</td>
+            <td class="lb-time">2026-05-19 08:48</td>
+            <td class="lb-subid">740372</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">6</td>
+            <td class="lb-rank">15</td>
             <td class="lb-submitter"><a href="719913/">marcusm117</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
             <td class="lb-cell-num">992,172</td>
             <td class="lb-cell-num">447,944</td>
-            <td class="lb-time">2026-05-09 UTC</td>
+            <td class="lb-time">2026-05-09 23:00</td>
+            <td class="lb-subid">719913</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">7</td>
+            <td class="lb-rank">16</td>
             <td class="lb-submitter"><a href="738033/">marcusm117</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
             <td class="lb-cell-num">992,172</td>
             <td class="lb-cell-num">447,944</td>
-            <td class="lb-time">2026-05-18 05:40 UTC</td>
+            <td class="lb-time">2026-05-18 05:40</td>
+            <td class="lb-subid">738033</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">8</td>
+            <td class="lb-rank">17</td>
+            <td class="lb-submitter"><a href="755093/">sandeepsaluru</a></td>
+            <td class="lb-cell-num">29 / 34</td>
+            <td class="lb-cell-num">50.0%</td>
+            <td class="lb-score">500 / 1000</td>
+            <td class="lb-cell-num">1,907,006</td>
+            <td class="lb-cell-num">402,173</td>
+            <td class="lb-time">2026-05-25 18:38</td>
+            <td class="lb-subid">755093</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">18</td>
             <td class="lb-submitter"><a href="744922/">maximiliano</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
             <td class="lb-cell-num">2,688,033</td>
             <td class="lb-cell-num">225,489</td>
-            <td class="lb-time">2026-05-21 UTC</td>
+            <td class="lb-time">2026-05-21 10:18</td>
+            <td class="lb-subid">744922</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">9</td>
+            <td class="lb-rank">19</td>
             <td class="lb-submitter"><a href="739612/">maximiliano</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
             <td class="lb-cell-num">2,690,110</td>
             <td class="lb-cell-num">224,471</td>
-            <td class="lb-time">2026-05-18 20:58 UTC</td>
+            <td class="lb-time">2026-05-18 20:58</td>
+            <td class="lb-subid">739612</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">10</td>
+            <td class="lb-rank">20</td>
             <td class="lb-submitter"><a href="739592/">maximiliano</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
             <td class="lb-cell-num">2,692,873</td>
             <td class="lb-cell-num">223,451</td>
-            <td class="lb-time">2026-05-18 20:38 UTC</td>
+            <td class="lb-time">2026-05-18 20:38</td>
+            <td class="lb-subid">739592</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">11</td>
+            <td class="lb-rank">21</td>
+            <td class="lb-submitter"><a href="733698/">aurasoph</a></td>
+            <td class="lb-cell-num">29 / 34</td>
+            <td class="lb-cell-num">50.0%</td>
+            <td class="lb-score">500 / 1000</td>
+            <td class="lb-cell-num">3,738,423</td>
+            <td class="lb-cell-num">252,385</td>
+            <td class="lb-time">2026-05-16 05:16</td>
+            <td class="lb-subid">733698</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">22</td>
             <td class="lb-submitter"><a href="738406/">aurasoph</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
             <td class="lb-cell-num">3,738,541</td>
             <td class="lb-cell-num">252,357</td>
-            <td class="lb-time">2026-05-18 09:12 UTC</td>
+            <td class="lb-time">2026-05-18 09:12</td>
+            <td class="lb-subid">738406</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">12</td>
+            <td class="lb-rank">23</td>
             <td class="lb-submitter"><a href="739590/">xvade</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
             <td class="lb-cell-num">5,944,287</td>
             <td class="lb-cell-num">258,717</td>
-            <td class="lb-time">2026-05-18 20:37 UTC</td>
+            <td class="lb-time">2026-05-18 20:37</td>
+            <td class="lb-subid">739590</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">13</td>
+            <td class="lb-rank">24</td>
             <td class="lb-submitter"><a href="721535/">aurasoph</a></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">49.6%</td>
             <td class="lb-score">496 / 1000</td>
             <td class="lb-cell-num">3,319,245</td>
             <td class="lb-cell-num">211,060</td>
-            <td class="lb-time">2026-05-10 UTC</td>
+            <td class="lb-time">2026-05-10 21:22</td>
+            <td class="lb-subid">721535</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">14</td>
+            <td class="lb-rank">25</td>
             <td class="lb-submitter"><a href="745091/">hypergalois</a></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">48.0%</td>
             <td class="lb-score">480 / 1000</td>
             <td class="lb-cell-num">1,052,421</td>
             <td class="lb-cell-num">273,586</td>
-            <td class="lb-time">2026-05-21 UTC</td>
+            <td class="lb-time">2026-05-21 11:18</td>
+            <td class="lb-subid">745091</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">15</td>
+            <td class="lb-rank">26</td>
             <td class="lb-submitter"><a href="739714/">sunny99</a></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
             <td class="lb-cell-num">838,662</td>
             <td class="lb-cell-num">237,875</td>
-            <td class="lb-time">2026-05-18 23:40 UTC</td>
+            <td class="lb-time">2026-05-18 23:40</td>
+            <td class="lb-subid">739714</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">16</td>
+            <td class="lb-rank">27</td>
             <td class="lb-submitter"><a href="739715/">sunny99</a></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
             <td class="lb-cell-num">838,662</td>
             <td class="lb-cell-num">237,875</td>
-            <td class="lb-time">2026-05-18 23:41 UTC</td>
+            <td class="lb-time">2026-05-18 23:41</td>
+            <td class="lb-subid">739715</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">17</td>
+            <td class="lb-rank">28</td>
             <td class="lb-submitter"><a href="740814/">sunny99</a></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
             <td class="lb-cell-num">838,662</td>
             <td class="lb-cell-num">237,875</td>
-            <td class="lb-time">2026-05-19 12:52 UTC</td>
+            <td class="lb-time">2026-05-19 12:52</td>
+            <td class="lb-subid">740814</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">18</td>
+            <td class="lb-rank">29</td>
+            <td class="lb-submitter"><a href="735789/">xuanfeiren</a></td>
+            <td class="lb-cell-num">28 / 34</td>
+            <td class="lb-cell-num">40.0%</td>
+            <td class="lb-score">400 / 1000</td>
+            <td class="lb-cell-num">1,333,675</td>
+            <td class="lb-cell-num">355,300</td>
+            <td class="lb-time">2026-05-17 08:48</td>
+            <td class="lb-subid">735789</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">30</td>
             <td class="lb-submitter"><a href="739765/">xuanfeiren</a></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
             <td class="lb-cell-num">1,455,897</td>
             <td class="lb-cell-num">369,770</td>
-            <td class="lb-time">2026-05-19 01:08 UTC</td>
+            <td class="lb-time">2026-05-19 01:08</td>
+            <td class="lb-subid">739765</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">19</td>
+            <td class="lb-rank">31</td>
             <td class="lb-submitter"><a href="739971/">allenanie</a></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
             <td class="lb-cell-num">1,455,897</td>
             <td class="lb-cell-num">369,770</td>
-            <td class="lb-time">2026-05-19 04:20 UTC</td>
+            <td class="lb-time">2026-05-19 04:20</td>
+            <td class="lb-subid">739971</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">20</td>
+            <td class="lb-rank">32</td>
             <td class="lb-submitter"><a href="736267/">maximiliano</a></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
             <td class="lb-cell-num">2,302,898</td>
             <td class="lb-cell-num">147,529</td>
-            <td class="lb-time">2026-05-17 15:28 UTC</td>
+            <td class="lb-time">2026-05-17 15:28</td>
+            <td class="lb-subid">736267</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">21</td>
+            <td class="lb-rank">33</td>
             <td class="lb-submitter"><a href="739516/">bhwang</a></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
             <td class="lb-cell-num">515,038</td>
             <td class="lb-cell-num">184,688</td>
-            <td class="lb-time">2026-05-18 19:07 UTC</td>
+            <td class="lb-time">2026-05-18 19:07</td>
+            <td class="lb-subid">739516</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">22</td>
+            <td class="lb-rank">34</td>
             <td class="lb-submitter"><a href="720098/">allenzhu</a></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
             <td class="lb-cell-num">547,790</td>
             <td class="lb-cell-num">173,841</td>
-            <td class="lb-time">2026-05-10 UTC</td>
+            <td class="lb-time">2026-05-10 04:31</td>
+            <td class="lb-subid">720098</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">23</td>
+            <td class="lb-rank">35</td>
             <td class="lb-submitter"><a href="719676/">allenzhu</a></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
             <td class="lb-cell-num">547,793</td>
             <td class="lb-cell-num">173,873</td>
-            <td class="lb-time">2026-05-09 UTC</td>
+            <td class="lb-time">2026-05-09 17:54</td>
+            <td class="lb-subid">719676</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">24</td>
+            <td class="lb-rank">36</td>
             <td class="lb-submitter"><a href="720121/">allenzhu</a></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
             <td class="lb-cell-num">607,819</td>
             <td class="lb-cell-num">202,997</td>
-            <td class="lb-time">2026-05-10 UTC</td>
+            <td class="lb-time">2026-05-10 04:55</td>
+            <td class="lb-subid">720121</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">24</td>
+            <td class="lb-rank">37</td>
             <td class="lb-submitter"><a href="720124/">allenzhu</a></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
             <td class="lb-cell-num">607,819</td>
             <td class="lb-cell-num">202,997</td>
-            <td class="lb-time">2026-05-10 UTC</td>
+            <td class="lb-time">2026-05-10 04:56</td>
+            <td class="lb-subid">720124</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">26</td>
+            <td class="lb-rank">38</td>
+            <td class="lb-submitter"><a href="729444/">jasperdekoninck</a></td>
+            <td class="lb-cell-num">27 / 34</td>
+            <td class="lb-cell-num">32.0%</td>
+            <td class="lb-score">320 / 1000</td>
+            <td class="lb-cell-num">629,882</td>
+            <td class="lb-cell-num">150,822</td>
+            <td class="lb-time">2026-05-14 08:43</td>
+            <td class="lb-subid">729444</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">39</td>
             <td class="lb-submitter"><a href="738795/">sunny99</a></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
             <td class="lb-cell-num">654,555</td>
             <td class="lb-cell-num">137,940</td>
-            <td class="lb-time">2026-05-18 12:58 UTC</td>
+            <td class="lb-time">2026-05-18 12:58</td>
+            <td class="lb-subid">738795</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">27</td>
+            <td class="lb-rank">40</td>
             <td class="lb-submitter"><a href="738805/">sunny99</a></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
             <td class="lb-cell-num">654,555</td>
             <td class="lb-cell-num">137,940</td>
-            <td class="lb-time">2026-05-18 13:06 UTC</td>
+            <td class="lb-time">2026-05-18 13:06</td>
+            <td class="lb-subid">738805</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">28</td>
+            <td class="lb-rank">41</td>
+            <td class="lb-submitter"><a href="767100/">janko</a></td>
+            <td class="lb-cell-num">27 / 34</td>
+            <td class="lb-cell-num">32.0%</td>
+            <td class="lb-score">320 / 1000</td>
+            <td class="lb-cell-num">695,777</td>
+            <td class="lb-cell-num">105,029</td>
+            <td class="lb-time">2026-05-30 06:31</td>
+            <td class="lb-subid">767100</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">42</td>
+            <td class="lb-submitter"><a href="733497/">xuanfeiren</a></td>
+            <td class="lb-cell-num">27 / 34</td>
+            <td class="lb-cell-num">32.0%</td>
+            <td class="lb-score">320 / 1000</td>
+            <td class="lb-cell-num">893,644</td>
+            <td class="lb-cell-num">158,503</td>
+            <td class="lb-time">2026-05-16 01:26</td>
+            <td class="lb-subid">733497</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">42</td>
+            <td class="lb-submitter"><a href="733498/">xuanfeiren</a></td>
+            <td class="lb-cell-num">27 / 34</td>
+            <td class="lb-cell-num">32.0%</td>
+            <td class="lb-score">320 / 1000</td>
+            <td class="lb-cell-num">893,644</td>
+            <td class="lb-cell-num">158,503</td>
+            <td class="lb-time">2026-05-16 01:26</td>
+            <td class="lb-subid">733498</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">44</td>
             <td class="lb-submitter"><a href="740669/">guojing0</a></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
             <td class="lb-cell-num">1,007,873</td>
             <td class="lb-cell-num">133,007</td>
-            <td class="lb-time">2026-05-19 11:29 UTC</td>
+            <td class="lb-time">2026-05-19 11:29</td>
+            <td class="lb-subid">740669</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">29</td>
+            <td class="lb-rank">45</td>
             <td class="lb-submitter"><a href="736752/">auraq</a></td>
             <td class="lb-cell-num">23 / 34</td>
             <td class="lb-cell-num">27.2%</td>
             <td class="lb-score">272 / 1000</td>
             <td class="lb-cell-num">567,430</td>
             <td class="lb-cell-num">133,787</td>
-            <td class="lb-time">2026-05-17 21:11 UTC</td>
+            <td class="lb-time">2026-05-17 21:11</td>
+            <td class="lb-subid">736752</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">30</td>
+            <td class="lb-rank">46</td>
+            <td class="lb-submitter"><a href="766564/">janko</a></td>
+            <td class="lb-cell-num">23 / 34</td>
+            <td class="lb-cell-num">26.0%</td>
+            <td class="lb-score">260 / 1000</td>
+            <td class="lb-cell-num">654,082</td>
+            <td class="lb-cell-num">87,715</td>
+            <td class="lb-time">2026-05-30 02:11</td>
+            <td class="lb-subid">766564</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">47</td>
             <td class="lb-submitter"><a href="738767/">sunny99</a></td>
             <td class="lb-cell-num">22 / 34</td>
             <td class="lb-cell-num">22.0%</td>
             <td class="lb-score">220 / 1000</td>
             <td class="lb-cell-num">490,463</td>
             <td class="lb-cell-num">104,622</td>
-            <td class="lb-time">2026-05-18 12:42 UTC</td>
+            <td class="lb-time">2026-05-18 12:42</td>
+            <td class="lb-subid">738767</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">31</td>
+            <td class="lb-rank">48</td>
+            <td class="lb-submitter"><a href="767094/">shuwesley</a></td>
+            <td class="lb-cell-num">17 / 34</td>
+            <td class="lb-cell-num">21.6%</td>
+            <td class="lb-score">216 / 1000</td>
+            <td class="lb-cell-num">434,794</td>
+            <td class="lb-cell-num">79,004</td>
+            <td class="lb-time">2026-05-30 06:27</td>
+            <td class="lb-subid">767094</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">49</td>
             <td class="lb-submitter"><a href="743755/">robertboy18</a></td>
             <td class="lb-cell-num">3 / 34</td>
             <td class="lb-cell-num">16.0%</td>
             <td class="lb-score">160 / 1000</td>
             <td class="lb-cell-num">80,051</td>
             <td class="lb-cell-num">59,208</td>
-            <td class="lb-time">2026-05-20 UTC</td>
+            <td class="lb-time">2026-05-20 22:30</td>
+            <td class="lb-subid">743755</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">32</td>
+            <td class="lb-rank">50</td>
             <td class="lb-submitter"><a href="747085/">snowpine007</a></td>
             <td class="lb-cell-num">3 / 34</td>
             <td class="lb-cell-num">16.0%</td>
             <td class="lb-score">160 / 1000</td>
             <td class="lb-cell-num">87,088</td>
             <td class="lb-cell-num">81,294</td>
-            <td class="lb-time">2026-05-22 UTC</td>
+            <td class="lb-time">2026-05-22 06:27</td>
+            <td class="lb-subid">747085</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">33</td>
+            <td class="lb-rank">51</td>
             <td class="lb-submitter"><a href="716101/">jjyyy</a></td>
             <td class="lb-cell-num">3 / 34</td>
             <td class="lb-cell-num">16.0%</td>
             <td class="lb-score">160 / 1000</td>
             <td class="lb-cell-num">167,816</td>
             <td class="lb-cell-num">63,207</td>
-            <td class="lb-time">2026-05-07 UTC</td>
+            <td class="lb-time">2026-05-07 22:24</td>
+            <td class="lb-subid">716101</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">33</td>
+            <td class="lb-rank">52</td>
             <td class="lb-submitter"><a href="716186/">jjyyy</a></td>
             <td class="lb-cell-num">3 / 34</td>
             <td class="lb-cell-num">16.0%</td>
             <td class="lb-score">160 / 1000</td>
             <td class="lb-cell-num">167,816</td>
             <td class="lb-cell-num">63,207</td>
-            <td class="lb-time">2026-05-07 UTC</td>
+            <td class="lb-time">2026-05-07 23:27</td>
+            <td class="lb-subid">716186</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">35</td>
+            <td class="lb-rank">53</td>
             <td class="lb-submitter"><a href="739618/">msantolu</a></td>
             <td class="lb-cell-num">19 / 34</td>
             <td class="lb-cell-num">16.0%</td>
             <td class="lb-score">160 / 1000</td>
             <td class="lb-cell-num">332,576</td>
             <td class="lb-cell-num">68,018</td>
-            <td class="lb-time">2026-05-18 21:04 UTC</td>
+            <td class="lb-time">2026-05-18 21:04</td>
+            <td class="lb-subid">739618</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">36</td>
+            <td class="lb-rank">54</td>
             <td class="lb-submitter"><a href="718997/">jxb222</a></td>
             <td class="lb-cell-num">19 / 34</td>
             <td class="lb-cell-num">16.0%</td>
             <td class="lb-score">160 / 1000</td>
             <td class="lb-cell-num">399,390</td>
             <td class="lb-cell-num">62,324</td>
-            <td class="lb-time">2026-05-09 UTC</td>
+            <td class="lb-time">2026-05-09 10:01</td>
+            <td class="lb-subid">718997</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">37</td>
+            <td class="lb-rank">55</td>
             <td class="lb-submitter"><a href="743121/">ctree4113</a></td>
             <td class="lb-cell-num">17 / 34</td>
             <td class="lb-cell-num">13.1%</td>
             <td class="lb-score">131 / 1000</td>
             <td class="lb-cell-num">448,728</td>
             <td class="lb-cell-num">25,258</td>
-            <td class="lb-time">2026-05-20 UTC</td>
+            <td class="lb-time">2026-05-20 15:00</td>
+            <td class="lb-subid">743121</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">38</td>
+            <td class="lb-rank">56</td>
+            <td class="lb-submitter"><a href="731053/">lmilikic</a></td>
+            <td class="lb-cell-num">4 / 34</td>
+            <td class="lb-cell-num">10.0%</td>
+            <td class="lb-score">100 / 1000</td>
+            <td class="lb-cell-num">219,383</td>
+            <td class="lb-cell-num">45,401</td>
+            <td class="lb-time">2026-05-14 20:46</td>
+            <td class="lb-subid">731053</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">57</td>
             <td class="lb-submitter"><a href="738233/">bhwang</a></td>
             <td class="lb-cell-num">14 / 34</td>
             <td class="lb-cell-num">8.3%</td>
             <td class="lb-score">83 / 1000</td>
             <td class="lb-cell-num">116,506</td>
             <td class="lb-cell-num">63,446</td>
-            <td class="lb-time">2026-05-18 08:06 UTC</td>
+            <td class="lb-time">2026-05-18 08:06</td>
+            <td class="lb-subid">738233</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">39</td>
+            <td class="lb-rank">58</td>
             <td class="lb-submitter"><a href="721519/">yhn112</a></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
             <td class="lb-cell-num">27,508</td>
             <td class="lb-cell-num">3,216</td>
-            <td class="lb-time">2026-05-10 UTC</td>
+            <td class="lb-time">2026-05-10 20:50</td>
+            <td class="lb-subid">721519</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">39</td>
+            <td class="lb-rank">59</td>
             <td class="lb-submitter"><a href="721521/">yhn112</a></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
             <td class="lb-cell-num">27,508</td>
             <td class="lb-cell-num">3,216</td>
-            <td class="lb-time">2026-05-10 UTC</td>
+            <td class="lb-time">2026-05-10 20:56</td>
+            <td class="lb-subid">721521</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">39</td>
+            <td class="lb-rank">60</td>
             <td class="lb-submitter"><a href="721526/">yhn112</a></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
             <td class="lb-cell-num">27,508</td>
             <td class="lb-cell-num">3,216</td>
-            <td class="lb-time">2026-05-10 UTC</td>
+            <td class="lb-time">2026-05-10 21:04</td>
+            <td class="lb-subid">721526</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">39</td>
+            <td class="lb-rank">61</td>
             <td class="lb-submitter"><a href="721527/">yhn112</a></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
             <td class="lb-cell-num">27,508</td>
             <td class="lb-cell-num">3,216</td>
-            <td class="lb-time">2026-05-10 UTC</td>
+            <td class="lb-time">2026-05-10 21:05</td>
+            <td class="lb-subid">721527</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">39</td>
+            <td class="lb-rank">61</td>
             <td class="lb-submitter"><a href="721528/">yhn112</a></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
             <td class="lb-cell-num">27,508</td>
             <td class="lb-cell-num">3,216</td>
-            <td class="lb-time">2026-05-10 UTC</td>
+            <td class="lb-time">2026-05-10 21:05</td>
+            <td class="lb-subid">721528</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">44</td>
+            <td class="lb-rank">63</td>
+            <td class="lb-submitter"><a href="722653/">yhn112</a></td>
+            <td class="lb-cell-num">2 / 34</td>
+            <td class="lb-cell-num">4.4%</td>
+            <td class="lb-score">44 / 1000</td>
+            <td class="lb-cell-num">27,508</td>
+            <td class="lb-cell-num">3,216</td>
+            <td class="lb-time">2026-05-11 13:14</td>
+            <td class="lb-subid">722653</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">64</td>
             <td class="lb-submitter"><a href="736741/">yhn112</a></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
             <td class="lb-cell-num">27,508</td>
             <td class="lb-cell-num">3,216</td>
-            <td class="lb-time">2026-05-17 20:52 UTC</td>
+            <td class="lb-time">2026-05-17 20:52</td>
+            <td class="lb-subid">736741</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">45</td>
+            <td class="lb-rank">65</td>
             <td class="lb-submitter"><a href="721525/">yhn112</a></td>
             <td class="lb-cell-num">1 / 34</td>
             <td class="lb-cell-num">4.0%</td>
             <td class="lb-score">40 / 1000</td>
             <td class="lb-cell-num">13,272</td>
             <td class="lb-cell-num">2,314</td>
-            <td class="lb-time">2026-05-10 UTC</td>
+            <td class="lb-time">2026-05-10 21:04</td>
+            <td class="lb-subid">721525</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">45</td>
+            <td class="lb-rank">66</td>
             <td class="lb-submitter"><a href="721529/">yhn112</a></td>
             <td class="lb-cell-num">1 / 34</td>
             <td class="lb-cell-num">4.0%</td>
             <td class="lb-score">40 / 1000</td>
             <td class="lb-cell-num">13,272</td>
             <td class="lb-cell-num">2,314</td>
-            <td class="lb-time">2026-05-10 UTC</td>
+            <td class="lb-time">2026-05-10 21:06</td>
+            <td class="lb-subid">721529</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">47</td>
+            <td class="lb-rank">67</td>
             <td class="lb-submitter"><a href="739324/">shuwesley</a></td>
             <td class="lb-cell-num">6 / 34</td>
             <td class="lb-cell-num">2.4%</td>
             <td class="lb-score">24 / 1000</td>
             <td class="lb-cell-num">36,908</td>
             <td class="lb-cell-num">2,517</td>
-            <td class="lb-time">2026-05-18 17:06 UTC</td>
+            <td class="lb-time">2026-05-18 17:06</td>
+            <td class="lb-subid">739324</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">48</td>
+            <td class="lb-rank">68</td>
+            <td class="lb-submitter"><a href="751384/">sandeepsaluru</a></td>
+            <td class="lb-cell-num">1 / 34</td>
+            <td class="lb-cell-num">1.0%</td>
+            <td class="lb-score">10 / 1000</td>
+            <td class="lb-cell-num">4,984</td>
+            <td class="lb-cell-num">1,678</td>
+            <td class="lb-time">2026-05-24 00:47</td>
+            <td class="lb-subid">751384</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">69</td>
             <td class="lb-submitter"><a href="717745/">kurone02</a></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
             <td class="lb-score">0 / 1000</td>
             <td class="lb-cell-num">0</td>
             <td class="lb-cell-num">0</td>
-            <td class="lb-time">2026-05-08 UTC</td>
+            <td class="lb-time">2026-05-08 16:32</td>
+            <td class="lb-subid">717745</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">49</td>
+            <td class="lb-rank">70</td>
             <td class="lb-submitter"><a href="720140/">allenzhu</a></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
             <td class="lb-score">0 / 1000</td>
             <td class="lb-cell-num">0</td>
             <td class="lb-cell-num">0</td>
-            <td class="lb-time">2026-05-10 UTC</td>
+            <td class="lb-time">2026-05-10 05:07</td>
+            <td class="lb-subid">720140</td>
           </tr>
 
           <tr>
-            <td class="lb-rank">50</td>
+            <td class="lb-rank">71</td>
+            <td class="lb-submitter"><a href="727980/">allenzhu</a></td>
+            <td class="lb-cell-num">0 / 34</td>
+            <td class="lb-cell-num">0.0%</td>
+            <td class="lb-score">0 / 1000</td>
+            <td class="lb-cell-num">0</td>
+            <td class="lb-cell-num">0</td>
+            <td class="lb-time">2026-05-13 13:24</td>
+            <td class="lb-subid">727980</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">72</td>
             <td class="lb-submitter"><a href="739585/">xvade</a></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
             <td class="lb-score">0 / 1000</td>
             <td class="lb-cell-num">0</td>
             <td class="lb-cell-num">0</td>
-            <td class="lb-time">2026-05-18 20:33 UTC</td>
+            <td class="lb-time">2026-05-18 20:33</td>
+            <td class="lb-subid">739585</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">73</td>
+            <td class="lb-submitter"><a href="755525/">manishacharya</a></td>
+            <td class="lb-cell-num">0 / 34</td>
+            <td class="lb-cell-num">0.0%</td>
+            <td class="lb-score">0 / 1000</td>
+            <td class="lb-cell-num">0</td>
+            <td class="lb-cell-num">0</td>
+            <td class="lb-time">2026-05-26 02:50</td>
+            <td class="lb-subid">755525</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">74</td>
+            <td class="lb-submitter"><a href="730891/">jasperdekoninck</a></td>
+            <td class="lb-cell-num">0 / 34</td>
+            <td class="lb-cell-num">0.0%</td>
+            <td class="lb-score">0 / 1000</td>
+            <td class="lb-cell-num">0</td>
+            <td class="lb-cell-num">—</td>
+            <td class="lb-time">2026-05-14 18:34</td>
+            <td class="lb-subid">730891</td>
+          </tr>
+
+          <tr>
+            <td class="lb-rank">75</td>
+            <td class="lb-submitter"><a href="756984/">brendanlo</a></td>
+            <td class="lb-cell-num">0 / 34</td>
+            <td class="lb-cell-num">0.0%</td>
+            <td class="lb-score">0 / 1000</td>
+            <td class="lb-cell-num">0</td>
+            <td class="lb-cell-num">—</td>
+            <td class="lb-time">2026-05-26 15:00</td>
+            <td class="lb-subid">756984</td>
           </tr>
         </tbody>
       </table>

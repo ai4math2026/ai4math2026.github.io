@@ -696,8 +696,22 @@ ul { list-style: none; }
 /* ============================================================
    News
    ============================================================ */
+.news-list-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  overflow-y: auto;
+  max-height: 400px;
+  padding-right: 6px;
+}
+.news-list-wrap::-webkit-scrollbar {
+  width: 4px;
+}
+.news-list-wrap::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
 .news-list {
-  max-width: 780px;
+  max-width: 920px;
   margin: 0 auto;
 }
 .news-item {
