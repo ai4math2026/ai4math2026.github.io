@@ -76,13 +76,40 @@
       color: var(--color-text);
     }
     table.lb-table tbody tr:last-child td { border-bottom: none; }
-    table.lb-table tbody tr:hover { background: var(--color-bg-light); }
+    table.lb-table tbody tr { transition: background 0.12s; }
+    table.lb-table tbody tr:hover { background: #f1f5f9; }
+    /* N1: top 3 podium tinting — only on the Rank column */
+    table.lb-table tbody tr.lb-rank-1 td.lb-rank { background: linear-gradient(90deg, rgba(250,204,21,0.32) 0%, rgba(250,204,21,0.05) 80%, transparent 100%); }
+    table.lb-table tbody tr.lb-rank-2 td.lb-rank { background: linear-gradient(90deg, rgba(148,163,184,0.32) 0%, rgba(148,163,184,0.05) 80%, transparent 100%); }
+    table.lb-table tbody tr.lb-rank-3 td.lb-rank { background: linear-gradient(90deg, rgba(217,119,6,0.28) 0%, rgba(217,119,6,0.05) 80%, transparent 100%); }
+    .lb-medal { font-size: 18px; margin-right: 4px; vertical-align: -2px; }
+    .lb-attempts {
+      font-size: 11.5px; color: var(--color-text-muted);
+      font-weight: 400; margin-left: 6px; white-space: nowrap;
+    }
+    /* N2: sticky header */
+    table.lb-table thead th { position: sticky; top: 0; z-index: 5; }
+    /* N3: search bar */
+    .lb-search-row {
+      display: flex; gap: 12px; align-items: center;
+      margin: 8px 0 14px;
+    }
+    .lb-search-row input {
+      flex: 1; max-width: 500px;
+      padding: 8px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+    .lb-search-row input:focus { outline: 2px solid var(--color-primary); border-color: var(--color-primary); }
+    .lb-search-count { font-size: 13px; color: var(--color-text-muted); }
     .lb-rank {
       font-weight: 700;
       color: var(--color-primary-dark);
       width: 60px;
       font-variant-numeric: tabular-nums;
-      text-align: center;
+      text-align: right;
     }
     .lb-submitter {
       font-weight: 600;
@@ -168,17 +195,22 @@
 <section class="section section-white" style="padding-top: 140px;">
   <div class="container">
     <h2 class="section-title">Track 2 Leaderboard</h2>
-    <p class="section-subtitle">TCS Proving in Lean. Combined Phase 1 + Phase 2 ranking out of 700 points. See <a href="../scoring-rules/">Scoring Rules</a> for the full per problem scoring criteria and the tie-break cascade.</p>
+    <p class="section-subtitle">TCS Proving in Lean. Combined Phase 1 + Phase 2 ranking out of 1000 points. See <a href="../scoring-rules/">Scoring Rules</a> for the full per problem scoring criteria and the tie-break cascade.</p>
 
     <div class="lb-note">
       All times on this page are UTC. We sweep Codabench for new submissions roughly every 48 hours and score each new batch shortly after.
     </div>
 
     <div class="lb-meta">
-      <span><strong>Last updated:</strong> 2026-06-01 19:28</span>
-      <span><strong>Last collection:</strong> 2026-06-01 15:45</span>
+      <span><strong>Last updated:</strong> 2026-06-02 17:12</span>
+      <span><strong>Last collection:</strong> 2026-06-02 17:06</span>
       <span><strong>Verifier:</strong> safeverify</span>
-      <span><strong>Submissions scored:</strong> 75</span>
+      <span><strong>Submissions scored:</strong> 80</span>
+    </div>
+
+    <div class="lb-search-row">
+      <input type="search" id="lb-search" placeholder="Filter by submitter (comma to combine multiple, e.g. alice, bob)" autocomplete="off" />
+      <span class="lb-search-count" id="lb-search-count"></span>
     </div>
 
     <div class="lb-card">
@@ -197,9 +229,21 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="lb-rank">1</td>
-            <td class="lb-submitter"><a href="771718/">jasperdekoninck</a></td>
+          <tr class="lb-row lb-rank-1" data-user="janko" data-id="775956">
+            <td class="lb-rank"><span class="lb-medal">🥇</span>1</td>
+            <td class="lb-submitter"><a href="775956/">janko</a><span class="lb-attempts">(5 attempts)</span></td>
+            <td class="lb-cell-num">30 / 34</td>
+            <td class="lb-cell-num">60.0%</td>
+            <td class="lb-score">600 / 1000</td>
+            <td class="lb-cell-num">337,976</td>
+            <td class="lb-cell-num">258,444</td>
+            <td class="lb-time">2026-06-02 15:51</td>
+            <td class="lb-subid">775956</td>
+          </tr>
+
+          <tr class="lb-row lb-rank-2" data-user="jasperdekoninck" data-id="771718">
+            <td class="lb-rank"><span class="lb-medal">🥈</span>2</td>
+            <td class="lb-submitter"><a href="771718/">jasperdekoninck</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
             <td class="lb-score">600 / 1000</td>
@@ -209,9 +253,9 @@
             <td class="lb-subid">771718</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">2</td>
-            <td class="lb-submitter"><a href="773936/">allenzhu</a></td>
+          <tr class="lb-row lb-rank-3" data-user="allenzhu" data-id="773936">
+            <td class="lb-rank"><span class="lb-medal">🥉</span>3</td>
+            <td class="lb-submitter"><a href="773936/">allenzhu</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
             <td class="lb-score">600 / 1000</td>
@@ -221,8 +265,8 @@
             <td class="lb-subid">773936</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">3</td>
+          <tr class="lb-row" data-user="nielstron" data-id="763078">
+            <td class="lb-rank">4</td>
             <td class="lb-submitter"><a href="763078/">nielstron</a></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
@@ -233,8 +277,8 @@
             <td class="lb-subid">763078</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">4</td>
+          <tr class="lb-row" data-user="chensun" data-id="765555">
+            <td class="lb-rank">5</td>
             <td class="lb-submitter"><a href="765555/">chensun</a></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
@@ -245,9 +289,9 @@
             <td class="lb-subid">765555</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">5</td>
-            <td class="lb-submitter"><a href="763640/">ctree4113</a></td>
+          <tr class="lb-row" data-user="ctree4113" data-id="763640">
+            <td class="lb-rank">6</td>
+            <td class="lb-submitter"><a href="763640/">ctree4113</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
             <td class="lb-score">600 / 1000</td>
@@ -257,9 +301,21 @@
             <td class="lb-subid">763640</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">6</td>
-            <td class="lb-submitter"><a href="770105/">allenzhu</a></td>
+          <tr class="lb-row" data-user="atrin" data-id="775010">
+            <td class="lb-rank">7</td>
+            <td class="lb-submitter"><a href="775010/">atrin</a></td>
+            <td class="lb-cell-num">29 / 34</td>
+            <td class="lb-cell-num">52.0%</td>
+            <td class="lb-score">520 / 1000</td>
+            <td class="lb-cell-num">1,088,386</td>
+            <td class="lb-cell-num">257,686</td>
+            <td class="lb-time">2026-06-02 05:21</td>
+            <td class="lb-subid">775010</td>
+          </tr>
+
+          <tr class="lb-row" data-user="allenzhu" data-id="770105">
+            <td class="lb-rank">8</td>
+            <td class="lb-submitter"><a href="770105/">allenzhu</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -269,9 +325,9 @@
             <td class="lb-subid">770105</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">7</td>
-            <td class="lb-submitter"><a href="736166/">jasperdekoninck</a></td>
+          <tr class="lb-row" data-user="jasperdekoninck" data-id="736166">
+            <td class="lb-rank">9</td>
+            <td class="lb-submitter"><a href="736166/">jasperdekoninck</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -281,9 +337,9 @@
             <td class="lb-subid">736166</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">8</td>
-            <td class="lb-submitter"><a href="733268/">jasperdekoninck</a></td>
+          <tr class="lb-row" data-user="jasperdekoninck" data-id="733268">
+            <td class="lb-rank">10</td>
+            <td class="lb-submitter"><a href="733268/">jasperdekoninck</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -293,9 +349,9 @@
             <td class="lb-subid">733268</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">9</td>
-            <td class="lb-submitter"><a href="743754/">robertboy18</a></td>
+          <tr class="lb-row" data-user="robertboy18" data-id="743754">
+            <td class="lb-rank">11</td>
+            <td class="lb-submitter"><a href="743754/">robertboy18</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -305,9 +361,9 @@
             <td class="lb-subid">743754</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">10</td>
-            <td class="lb-submitter"><a href="767385/">janko</a></td>
+          <tr class="lb-row" data-user="janko" data-id="767385">
+            <td class="lb-rank">12</td>
+            <td class="lb-submitter"><a href="767385/">janko</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -317,9 +373,9 @@
             <td class="lb-subid">767385</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">11</td>
-            <td class="lb-submitter"><a href="745249/">sunny99</a></td>
+          <tr class="lb-row" data-user="sunny99" data-id="745249">
+            <td class="lb-rank">13</td>
+            <td class="lb-submitter"><a href="745249/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -329,9 +385,9 @@
             <td class="lb-subid">745249</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">12</td>
-            <td class="lb-submitter"><a href="746119/">bhwang</a></td>
+          <tr class="lb-row" data-user="bhwang" data-id="746119">
+            <td class="lb-rank">14</td>
+            <td class="lb-submitter"><a href="746119/">bhwang</a><span class="lb-attempts">(3 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -341,9 +397,9 @@
             <td class="lb-subid">746119</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">13</td>
-            <td class="lb-submitter"><a href="767156/">janko</a></td>
+          <tr class="lb-row" data-user="janko" data-id="767156">
+            <td class="lb-rank">15</td>
+            <td class="lb-submitter"><a href="767156/">janko</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -353,8 +409,8 @@
             <td class="lb-subid">767156</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">14</td>
+          <tr class="lb-row" data-user="jszhang" data-id="740372">
+            <td class="lb-rank">16</td>
             <td class="lb-submitter"><a href="740372/">jszhang</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -365,9 +421,9 @@
             <td class="lb-subid">740372</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">15</td>
-            <td class="lb-submitter"><a href="719913/">marcusm117</a></td>
+          <tr class="lb-row" data-user="marcusm117" data-id="719913">
+            <td class="lb-rank">17</td>
+            <td class="lb-submitter"><a href="719913/">marcusm117</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -377,9 +433,9 @@
             <td class="lb-subid">719913</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">16</td>
-            <td class="lb-submitter"><a href="738033/">marcusm117</a></td>
+          <tr class="lb-row" data-user="marcusm117" data-id="738033">
+            <td class="lb-rank">18</td>
+            <td class="lb-submitter"><a href="738033/">marcusm117</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -389,9 +445,9 @@
             <td class="lb-subid">738033</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">17</td>
-            <td class="lb-submitter"><a href="755093/">sandeepsaluru</a></td>
+          <tr class="lb-row" data-user="sandeepsaluru" data-id="755093">
+            <td class="lb-rank">19</td>
+            <td class="lb-submitter"><a href="755093/">sandeepsaluru</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -401,9 +457,9 @@
             <td class="lb-subid">755093</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">18</td>
-            <td class="lb-submitter"><a href="744922/">maximiliano</a></td>
+          <tr class="lb-row" data-user="maximiliano" data-id="744922">
+            <td class="lb-rank">20</td>
+            <td class="lb-submitter"><a href="744922/">maximiliano</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -413,9 +469,9 @@
             <td class="lb-subid">744922</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">19</td>
-            <td class="lb-submitter"><a href="739612/">maximiliano</a></td>
+          <tr class="lb-row" data-user="maximiliano" data-id="739612">
+            <td class="lb-rank">21</td>
+            <td class="lb-submitter"><a href="739612/">maximiliano</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -425,9 +481,9 @@
             <td class="lb-subid">739612</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">20</td>
-            <td class="lb-submitter"><a href="739592/">maximiliano</a></td>
+          <tr class="lb-row" data-user="maximiliano" data-id="739592">
+            <td class="lb-rank">22</td>
+            <td class="lb-submitter"><a href="739592/">maximiliano</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -437,9 +493,9 @@
             <td class="lb-subid">739592</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">21</td>
-            <td class="lb-submitter"><a href="733698/">aurasoph</a></td>
+          <tr class="lb-row" data-user="aurasoph" data-id="733698">
+            <td class="lb-rank">23</td>
+            <td class="lb-submitter"><a href="733698/">aurasoph</a><span class="lb-attempts">(3 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -449,9 +505,9 @@
             <td class="lb-subid">733698</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">22</td>
-            <td class="lb-submitter"><a href="738406/">aurasoph</a></td>
+          <tr class="lb-row" data-user="aurasoph" data-id="738406">
+            <td class="lb-rank">24</td>
+            <td class="lb-submitter"><a href="738406/">aurasoph</a><span class="lb-attempts">(3 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -461,9 +517,9 @@
             <td class="lb-subid">738406</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">23</td>
-            <td class="lb-submitter"><a href="739590/">xvade</a></td>
+          <tr class="lb-row" data-user="xvade" data-id="739590">
+            <td class="lb-rank">25</td>
+            <td class="lb-submitter"><a href="739590/">xvade</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -473,9 +529,9 @@
             <td class="lb-subid">739590</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">24</td>
-            <td class="lb-submitter"><a href="721535/">aurasoph</a></td>
+          <tr class="lb-row" data-user="aurasoph" data-id="721535">
+            <td class="lb-rank">26</td>
+            <td class="lb-submitter"><a href="721535/">aurasoph</a><span class="lb-attempts">(3 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">49.6%</td>
             <td class="lb-score">496 / 1000</td>
@@ -485,8 +541,8 @@
             <td class="lb-subid">721535</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">25</td>
+          <tr class="lb-row" data-user="hypergalois" data-id="745091">
+            <td class="lb-rank">27</td>
             <td class="lb-submitter"><a href="745091/">hypergalois</a></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">48.0%</td>
@@ -497,9 +553,9 @@
             <td class="lb-subid">745091</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">26</td>
-            <td class="lb-submitter"><a href="739714/">sunny99</a></td>
+          <tr class="lb-row" data-user="sunny99" data-id="739714">
+            <td class="lb-rank">28</td>
+            <td class="lb-submitter"><a href="739714/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
@@ -509,9 +565,9 @@
             <td class="lb-subid">739714</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">27</td>
-            <td class="lb-submitter"><a href="739715/">sunny99</a></td>
+          <tr class="lb-row" data-user="sunny99" data-id="739715">
+            <td class="lb-rank">29</td>
+            <td class="lb-submitter"><a href="739715/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
@@ -521,9 +577,9 @@
             <td class="lb-subid">739715</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">28</td>
-            <td class="lb-submitter"><a href="740814/">sunny99</a></td>
+          <tr class="lb-row" data-user="sunny99" data-id="740814">
+            <td class="lb-rank">30</td>
+            <td class="lb-submitter"><a href="740814/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
@@ -533,9 +589,9 @@
             <td class="lb-subid">740814</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">29</td>
-            <td class="lb-submitter"><a href="735789/">xuanfeiren</a></td>
+          <tr class="lb-row" data-user="xuanfeiren" data-id="735789">
+            <td class="lb-rank">31</td>
+            <td class="lb-submitter"><a href="735789/">xuanfeiren</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
@@ -545,9 +601,9 @@
             <td class="lb-subid">735789</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">30</td>
-            <td class="lb-submitter"><a href="739765/">xuanfeiren</a></td>
+          <tr class="lb-row" data-user="xuanfeiren" data-id="739765">
+            <td class="lb-rank">32</td>
+            <td class="lb-submitter"><a href="739765/">xuanfeiren</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
@@ -557,8 +613,8 @@
             <td class="lb-subid">739765</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">31</td>
+          <tr class="lb-row" data-user="allenanie" data-id="739971">
+            <td class="lb-rank">33</td>
             <td class="lb-submitter"><a href="739971/">allenanie</a></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
@@ -569,9 +625,21 @@
             <td class="lb-subid">739971</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">32</td>
-            <td class="lb-submitter"><a href="736267/">maximiliano</a></td>
+          <tr class="lb-row" data-user="minjaeso" data-id="775626">
+            <td class="lb-rank">34</td>
+            <td class="lb-submitter"><a href="775626/">minjaeso</a></td>
+            <td class="lb-cell-num">28 / 34</td>
+            <td class="lb-cell-num">40.0%</td>
+            <td class="lb-score">400 / 1000</td>
+            <td class="lb-cell-num">1,972,110</td>
+            <td class="lb-cell-num">310,994</td>
+            <td class="lb-time">2026-06-02 11:54</td>
+            <td class="lb-subid">775626</td>
+          </tr>
+
+          <tr class="lb-row" data-user="maximiliano" data-id="736267">
+            <td class="lb-rank">35</td>
+            <td class="lb-submitter"><a href="736267/">maximiliano</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
@@ -581,9 +649,9 @@
             <td class="lb-subid">736267</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">33</td>
-            <td class="lb-submitter"><a href="739516/">bhwang</a></td>
+          <tr class="lb-row" data-user="bhwang" data-id="739516">
+            <td class="lb-rank">36</td>
+            <td class="lb-submitter"><a href="739516/">bhwang</a><span class="lb-attempts">(3 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -593,9 +661,9 @@
             <td class="lb-subid">739516</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">34</td>
-            <td class="lb-submitter"><a href="720098/">allenzhu</a></td>
+          <tr class="lb-row" data-user="allenzhu" data-id="720098">
+            <td class="lb-rank">37</td>
+            <td class="lb-submitter"><a href="720098/">allenzhu</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -605,9 +673,9 @@
             <td class="lb-subid">720098</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">35</td>
-            <td class="lb-submitter"><a href="719676/">allenzhu</a></td>
+          <tr class="lb-row" data-user="allenzhu" data-id="719676">
+            <td class="lb-rank">38</td>
+            <td class="lb-submitter"><a href="719676/">allenzhu</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -617,9 +685,9 @@
             <td class="lb-subid">719676</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">36</td>
-            <td class="lb-submitter"><a href="720121/">allenzhu</a></td>
+          <tr class="lb-row" data-user="allenzhu" data-id="720121">
+            <td class="lb-rank">39</td>
+            <td class="lb-submitter"><a href="720121/">allenzhu</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -629,9 +697,9 @@
             <td class="lb-subid">720121</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">37</td>
-            <td class="lb-submitter"><a href="720124/">allenzhu</a></td>
+          <tr class="lb-row" data-user="allenzhu" data-id="720124">
+            <td class="lb-rank">40</td>
+            <td class="lb-submitter"><a href="720124/">allenzhu</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -641,9 +709,9 @@
             <td class="lb-subid">720124</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">38</td>
-            <td class="lb-submitter"><a href="729444/">jasperdekoninck</a></td>
+          <tr class="lb-row" data-user="jasperdekoninck" data-id="729444">
+            <td class="lb-rank">41</td>
+            <td class="lb-submitter"><a href="729444/">jasperdekoninck</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -653,9 +721,9 @@
             <td class="lb-subid">729444</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">39</td>
-            <td class="lb-submitter"><a href="738795/">sunny99</a></td>
+          <tr class="lb-row" data-user="sunny99" data-id="738795">
+            <td class="lb-rank">42</td>
+            <td class="lb-submitter"><a href="738795/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -665,9 +733,9 @@
             <td class="lb-subid">738795</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">40</td>
-            <td class="lb-submitter"><a href="738805/">sunny99</a></td>
+          <tr class="lb-row" data-user="sunny99" data-id="738805">
+            <td class="lb-rank">43</td>
+            <td class="lb-submitter"><a href="738805/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -677,9 +745,9 @@
             <td class="lb-subid">738805</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">41</td>
-            <td class="lb-submitter"><a href="767100/">janko</a></td>
+          <tr class="lb-row" data-user="janko" data-id="767100">
+            <td class="lb-rank">44</td>
+            <td class="lb-submitter"><a href="767100/">janko</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -689,9 +757,9 @@
             <td class="lb-subid">767100</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">42</td>
-            <td class="lb-submitter"><a href="733497/">xuanfeiren</a></td>
+          <tr class="lb-row" data-user="xuanfeiren" data-id="733497">
+            <td class="lb-rank">45</td>
+            <td class="lb-submitter"><a href="733497/">xuanfeiren</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -701,9 +769,9 @@
             <td class="lb-subid">733497</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">42</td>
-            <td class="lb-submitter"><a href="733498/">xuanfeiren</a></td>
+          <tr class="lb-row" data-user="xuanfeiren" data-id="733498">
+            <td class="lb-rank">45</td>
+            <td class="lb-submitter"><a href="733498/">xuanfeiren</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -713,8 +781,8 @@
             <td class="lb-subid">733498</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">44</td>
+          <tr class="lb-row" data-user="guojing0" data-id="740669">
+            <td class="lb-rank">47</td>
             <td class="lb-submitter"><a href="740669/">guojing0</a></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
@@ -725,8 +793,8 @@
             <td class="lb-subid">740669</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">45</td>
+          <tr class="lb-row" data-user="auraq" data-id="736752">
+            <td class="lb-rank">48</td>
             <td class="lb-submitter"><a href="736752/">auraq</a></td>
             <td class="lb-cell-num">23 / 34</td>
             <td class="lb-cell-num">27.2%</td>
@@ -737,9 +805,9 @@
             <td class="lb-subid">736752</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">46</td>
-            <td class="lb-submitter"><a href="766564/">janko</a></td>
+          <tr class="lb-row" data-user="janko" data-id="766564">
+            <td class="lb-rank">49</td>
+            <td class="lb-submitter"><a href="766564/">janko</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">23 / 34</td>
             <td class="lb-cell-num">26.0%</td>
             <td class="lb-score">260 / 1000</td>
@@ -749,9 +817,21 @@
             <td class="lb-subid">766564</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">47</td>
-            <td class="lb-submitter"><a href="738767/">sunny99</a></td>
+          <tr class="lb-row" data-user="dmytruto" data-id="776150">
+            <td class="lb-rank">50</td>
+            <td class="lb-submitter"><a href="776150/">dmytruto</a></td>
+            <td class="lb-cell-num">21 / 34</td>
+            <td class="lb-cell-num">25.4%</td>
+            <td class="lb-score">254 / 1000</td>
+            <td class="lb-cell-num">549,845</td>
+            <td class="lb-cell-num">90,095</td>
+            <td class="lb-time">2026-06-02 17:06</td>
+            <td class="lb-subid">776150</td>
+          </tr>
+
+          <tr class="lb-row" data-user="sunny99" data-id="738767">
+            <td class="lb-rank">51</td>
+            <td class="lb-submitter"><a href="738767/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">22 / 34</td>
             <td class="lb-cell-num">22.0%</td>
             <td class="lb-score">220 / 1000</td>
@@ -761,9 +841,9 @@
             <td class="lb-subid">738767</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">48</td>
-            <td class="lb-submitter"><a href="767094/">shuwesley</a></td>
+          <tr class="lb-row" data-user="shuwesley" data-id="767094">
+            <td class="lb-rank">52</td>
+            <td class="lb-submitter"><a href="767094/">shuwesley</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">17 / 34</td>
             <td class="lb-cell-num">21.6%</td>
             <td class="lb-score">216 / 1000</td>
@@ -773,9 +853,9 @@
             <td class="lb-subid">767094</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">49</td>
-            <td class="lb-submitter"><a href="743755/">robertboy18</a></td>
+          <tr class="lb-row" data-user="robertboy18" data-id="743755">
+            <td class="lb-rank">53</td>
+            <td class="lb-submitter"><a href="743755/">robertboy18</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">3 / 34</td>
             <td class="lb-cell-num">16.0%</td>
             <td class="lb-score">160 / 1000</td>
@@ -785,8 +865,8 @@
             <td class="lb-subid">743755</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">50</td>
+          <tr class="lb-row" data-user="snowpine007" data-id="747085">
+            <td class="lb-rank">54</td>
             <td class="lb-submitter"><a href="747085/">snowpine007</a></td>
             <td class="lb-cell-num">3 / 34</td>
             <td class="lb-cell-num">16.0%</td>
@@ -797,9 +877,9 @@
             <td class="lb-subid">747085</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">51</td>
-            <td class="lb-submitter"><a href="716101/">jjyyy</a></td>
+          <tr class="lb-row" data-user="jjyyy" data-id="716101">
+            <td class="lb-rank">55</td>
+            <td class="lb-submitter"><a href="716101/">jjyyy</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">3 / 34</td>
             <td class="lb-cell-num">16.0%</td>
             <td class="lb-score">160 / 1000</td>
@@ -809,9 +889,9 @@
             <td class="lb-subid">716101</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">52</td>
-            <td class="lb-submitter"><a href="716186/">jjyyy</a></td>
+          <tr class="lb-row" data-user="jjyyy" data-id="716186">
+            <td class="lb-rank">56</td>
+            <td class="lb-submitter"><a href="716186/">jjyyy</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">3 / 34</td>
             <td class="lb-cell-num">16.0%</td>
             <td class="lb-score">160 / 1000</td>
@@ -821,8 +901,8 @@
             <td class="lb-subid">716186</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">53</td>
+          <tr class="lb-row" data-user="msantolu" data-id="739618">
+            <td class="lb-rank">57</td>
             <td class="lb-submitter"><a href="739618/">msantolu</a></td>
             <td class="lb-cell-num">19 / 34</td>
             <td class="lb-cell-num">16.0%</td>
@@ -833,8 +913,8 @@
             <td class="lb-subid">739618</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">54</td>
+          <tr class="lb-row" data-user="jxb222" data-id="718997">
+            <td class="lb-rank">58</td>
             <td class="lb-submitter"><a href="718997/">jxb222</a></td>
             <td class="lb-cell-num">19 / 34</td>
             <td class="lb-cell-num">16.0%</td>
@@ -845,9 +925,21 @@
             <td class="lb-subid">718997</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">55</td>
-            <td class="lb-submitter"><a href="743121/">ctree4113</a></td>
+          <tr class="lb-row" data-user="maudlemercier" data-id="775524">
+            <td class="lb-rank">59</td>
+            <td class="lb-submitter"><a href="775524/">maudlemercier</a></td>
+            <td class="lb-cell-num">17 / 34</td>
+            <td class="lb-cell-num">13.8%</td>
+            <td class="lb-score">138 / 1000</td>
+            <td class="lb-cell-num">289,230</td>
+            <td class="lb-cell-num">82,492</td>
+            <td class="lb-time">2026-06-02 10:40</td>
+            <td class="lb-subid">775524</td>
+          </tr>
+
+          <tr class="lb-row" data-user="ctree4113" data-id="743121">
+            <td class="lb-rank">60</td>
+            <td class="lb-submitter"><a href="743121/">ctree4113</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">17 / 34</td>
             <td class="lb-cell-num">13.1%</td>
             <td class="lb-score">131 / 1000</td>
@@ -857,8 +949,8 @@
             <td class="lb-subid">743121</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">56</td>
+          <tr class="lb-row" data-user="lmilikic" data-id="731053">
+            <td class="lb-rank">61</td>
             <td class="lb-submitter"><a href="731053/">lmilikic</a></td>
             <td class="lb-cell-num">4 / 34</td>
             <td class="lb-cell-num">10.0%</td>
@@ -869,9 +961,9 @@
             <td class="lb-subid">731053</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">57</td>
-            <td class="lb-submitter"><a href="738233/">bhwang</a></td>
+          <tr class="lb-row" data-user="bhwang" data-id="738233">
+            <td class="lb-rank">62</td>
+            <td class="lb-submitter"><a href="738233/">bhwang</a><span class="lb-attempts">(3 attempts)</span></td>
             <td class="lb-cell-num">14 / 34</td>
             <td class="lb-cell-num">8.3%</td>
             <td class="lb-score">83 / 1000</td>
@@ -881,9 +973,9 @@
             <td class="lb-subid">738233</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">58</td>
-            <td class="lb-submitter"><a href="721519/">yhn112</a></td>
+          <tr class="lb-row" data-user="yhn112" data-id="721519">
+            <td class="lb-rank">63</td>
+            <td class="lb-submitter"><a href="721519/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
@@ -893,9 +985,9 @@
             <td class="lb-subid">721519</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">59</td>
-            <td class="lb-submitter"><a href="721521/">yhn112</a></td>
+          <tr class="lb-row" data-user="yhn112" data-id="721521">
+            <td class="lb-rank">64</td>
+            <td class="lb-submitter"><a href="721521/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
@@ -905,9 +997,9 @@
             <td class="lb-subid">721521</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">60</td>
-            <td class="lb-submitter"><a href="721526/">yhn112</a></td>
+          <tr class="lb-row" data-user="yhn112" data-id="721526">
+            <td class="lb-rank">65</td>
+            <td class="lb-submitter"><a href="721526/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
@@ -917,9 +1009,9 @@
             <td class="lb-subid">721526</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">61</td>
-            <td class="lb-submitter"><a href="721527/">yhn112</a></td>
+          <tr class="lb-row" data-user="yhn112" data-id="721527">
+            <td class="lb-rank">66</td>
+            <td class="lb-submitter"><a href="721527/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
@@ -929,9 +1021,9 @@
             <td class="lb-subid">721527</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">61</td>
-            <td class="lb-submitter"><a href="721528/">yhn112</a></td>
+          <tr class="lb-row" data-user="yhn112" data-id="721528">
+            <td class="lb-rank">66</td>
+            <td class="lb-submitter"><a href="721528/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
@@ -941,9 +1033,9 @@
             <td class="lb-subid">721528</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">63</td>
-            <td class="lb-submitter"><a href="722653/">yhn112</a></td>
+          <tr class="lb-row" data-user="yhn112" data-id="722653">
+            <td class="lb-rank">68</td>
+            <td class="lb-submitter"><a href="722653/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
@@ -953,9 +1045,9 @@
             <td class="lb-subid">722653</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">64</td>
-            <td class="lb-submitter"><a href="736741/">yhn112</a></td>
+          <tr class="lb-row" data-user="yhn112" data-id="736741">
+            <td class="lb-rank">69</td>
+            <td class="lb-submitter"><a href="736741/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
             <td class="lb-score">44 / 1000</td>
@@ -965,9 +1057,9 @@
             <td class="lb-subid">736741</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">65</td>
-            <td class="lb-submitter"><a href="721525/">yhn112</a></td>
+          <tr class="lb-row" data-user="yhn112" data-id="721525">
+            <td class="lb-rank">70</td>
+            <td class="lb-submitter"><a href="721525/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">1 / 34</td>
             <td class="lb-cell-num">4.0%</td>
             <td class="lb-score">40 / 1000</td>
@@ -977,9 +1069,9 @@
             <td class="lb-subid">721525</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">66</td>
-            <td class="lb-submitter"><a href="721529/">yhn112</a></td>
+          <tr class="lb-row" data-user="yhn112" data-id="721529">
+            <td class="lb-rank">71</td>
+            <td class="lb-submitter"><a href="721529/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">1 / 34</td>
             <td class="lb-cell-num">4.0%</td>
             <td class="lb-score">40 / 1000</td>
@@ -989,9 +1081,9 @@
             <td class="lb-subid">721529</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">67</td>
-            <td class="lb-submitter"><a href="739324/">shuwesley</a></td>
+          <tr class="lb-row" data-user="shuwesley" data-id="739324">
+            <td class="lb-rank">72</td>
+            <td class="lb-submitter"><a href="739324/">shuwesley</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">6 / 34</td>
             <td class="lb-cell-num">2.4%</td>
             <td class="lb-score">24 / 1000</td>
@@ -1001,9 +1093,9 @@
             <td class="lb-subid">739324</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">68</td>
-            <td class="lb-submitter"><a href="751384/">sandeepsaluru</a></td>
+          <tr class="lb-row" data-user="sandeepsaluru" data-id="751384">
+            <td class="lb-rank">73</td>
+            <td class="lb-submitter"><a href="751384/">sandeepsaluru</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">1 / 34</td>
             <td class="lb-cell-num">1.0%</td>
             <td class="lb-score">10 / 1000</td>
@@ -1013,8 +1105,8 @@
             <td class="lb-subid">751384</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">69</td>
+          <tr class="lb-row" data-user="kurone02" data-id="717745">
+            <td class="lb-rank">74</td>
             <td class="lb-submitter"><a href="717745/">kurone02</a></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
@@ -1025,9 +1117,9 @@
             <td class="lb-subid">717745</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">70</td>
-            <td class="lb-submitter"><a href="720140/">allenzhu</a></td>
+          <tr class="lb-row" data-user="allenzhu" data-id="720140">
+            <td class="lb-rank">75</td>
+            <td class="lb-submitter"><a href="720140/">allenzhu</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
             <td class="lb-score">0 / 1000</td>
@@ -1037,9 +1129,9 @@
             <td class="lb-subid">720140</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">71</td>
-            <td class="lb-submitter"><a href="727980/">allenzhu</a></td>
+          <tr class="lb-row" data-user="allenzhu" data-id="727980">
+            <td class="lb-rank">76</td>
+            <td class="lb-submitter"><a href="727980/">allenzhu</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
             <td class="lb-score">0 / 1000</td>
@@ -1049,9 +1141,9 @@
             <td class="lb-subid">727980</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">72</td>
-            <td class="lb-submitter"><a href="739585/">xvade</a></td>
+          <tr class="lb-row" data-user="xvade" data-id="739585">
+            <td class="lb-rank">77</td>
+            <td class="lb-submitter"><a href="739585/">xvade</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
             <td class="lb-score">0 / 1000</td>
@@ -1061,8 +1153,8 @@
             <td class="lb-subid">739585</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">73</td>
+          <tr class="lb-row" data-user="manishacharya" data-id="755525">
+            <td class="lb-rank">78</td>
             <td class="lb-submitter"><a href="755525/">manishacharya</a></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
@@ -1073,9 +1165,9 @@
             <td class="lb-subid">755525</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">74</td>
-            <td class="lb-submitter"><a href="730891/">jasperdekoninck</a></td>
+          <tr class="lb-row" data-user="jasperdekoninck" data-id="730891">
+            <td class="lb-rank">79</td>
+            <td class="lb-submitter"><a href="730891/">jasperdekoninck</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
             <td class="lb-score">0 / 1000</td>
@@ -1085,8 +1177,8 @@
             <td class="lb-subid">730891</td>
           </tr>
 
-          <tr>
-            <td class="lb-rank">75</td>
+          <tr class="lb-row" data-user="brendanlo" data-id="756984">
+            <td class="lb-rank">80</td>
             <td class="lb-submitter"><a href="756984/">brendanlo</a></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
@@ -1158,6 +1250,35 @@
     if (type === 'num')       return parseInt(text, 10);
     return text;
   }
+  // N3: live username filter
+  var search = document.getElementById('lb-search');
+  var searchCount = document.getElementById('lb-search-count');
+  var allRows = Array.prototype.slice.call(document.querySelectorAll('table.lb-table tbody tr.lb-row'));
+  if (search) {
+    search.addEventListener('input', function() {
+      // Comma-separated query: any term matching counts as a hit. Empty
+      // terms (e.g. trailing comma) are ignored.
+      var raw = search.value.trim().toLowerCase();
+      var terms = raw.split(',')
+        .map(function(t) { return t.trim(); })
+        .filter(function(t) { return t.length > 0; });
+      var shown = 0;
+      allRows.forEach(function(tr) {
+        var u = tr.getAttribute('data-user') || '';
+        var match = terms.length === 0 || terms.some(function(t) {
+          return u.indexOf(t) !== -1;
+        });
+        tr.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      if (searchCount) {
+        searchCount.textContent = terms.length
+          ? (shown + ' of ' + allRows.length + ' shown')
+          : '';
+      }
+    });
+  }
+
   document.querySelectorAll('table.lb-table th.sortable').forEach(function(th) {
     th.addEventListener('click', function() {
       var table = th.closest('table');
