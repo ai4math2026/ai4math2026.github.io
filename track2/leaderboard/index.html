@@ -202,7 +202,7 @@
     </div>
 
     <div class="lb-meta">
-      <span><strong>Last updated:</strong> 2026-06-02 17:12</span>
+      <span><strong>Last updated:</strong> 2026-06-02 17:26</span>
       <span><strong>Last collection:</strong> 2026-06-02 17:06</span>
       <span><strong>Verifier:</strong> safeverify</span>
       <span><strong>Submissions scored:</strong> 80</span>
@@ -1247,7 +1247,12 @@
     if (type === 'num-comma') return parseInt(text.replace(/,/g, ''), 10);
     if (type === 'num-pct')   return parseFloat(text);
     if (type === 'num-frac')  return parseInt(text.split('/')[0].trim().replace(/,/g, ''), 10);
-    if (type === 'num')       return parseInt(text, 10);
+    if (type === 'num')       {
+      // Extract the first integer in the cell. Tolerates leading emoji /
+      // non-digit characters (e.g. the rank column's medal prefix "🥇1").
+      var m = text.match(/-?\d+/);
+      return m ? parseInt(m[0], 10) : (dir === 'asc' ? Infinity : -Infinity);
+    }
     return text;
   }
   // N3: live username filter
