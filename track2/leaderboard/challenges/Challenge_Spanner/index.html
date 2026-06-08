@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Challenge_Spanner - Per problem leaderboard</title>
+  <meta name="description" content="Per problem leaderboard for Challenge_Spanner." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="../../../../assets/images/logo_small.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../../assets/css/style.css" />
+  <style>
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    body > section { flex: 1 0 auto; }
+    .pp-back {
+      display: inline-block; margin-bottom: 18px; color: #586069;
+      text-decoration: none; font-size: 14px;
+    }
+    .pp-back:hover { color: #0366d6; }
+    .pp-index-section { margin: 28px 0 8px; font-size: 18px; color: #24292e; }
+    .pp-index-phase  { margin: 36px 0 4px; font-size: 22px; font-weight: 700; color: #24292e; }
+    .pp-card-grid    { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-bottom: 18px; }
+    .pp-card {
+      display: block; padding: 14px 16px; border: 1px solid #d1d5da; border-radius: 8px;
+      background: #fff; text-decoration: none; color: #24292e;
+      transition: border-color 120ms, box-shadow 120ms;
+    }
+    .pp-card:hover { border-color: #0366d6; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .pp-card-name  { font-family: 'Source Code Pro', 'SFMono-Regular', Consolas, monospace; font-size: 13px; word-break: break-word; }
+    .pp-card-meta  { display: flex; justify-content: space-between; align-items: baseline; margin-top: 8px; font-size: 13px; color: #586069; }
+    .pp-card-pts   { color: #6f42c1; font-weight: 600; }
+    .pp-card-solved {
+      font-weight: 600;
+    }
+    .pp-card-solved.zero { color: #97a0aa; }
+    .pp-card-solved.many { color: #22863a; }
+
+    .pp-page-header { margin-bottom: 18px; }
+    .pp-page-title  { font-size: 28px; margin: 4px 0 4px; }
+    .pp-page-meta   { color: #586069; font-size: 14px; }
+    .pp-page-meta b { color: #24292e; }
+
+    .pp-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+    .pp-table th, .pp-table td { padding: 8px 12px; border-bottom: 1px solid #eaecef; text-align: left; font-size: 14px; }
+    .pp-table th { background: #f6f8fa; color: #24292e; font-weight: 600; }
+    .pp-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .pp-table tr.solved-row td:first-child { border-left: 3px solid #34a853; }
+    .pp-empty { padding: 28px; text-align: center; color: #586069; background: #f6f8fa; border-radius: 8px; }
+
+    .pp-wrap { max-width: 1000px; margin: 24px auto 60px; padding: 0 20px; }
+    .pp-h1   { font-size: 26px; margin: 6px 0; font-weight: 700; word-break: break-word; }
+  </style>
+</head>
+<body>
+<section style="background:#fafbfc; padding:24px 0;">
+  <div class="pp-wrap">
+    <a class="pp-back" href="../">&larr; Back to per problem leaderboard</a>
+    <div class="pp-page-header">
+      <h1 class="pp-h1">Challenge_Spanner</h1>
+      <p class="pp-page-meta">
+        Theorem: <code>Spanner.spanner_exists</code>.
+        Worth <b>100</b> points. <b>22</b> solved out of <b>24</b> attempted.
+        Ranking by heartbeats ascending, then bytes ascending, then submission time ascending.
+      </p>
+    </div>
+    <table class="pp-table"><thead><tr><th class="num">#</th><th>Submitter</th><th class="num">Heartbeats</th><th class="num">Bytes</th><th>Submitted</th><th>Submission</th></tr></thead><tbody><tr class="solved-row"><td class="num">1</td><td>janko</td><td class="num">33,360</td><td class="num">34,287</td><td>2026-06-03 04:11</td><td><a href="../../776732/">776732</a></td></tr><tr class="solved-row"><td class="num">2</td><td>janko</td><td class="num">47,639</td><td class="num">33,242</td><td>2026-06-02 15:51</td><td><a href="../../775956/">775956</a></td></tr><tr class="solved-row"><td class="num">3</td><td>allenzhu</td><td class="num">64,303</td><td class="num">50,203</td><td>2026-06-08 16:35</td><td><a href="../../786448/">786448</a></td></tr><tr class="solved-row"><td class="num">4</td><td>ctree4113</td><td class="num">65,998</td><td class="num">41,226</td><td>2026-06-03 19:03</td><td><a href="../../778134/">778134</a></td></tr><tr class="solved-row"><td class="num">5</td><td>cmxu7</td><td class="num">68,438</td><td class="num">39,202</td><td>2026-06-04 06:08</td><td><a href="../../778665/">778665</a></td></tr><tr class="solved-row"><td class="num">6</td><td>cmxu7</td><td class="num">68,438</td><td class="num">39,202</td><td>2026-06-07 17:08</td><td><a href="../../784444/">784444</a></td></tr><tr class="solved-row"><td class="num">7</td><td>cmxu7</td><td class="num">68,439</td><td class="num">43,915</td><td>2026-06-03 08:38</td><td><a href="../../777120/">777120</a></td></tr><tr class="solved-row"><td class="num">8</td><td>cmxu7</td><td class="num">68,439</td><td class="num">43,915</td><td>2026-06-08 06:54</td><td><a href="../../785357/">785357</a></td></tr><tr class="solved-row"><td class="num">9</td><td>jasperdekoninck</td><td class="num">68,510</td><td class="num">35,858</td><td>2026-05-31 19:03</td><td><a href="../../771718/">771718</a></td></tr><tr class="solved-row"><td class="num">10</td><td>ctree4113</td><td class="num">68,639</td><td class="num">41,257</td><td>2026-05-28 21:44</td><td><a href="../../763640/">763640</a></td></tr><tr class="solved-row"><td class="num">11</td><td>hypergalois</td><td class="num">78,626</td><td class="num">38,574</td><td>2026-06-08 00:43</td><td><a href="../../784932/">784932</a></td></tr><tr class="solved-row"><td class="num">12</td><td>allenzhu</td><td class="num">83,430</td><td class="num">49,949</td><td>2026-06-07 16:52</td><td><a href="../../784414/">784414</a></td></tr><tr class="solved-row"><td class="num">13</td><td>allenzhu</td><td class="num">83,430</td><td class="num">49,949</td><td>2026-06-07 17:49</td><td><a href="../../784526/">784526</a></td></tr><tr class="solved-row"><td class="num">14</td><td>allenzhu</td><td class="num">92,474</td><td class="num">49,334</td><td>2026-06-04 05:10</td><td><a href="../../778567/">778567</a></td></tr><tr class="solved-row"><td class="num">15</td><td>allenzhu</td><td class="num">97,461</td><td class="num">54,162</td><td>2026-06-01 15:45</td><td><a href="../../773936/">773936</a></td></tr><tr class="solved-row"><td class="num">16</td><td>bhwang</td><td class="num">100,248</td><td class="num">57,356</td><td>2026-06-08 09:28</td><td><a href="../../785626/">785626</a></td></tr><tr class="solved-row"><td class="num">17</td><td>nielstron</td><td class="num">106,041</td><td class="num">34,901</td><td>2026-05-28 18:01</td><td><a href="../../763078/">763078</a></td></tr><tr class="solved-row"><td class="num">18</td><td>chensun</td><td class="num">106,041</td><td class="num">34,901</td><td>2026-05-29 15:53</td><td><a href="../../765555/">765555</a></td></tr><tr class="solved-row"><td class="num">19</td><td>minjaeso</td><td class="num">106,559</td><td class="num">50,036</td><td>2026-06-03 13:27</td><td><a href="../../777609/">777609</a></td></tr><tr class="solved-row"><td class="num">20</td><td>maudlemercier</td><td class="num">114,079</td><td class="num">98,877</td><td>2026-06-03 12:17</td><td><a href="../../777554/">777554</a></td></tr><tr class="solved-row"><td class="num">21</td><td>atrin</td><td class="num">141,085</td><td class="num">56,790</td><td>2026-06-02 05:21</td><td><a href="../../775010/">775010</a></td></tr><tr class="solved-row"><td class="num">22</td><td>atrin</td><td class="num">141,085</td><td class="num">56,790</td><td>2026-06-06 00:59</td><td><a href="../../782005/">782005</a></td></tr></tbody></table>
+    <p class="pp-sub" style="margin-top:22px;">
+      Last updated 2026-06-08 17:21.
+    </p>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>3rd AI for Math Workshop</h4>
+        <p>Toward Self-Evolving Scientific Agents<br/>
+          ICML 2026 &mdash; Saturday, July 11, 2026
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../../../../index.html#about">About</a></li>
+          <li><a href="../../../../index.html#speakers">Speakers</a></li>
+          <li><a href="../../../../index.html#cfp">Call for Papers</a></li>
+          <li><a href="../../../../index.html#challenge">Challenge</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>For inquiries, please contact:</p>
+        <p><a href="mailto:ai4mathicml@gmail.com">ai4mathicml@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AI for Math Workshop Organizers.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

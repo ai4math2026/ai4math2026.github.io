@@ -110,6 +110,19 @@
       margin-left: 12px; user-select: none;
     }
     .lb-view-toggle input { width: 14px; height: 14px; cursor: pointer; }
+    .lb-pp-button {
+      display: inline-flex; align-items: center;
+      padding: 7px 14px;
+      border: 1px solid #c9d3e0;
+      border-radius: 6px;
+      background: #eef2f7;
+      color: #3a4658;
+      font-size: 13.5px; font-weight: 600;
+      text-decoration: none;
+      margin-left: auto;
+      transition: background 120ms, border-color 120ms;
+    }
+    .lb-pp-button:hover { background: #e2e8f1; border-color: #b3c0d2; }
     .lb-rank {
       font-weight: 700;
       color: var(--color-primary-dark);
@@ -208,19 +221,20 @@
     </div>
 
     <div class="lb-meta">
-      <span><strong>Last updated:</strong> 2026-06-07 15:14</span>
-      <span><strong>Last collection:</strong> 2026-06-06 20:54</span>
+      <span><strong>Last updated:</strong> 2026-06-08 17:21</span>
+      <span><strong>Last collection:</strong> 2026-06-08 16:35</span>
       <span><strong>Verifier:</strong> SafeVerify</span>
-      <span><strong>Submissions scored:</strong> 93</span>
+      <span><strong>Submissions scored:</strong> 101</span>
     </div>
 
     <div class="lb-search-row">
       <input type="search" id="lb-search" placeholder="Filter by submitter (comma to combine multiple, e.g. alice, bob)" autocomplete="off" />
       <label class="lb-view-toggle">
         <input type="checkbox" id="lb-show-all" />
-        Show all submissions (default is best per submitter)
+        Show all submissions
       </label>
       <span class="lb-search-count" id="lb-search-count"></span>
+      <a class="lb-pp-button" href="challenges/">Per problem leaderboard</a>
     </div>
 
     <div class="lb-card">
@@ -309,12 +323,63 @@
 
           <tr class="lb-row"
               data-user="allenzhu"
-              data-id="773936"
+              data-id="786448"
               data-best="true"
               data-rank-all="5"
               data-rank-best="4">
             <td class="lb-rank" data-medal-all="" data-medal-best="">4</td>
-            <td class="lb-submitter"><a href="773936/">allenzhu</a><span class="lb-attempts">(9 attempts)</span></td>
+            <td class="lb-submitter"><a href="786448/">allenzhu</a><span class="lb-attempts">(12 attempts)</span></td>
+            <td class="lb-cell-num">30 / 34</td>
+            <td class="lb-cell-num">60.0%</td>
+            <td class="lb-score">600 / 1000</td>
+            <td class="lb-cell-num">547,916</td>
+            <td class="lb-cell-num">297,123</td>
+            <td class="lb-time">2026-06-08 16:35</td>
+            <td class="lb-subid">786448</td>
+          </tr>
+
+          <tr class="lb-row"
+              data-user="allenzhu"
+              data-id="784526"
+              data-best="false"
+              data-rank-all="6"
+              data-rank-best="" style="display:none">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">6</td>
+            <td class="lb-submitter"><a href="784526/">allenzhu</a><span class="lb-attempts">(12 attempts)</span></td>
+            <td class="lb-cell-num">30 / 34</td>
+            <td class="lb-cell-num">60.0%</td>
+            <td class="lb-score">600 / 1000</td>
+            <td class="lb-cell-num">574,013</td>
+            <td class="lb-cell-num">298,690</td>
+            <td class="lb-time">2026-06-07 17:49</td>
+            <td class="lb-subid">784526</td>
+          </tr>
+
+          <tr class="lb-row"
+              data-user="allenzhu"
+              data-id="784414"
+              data-best="false"
+              data-rank-all="7"
+              data-rank-best="" style="display:none">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">7</td>
+            <td class="lb-submitter"><a href="784414/">allenzhu</a><span class="lb-attempts">(12 attempts)</span></td>
+            <td class="lb-cell-num">30 / 34</td>
+            <td class="lb-cell-num">60.0%</td>
+            <td class="lb-score">600 / 1000</td>
+            <td class="lb-cell-num">582,284</td>
+            <td class="lb-cell-num">297,663</td>
+            <td class="lb-time">2026-06-07 16:52</td>
+            <td class="lb-subid">784414</td>
+          </tr>
+
+          <tr class="lb-row"
+              data-user="allenzhu"
+              data-id="773936"
+              data-best="false"
+              data-rank-all="8"
+              data-rank-best="" style="display:none">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">8</td>
+            <td class="lb-submitter"><a href="773936/">allenzhu</a><span class="lb-attempts">(12 attempts)</span></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
             <td class="lb-score">600 / 1000</td>
@@ -325,12 +390,29 @@
           </tr>
 
           <tr class="lb-row"
+              data-user="cmxu7"
+              data-id="785357"
+              data-best="true"
+              data-rank-all="9"
+              data-rank-best="5">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">5</td>
+            <td class="lb-submitter"><a href="785357/">cmxu7</a><span class="lb-attempts">(4 attempts)</span></td>
+            <td class="lb-cell-num">30 / 34</td>
+            <td class="lb-cell-num">60.0%</td>
+            <td class="lb-score">600 / 1000</td>
+            <td class="lb-cell-num">861,440</td>
+            <td class="lb-cell-num">290,542</td>
+            <td class="lb-time">2026-06-08 06:54</td>
+            <td class="lb-subid">785357</td>
+          </tr>
+
+          <tr class="lb-row"
               data-user="nielstron"
               data-id="763078"
               data-best="true"
-              data-rank-all="6"
-              data-rank-best="5">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">5</td>
+              data-rank-all="10"
+              data-rank-best="6">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">6</td>
             <td class="lb-submitter"><a href="763078/">nielstron</a></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
@@ -345,9 +427,9 @@
               data-user="chensun"
               data-id="765555"
               data-best="true"
-              data-rank-all="7"
-              data-rank-best="6">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">6</td>
+              data-rank-all="11"
+              data-rank-best="7">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">7</td>
             <td class="lb-submitter"><a href="765555/">chensun</a></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
@@ -359,12 +441,29 @@
           </tr>
 
           <tr class="lb-row"
+              data-user="hypergalois"
+              data-id="784932"
+              data-best="true"
+              data-rank-all="12"
+              data-rank-best="8">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">8</td>
+            <td class="lb-submitter"><a href="784932/">hypergalois</a><span class="lb-attempts">(2 attempts)</span></td>
+            <td class="lb-cell-num">30 / 34</td>
+            <td class="lb-cell-num">60.0%</td>
+            <td class="lb-score">600 / 1000</td>
+            <td class="lb-cell-num">1,045,637</td>
+            <td class="lb-cell-num">296,718</td>
+            <td class="lb-time">2026-06-08 00:43</td>
+            <td class="lb-subid">784932</td>
+          </tr>
+
+          <tr class="lb-row"
               data-user="atrin"
               data-id="775010"
               data-best="true"
-              data-rank-all="8"
-              data-rank-best="7">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">7</td>
+              data-rank-all="13"
+              data-rank-best="9">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">9</td>
             <td class="lb-submitter"><a href="775010/">atrin</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
@@ -379,9 +478,9 @@
               data-user="atrin"
               data-id="782005"
               data-best="false"
-              data-rank-all="9"
+              data-rank-all="14"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">9</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">14</td>
             <td class="lb-submitter"><a href="782005/">atrin</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
@@ -396,9 +495,9 @@
               data-user="ctree4113"
               data-id="763640"
               data-best="false"
-              data-rank-all="10"
+              data-rank-all="15"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">10</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">15</td>
             <td class="lb-submitter"><a href="763640/">ctree4113</a><span class="lb-attempts">(3 attempts)</span></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
@@ -413,9 +512,9 @@
               data-user="maudlemercier"
               data-id="777554"
               data-best="true"
-              data-rank-all="11"
-              data-rank-best="8">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">8</td>
+              data-rank-all="16"
+              data-rank-best="10">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">10</td>
             <td class="lb-submitter"><a href="777554/">maudlemercier</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
@@ -430,9 +529,9 @@
               data-user="minjaeso"
               data-id="777609"
               data-best="true"
-              data-rank-all="12"
-              data-rank-best="9">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">9</td>
+              data-rank-all="17"
+              data-rank-best="11">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">11</td>
             <td class="lb-submitter"><a href="777609/">minjaeso</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">30 / 34</td>
             <td class="lb-cell-num">60.0%</td>
@@ -447,10 +546,10 @@
               data-user="allenzhu"
               data-id="778567"
               data-best="false"
-              data-rank-all="13"
+              data-rank-all="18"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">13</td>
-            <td class="lb-submitter"><a href="778567/">allenzhu</a><span class="lb-attempts">(9 attempts)</span></td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">18</td>
+            <td class="lb-submitter"><a href="778567/">allenzhu</a><span class="lb-attempts">(12 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">58.0%</td>
             <td class="lb-score">580 / 1000</td>
@@ -463,11 +562,11 @@
           <tr class="lb-row"
               data-user="cmxu7"
               data-id="777120"
-              data-best="true"
-              data-rank-all="14"
-              data-rank-best="10">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">10</td>
-            <td class="lb-submitter"><a href="777120/">cmxu7</a><span class="lb-attempts">(2 attempts)</span></td>
+              data-best="false"
+              data-rank-all="19"
+              data-rank-best="" style="display:none">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">19</td>
+            <td class="lb-submitter"><a href="777120/">cmxu7</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">55.0%</td>
             <td class="lb-score">550 / 1000</td>
@@ -481,10 +580,10 @@
               data-user="allenzhu"
               data-id="770105"
               data-best="false"
-              data-rank-all="15"
+              data-rank-all="20"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">15</td>
-            <td class="lb-submitter"><a href="770105/">allenzhu</a><span class="lb-attempts">(9 attempts)</span></td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">20</td>
+            <td class="lb-submitter"><a href="770105/">allenzhu</a><span class="lb-attempts">(12 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -498,9 +597,9 @@
               data-user="jasperdekoninck"
               data-id="736166"
               data-best="false"
-              data-rank-all="16"
+              data-rank-all="21"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">16</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">21</td>
             <td class="lb-submitter"><a href="736166/">jasperdekoninck</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -515,9 +614,9 @@
               data-user="jasperdekoninck"
               data-id="733268"
               data-best="false"
-              data-rank-all="17"
+              data-rank-all="22"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">17</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">22</td>
             <td class="lb-submitter"><a href="733268/">jasperdekoninck</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -532,9 +631,9 @@
               data-user="robertboy18"
               data-id="743754"
               data-best="true"
-              data-rank-all="18"
-              data-rank-best="11">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">11</td>
+              data-rank-all="23"
+              data-rank-best="12">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">12</td>
             <td class="lb-submitter"><a href="743754/">robertboy18</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -549,9 +648,9 @@
               data-user="janko"
               data-id="767385"
               data-best="false"
-              data-rank-all="19"
+              data-rank-all="24"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">19</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">24</td>
             <td class="lb-submitter"><a href="767385/">janko</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -566,9 +665,9 @@
               data-user="sunny99"
               data-id="745249"
               data-best="true"
-              data-rank-all="20"
-              data-rank-best="12">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">12</td>
+              data-rank-all="25"
+              data-rank-best="13">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">13</td>
             <td class="lb-submitter"><a href="745249/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -583,10 +682,10 @@
               data-user="bhwang"
               data-id="746119"
               data-best="true"
-              data-rank-all="21"
-              data-rank-best="13">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">13</td>
-            <td class="lb-submitter"><a href="746119/">bhwang</a><span class="lb-attempts">(3 attempts)</span></td>
+              data-rank-all="26"
+              data-rank-best="14">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">14</td>
+            <td class="lb-submitter"><a href="746119/">bhwang</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
             <td class="lb-score">500 / 1000</td>
@@ -600,9 +699,9 @@
               data-user="janko"
               data-id="767156"
               data-best="false"
-              data-rank-all="22"
+              data-rank-all="27"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">22</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">27</td>
             <td class="lb-submitter"><a href="767156/">janko</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -617,9 +716,9 @@
               data-user="lmilikic"
               data-id="777922"
               data-best="true"
-              data-rank-all="23"
-              data-rank-best="14">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">14</td>
+              data-rank-all="28"
+              data-rank-best="15">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">15</td>
             <td class="lb-submitter"><a href="777922/">lmilikic</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -634,9 +733,9 @@
               data-user="jszhang"
               data-id="740372"
               data-best="true"
-              data-rank-all="24"
-              data-rank-best="15">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">15</td>
+              data-rank-all="29"
+              data-rank-best="16">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">16</td>
             <td class="lb-submitter"><a href="740372/">jszhang</a></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -651,9 +750,9 @@
               data-user="marcusm117"
               data-id="719913"
               data-best="true"
-              data-rank-all="25"
-              data-rank-best="16">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">16</td>
+              data-rank-all="30"
+              data-rank-best="17">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">17</td>
             <td class="lb-submitter"><a href="719913/">marcusm117</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -668,9 +767,9 @@
               data-user="marcusm117"
               data-id="738033"
               data-best="false"
-              data-rank-all="26"
+              data-rank-all="31"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">26</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">31</td>
             <td class="lb-submitter"><a href="738033/">marcusm117</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -685,9 +784,9 @@
               data-user="sandeepsaluru"
               data-id="755093"
               data-best="true"
-              data-rank-all="27"
-              data-rank-best="17">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">17</td>
+              data-rank-all="32"
+              data-rank-best="18">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">18</td>
             <td class="lb-submitter"><a href="755093/">sandeepsaluru</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -702,9 +801,9 @@
               data-user="maximiliano"
               data-id="736267"
               data-best="true"
-              data-rank-all="28"
-              data-rank-best="18">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">18</td>
+              data-rank-all="33"
+              data-rank-best="19">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">19</td>
             <td class="lb-submitter"><a href="736267/">maximiliano</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -719,9 +818,9 @@
               data-user="maximiliano"
               data-id="744922"
               data-best="false"
-              data-rank-all="29"
+              data-rank-all="34"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">29</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">34</td>
             <td class="lb-submitter"><a href="744922/">maximiliano</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -736,9 +835,9 @@
               data-user="maximiliano"
               data-id="739612"
               data-best="false"
-              data-rank-all="30"
+              data-rank-all="35"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">30</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">35</td>
             <td class="lb-submitter"><a href="739612/">maximiliano</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -753,9 +852,9 @@
               data-user="maximiliano"
               data-id="739592"
               data-best="false"
-              data-rank-all="31"
+              data-rank-all="36"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">31</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">36</td>
             <td class="lb-submitter"><a href="739592/">maximiliano</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -770,9 +869,9 @@
               data-user="aurasoph"
               data-id="733698"
               data-best="true"
-              data-rank-all="32"
-              data-rank-best="19">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">19</td>
+              data-rank-all="37"
+              data-rank-best="20">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">20</td>
             <td class="lb-submitter"><a href="733698/">aurasoph</a><span class="lb-attempts">(3 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -787,9 +886,9 @@
               data-user="aurasoph"
               data-id="738406"
               data-best="false"
-              data-rank-all="33"
+              data-rank-all="38"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">33</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">38</td>
             <td class="lb-submitter"><a href="738406/">aurasoph</a><span class="lb-attempts">(3 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -804,9 +903,9 @@
               data-user="xvade"
               data-id="739590"
               data-best="true"
-              data-rank-all="34"
-              data-rank-best="20">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">20</td>
+              data-rank-all="39"
+              data-rank-best="21">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">21</td>
             <td class="lb-submitter"><a href="739590/">xvade</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">29 / 34</td>
             <td class="lb-cell-num">50.0%</td>
@@ -821,9 +920,9 @@
               data-user="aurasoph"
               data-id="721535"
               data-best="false"
-              data-rank-all="35"
+              data-rank-all="40"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">35</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">40</td>
             <td class="lb-submitter"><a href="721535/">aurasoph</a><span class="lb-attempts">(3 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">49.6%</td>
@@ -837,11 +936,11 @@
           <tr class="lb-row"
               data-user="hypergalois"
               data-id="745091"
-              data-best="true"
-              data-rank-all="36"
-              data-rank-best="21">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">21</td>
-            <td class="lb-submitter"><a href="745091/">hypergalois</a></td>
+              data-best="false"
+              data-rank-all="41"
+              data-rank-best="" style="display:none">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">41</td>
+            <td class="lb-submitter"><a href="745091/">hypergalois</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">48.0%</td>
             <td class="lb-score">480 / 1000</td>
@@ -855,10 +954,10 @@
               data-user="cmxu7"
               data-id="778665"
               data-best="false"
-              data-rank-all="37"
+              data-rank-all="42"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">37</td>
-            <td class="lb-submitter"><a href="778665/">cmxu7</a><span class="lb-attempts">(2 attempts)</span></td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">42</td>
+            <td class="lb-submitter"><a href="778665/">cmxu7</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">47.0%</td>
             <td class="lb-score">470 / 1000</td>
@@ -869,13 +968,30 @@
           </tr>
 
           <tr class="lb-row"
+              data-user="cmxu7"
+              data-id="784444"
+              data-best="false"
+              data-rank-all="43"
+              data-rank-best="" style="display:none">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">43</td>
+            <td class="lb-submitter"><a href="784444/">cmxu7</a><span class="lb-attempts">(4 attempts)</span></td>
+            <td class="lb-cell-num">27 / 34</td>
+            <td class="lb-cell-num">47.0%</td>
+            <td class="lb-score">470 / 1000</td>
+            <td class="lb-cell-num">603,594</td>
+            <td class="lb-cell-num">188,035</td>
+            <td class="lb-time">2026-06-07 17:08</td>
+            <td class="lb-subid">784444</td>
+          </tr>
+
+          <tr class="lb-row"
               data-user="allenzhu"
               data-id="720098"
               data-best="false"
-              data-rank-all="38"
+              data-rank-all="44"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">38</td>
-            <td class="lb-submitter"><a href="720098/">allenzhu</a><span class="lb-attempts">(9 attempts)</span></td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">44</td>
+            <td class="lb-submitter"><a href="720098/">allenzhu</a><span class="lb-attempts">(12 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
             <td class="lb-score">400 / 1000</td>
@@ -889,9 +1005,9 @@
               data-user="sunny99"
               data-id="739714"
               data-best="false"
-              data-rank-all="39"
+              data-rank-all="45"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">39</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">45</td>
             <td class="lb-submitter"><a href="739714/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
@@ -906,9 +1022,9 @@
               data-user="sunny99"
               data-id="739715"
               data-best="false"
-              data-rank-all="40"
+              data-rank-all="46"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">40</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">46</td>
             <td class="lb-submitter"><a href="739715/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
@@ -923,9 +1039,9 @@
               data-user="sunny99"
               data-id="740814"
               data-best="false"
-              data-rank-all="41"
+              data-rank-all="47"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">41</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">47</td>
             <td class="lb-submitter"><a href="740814/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
@@ -940,7 +1056,7 @@
               data-user="xuanfeiren"
               data-id="733498"
               data-best="true"
-              data-rank-all="42"
+              data-rank-all="48"
               data-rank-best="22">
             <td class="lb-rank" data-medal-all="" data-medal-best="">22</td>
             <td class="lb-submitter"><a href="733498/">xuanfeiren</a><span class="lb-attempts">(4 attempts)</span></td>
@@ -957,9 +1073,9 @@
               data-user="xuanfeiren"
               data-id="735789"
               data-best="false"
-              data-rank-all="43"
+              data-rank-all="49"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">43</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">49</td>
             <td class="lb-submitter"><a href="735789/">xuanfeiren</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
@@ -974,9 +1090,9 @@
               data-user="xuanfeiren"
               data-id="739765"
               data-best="false"
-              data-rank-all="44"
+              data-rank-all="50"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">44</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">50</td>
             <td class="lb-submitter"><a href="739765/">xuanfeiren</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
@@ -991,7 +1107,7 @@
               data-user="allenanie"
               data-id="739971"
               data-best="true"
-              data-rank-all="45"
+              data-rank-all="51"
               data-rank-best="23">
             <td class="lb-rank" data-medal-all="" data-medal-best="">23</td>
             <td class="lb-submitter"><a href="739971/">allenanie</a></td>
@@ -1008,9 +1124,9 @@
               data-user="minjaeso"
               data-id="775626"
               data-best="false"
-              data-rank-all="46"
+              data-rank-all="52"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">46</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">52</td>
             <td class="lb-submitter"><a href="775626/">minjaeso</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">28 / 34</td>
             <td class="lb-cell-num">40.0%</td>
@@ -1025,10 +1141,10 @@
               data-user="bhwang"
               data-id="739516"
               data-best="false"
-              data-rank-all="47"
+              data-rank-all="53"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">47</td>
-            <td class="lb-submitter"><a href="739516/">bhwang</a><span class="lb-attempts">(3 attempts)</span></td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">53</td>
+            <td class="lb-submitter"><a href="739516/">bhwang</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -1042,10 +1158,10 @@
               data-user="allenzhu"
               data-id="719676"
               data-best="false"
-              data-rank-all="48"
+              data-rank-all="54"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">48</td>
-            <td class="lb-submitter"><a href="719676/">allenzhu</a><span class="lb-attempts">(9 attempts)</span></td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">54</td>
+            <td class="lb-submitter"><a href="719676/">allenzhu</a><span class="lb-attempts">(12 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -1059,10 +1175,10 @@
               data-user="allenzhu"
               data-id="720121"
               data-best="false"
-              data-rank-all="49"
+              data-rank-all="55"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">49</td>
-            <td class="lb-submitter"><a href="720121/">allenzhu</a><span class="lb-attempts">(9 attempts)</span></td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">55</td>
+            <td class="lb-submitter"><a href="720121/">allenzhu</a><span class="lb-attempts">(12 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -1076,10 +1192,10 @@
               data-user="allenzhu"
               data-id="720124"
               data-best="false"
-              data-rank-all="50"
+              data-rank-all="56"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">50</td>
-            <td class="lb-submitter"><a href="720124/">allenzhu</a><span class="lb-attempts">(9 attempts)</span></td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">56</td>
+            <td class="lb-submitter"><a href="720124/">allenzhu</a><span class="lb-attempts">(12 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
             <td class="lb-score">320 / 1000</td>
@@ -1090,12 +1206,29 @@
           </tr>
 
           <tr class="lb-row"
+              data-user="codyx"
+              data-id="784818"
+              data-best="true"
+              data-rank-all="57"
+              data-rank-best="24">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">24</td>
+            <td class="lb-submitter"><a href="784818/">codyx</a></td>
+            <td class="lb-cell-num">27 / 34</td>
+            <td class="lb-cell-num">32.0%</td>
+            <td class="lb-score">320 / 1000</td>
+            <td class="lb-cell-num">608,599</td>
+            <td class="lb-cell-num">154,756</td>
+            <td class="lb-time">2026-06-07 21:52</td>
+            <td class="lb-subid">784818</td>
+          </tr>
+
+          <tr class="lb-row"
               data-user="jasperdekoninck"
               data-id="729444"
               data-best="false"
-              data-rank-all="51"
+              data-rank-all="58"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">51</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">58</td>
             <td class="lb-submitter"><a href="729444/">jasperdekoninck</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
@@ -1110,9 +1243,9 @@
               data-user="sunny99"
               data-id="738795"
               data-best="false"
-              data-rank-all="52"
+              data-rank-all="59"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">52</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">59</td>
             <td class="lb-submitter"><a href="738795/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
@@ -1127,9 +1260,9 @@
               data-user="sunny99"
               data-id="738805"
               data-best="false"
-              data-rank-all="53"
+              data-rank-all="60"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">53</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">60</td>
             <td class="lb-submitter"><a href="738805/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
@@ -1144,9 +1277,9 @@
               data-user="janko"
               data-id="767100"
               data-best="false"
-              data-rank-all="54"
+              data-rank-all="61"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">54</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">61</td>
             <td class="lb-submitter"><a href="767100/">janko</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
@@ -1161,9 +1294,9 @@
               data-user="xuanfeiren"
               data-id="733497"
               data-best="false"
-              data-rank-all="55"
+              data-rank-all="62"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">55</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">62</td>
             <td class="lb-submitter"><a href="733497/">xuanfeiren</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
@@ -1178,9 +1311,9 @@
               data-user="guojing0"
               data-id="740669"
               data-best="true"
-              data-rank-all="56"
-              data-rank-best="24">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">24</td>
+              data-rank-all="63"
+              data-rank-best="25">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">25</td>
             <td class="lb-submitter"><a href="740669/">guojing0</a></td>
             <td class="lb-cell-num">27 / 34</td>
             <td class="lb-cell-num">32.0%</td>
@@ -1195,9 +1328,9 @@
               data-user="auraq"
               data-id="736752"
               data-best="true"
-              data-rank-all="57"
-              data-rank-best="25">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">25</td>
+              data-rank-all="64"
+              data-rank-best="26">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">26</td>
             <td class="lb-submitter"><a href="736752/">auraq</a></td>
             <td class="lb-cell-num">23 / 34</td>
             <td class="lb-cell-num">27.2%</td>
@@ -1212,9 +1345,9 @@
               data-user="janko"
               data-id="766564"
               data-best="false"
-              data-rank-all="58"
+              data-rank-all="65"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">58</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">65</td>
             <td class="lb-submitter"><a href="766564/">janko</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">23 / 34</td>
             <td class="lb-cell-num">26.0%</td>
@@ -1229,9 +1362,9 @@
               data-user="dmytruto"
               data-id="776150"
               data-best="true"
-              data-rank-all="59"
-              data-rank-best="26">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">26</td>
+              data-rank-all="66"
+              data-rank-best="27">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">27</td>
             <td class="lb-submitter"><a href="776150/">dmytruto</a></td>
             <td class="lb-cell-num">21 / 34</td>
             <td class="lb-cell-num">25.4%</td>
@@ -1246,9 +1379,9 @@
               data-user="sunny99"
               data-id="738767"
               data-best="false"
-              data-rank-all="60"
+              data-rank-all="67"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">60</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">67</td>
             <td class="lb-submitter"><a href="738767/">sunny99</a><span class="lb-attempts">(7 attempts)</span></td>
             <td class="lb-cell-num">22 / 34</td>
             <td class="lb-cell-num">22.0%</td>
@@ -1263,9 +1396,9 @@
               data-user="shuwesley"
               data-id="767094"
               data-best="true"
-              data-rank-all="61"
-              data-rank-best="27">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">27</td>
+              data-rank-all="68"
+              data-rank-best="28">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">28</td>
             <td class="lb-submitter"><a href="767094/">shuwesley</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">17 / 34</td>
             <td class="lb-cell-num">21.6%</td>
@@ -1277,12 +1410,29 @@
           </tr>
 
           <tr class="lb-row"
+              data-user="bhwang"
+              data-id="785626"
+              data-best="false"
+              data-rank-all="69"
+              data-rank-best="" style="display:none">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">69</td>
+            <td class="lb-submitter"><a href="785626/">bhwang</a><span class="lb-attempts">(4 attempts)</span></td>
+            <td class="lb-cell-num">2 / 34</td>
+            <td class="lb-cell-num">20.0%</td>
+            <td class="lb-score">200 / 1000</td>
+            <td class="lb-cell-num">143,109</td>
+            <td class="lb-cell-num">145,024</td>
+            <td class="lb-time">2026-06-08 09:28</td>
+            <td class="lb-subid">785626</td>
+          </tr>
+
+          <tr class="lb-row"
               data-user="robertboy18"
               data-id="743755"
               data-best="false"
-              data-rank-all="62"
+              data-rank-all="70"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">62</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">70</td>
             <td class="lb-submitter"><a href="743755/">robertboy18</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">3 / 34</td>
             <td class="lb-cell-num">16.0%</td>
@@ -1297,9 +1447,9 @@
               data-user="snowpine007"
               data-id="747085"
               data-best="true"
-              data-rank-all="63"
-              data-rank-best="28">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">28</td>
+              data-rank-all="71"
+              data-rank-best="29">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">29</td>
             <td class="lb-submitter"><a href="747085/">snowpine007</a></td>
             <td class="lb-cell-num">3 / 34</td>
             <td class="lb-cell-num">16.0%</td>
@@ -1314,9 +1464,9 @@
               data-user="jjyyy"
               data-id="716101"
               data-best="true"
-              data-rank-all="64"
-              data-rank-best="29">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">29</td>
+              data-rank-all="72"
+              data-rank-best="30">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">30</td>
             <td class="lb-submitter"><a href="716101/">jjyyy</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">3 / 34</td>
             <td class="lb-cell-num">16.0%</td>
@@ -1331,9 +1481,9 @@
               data-user="jjyyy"
               data-id="716186"
               data-best="false"
-              data-rank-all="65"
+              data-rank-all="73"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">65</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">73</td>
             <td class="lb-submitter"><a href="716186/">jjyyy</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">3 / 34</td>
             <td class="lb-cell-num">16.0%</td>
@@ -1348,9 +1498,9 @@
               data-user="msantolu"
               data-id="739618"
               data-best="true"
-              data-rank-all="66"
-              data-rank-best="30">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">30</td>
+              data-rank-all="74"
+              data-rank-best="31">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">31</td>
             <td class="lb-submitter"><a href="739618/">msantolu</a></td>
             <td class="lb-cell-num">19 / 34</td>
             <td class="lb-cell-num">16.0%</td>
@@ -1365,9 +1515,9 @@
               data-user="jxb222"
               data-id="718997"
               data-best="true"
-              data-rank-all="67"
-              data-rank-best="31">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">31</td>
+              data-rank-all="75"
+              data-rank-best="32">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">32</td>
             <td class="lb-submitter"><a href="718997/">jxb222</a></td>
             <td class="lb-cell-num">19 / 34</td>
             <td class="lb-cell-num">16.0%</td>
@@ -1382,9 +1532,9 @@
               data-user="maudlemercier"
               data-id="775524"
               data-best="false"
-              data-rank-all="68"
+              data-rank-all="76"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">68</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">76</td>
             <td class="lb-submitter"><a href="775524/">maudlemercier</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">17 / 34</td>
             <td class="lb-cell-num">13.8%</td>
@@ -1399,9 +1549,9 @@
               data-user="ctree4113"
               data-id="743121"
               data-best="false"
-              data-rank-all="69"
+              data-rank-all="77"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">69</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">77</td>
             <td class="lb-submitter"><a href="743121/">ctree4113</a><span class="lb-attempts">(3 attempts)</span></td>
             <td class="lb-cell-num">17 / 34</td>
             <td class="lb-cell-num">13.1%</td>
@@ -1416,9 +1566,9 @@
               data-user="lmilikic"
               data-id="731053"
               data-best="false"
-              data-rank-all="70"
+              data-rank-all="78"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">70</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">78</td>
             <td class="lb-submitter"><a href="731053/">lmilikic</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">4 / 34</td>
             <td class="lb-cell-num">10.0%</td>
@@ -1433,10 +1583,10 @@
               data-user="bhwang"
               data-id="738233"
               data-best="false"
-              data-rank-all="71"
+              data-rank-all="79"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">71</td>
-            <td class="lb-submitter"><a href="738233/">bhwang</a><span class="lb-attempts">(3 attempts)</span></td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">79</td>
+            <td class="lb-submitter"><a href="738233/">bhwang</a><span class="lb-attempts">(4 attempts)</span></td>
             <td class="lb-cell-num">14 / 34</td>
             <td class="lb-cell-num">8.3%</td>
             <td class="lb-score">83 / 1000</td>
@@ -1450,9 +1600,9 @@
               data-user="janko"
               data-id="783129"
               data-best="false"
-              data-rank-all="72"
+              data-rank-all="80"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">72</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">80</td>
             <td class="lb-submitter"><a href="783129/">janko</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">1 / 34</td>
             <td class="lb-cell-num">5.0%</td>
@@ -1467,9 +1617,9 @@
               data-user="janko"
               data-id="783046"
               data-best="false"
-              data-rank-all="73"
+              data-rank-all="81"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">73</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">81</td>
             <td class="lb-submitter"><a href="783046/">janko</a><span class="lb-attempts">(8 attempts)</span></td>
             <td class="lb-cell-num">1 / 34</td>
             <td class="lb-cell-num">5.0%</td>
@@ -1484,9 +1634,9 @@
               data-user="yhn112"
               data-id="721519"
               data-best="true"
-              data-rank-all="74"
-              data-rank-best="32">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">32</td>
+              data-rank-all="82"
+              data-rank-best="33">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">33</td>
             <td class="lb-submitter"><a href="721519/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
@@ -1501,9 +1651,9 @@
               data-user="yhn112"
               data-id="721521"
               data-best="false"
-              data-rank-all="75"
+              data-rank-all="83"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">75</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">83</td>
             <td class="lb-submitter"><a href="721521/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
@@ -1518,9 +1668,9 @@
               data-user="yhn112"
               data-id="721526"
               data-best="false"
-              data-rank-all="76"
+              data-rank-all="84"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">76</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">84</td>
             <td class="lb-submitter"><a href="721526/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
@@ -1535,9 +1685,9 @@
               data-user="yhn112"
               data-id="721527"
               data-best="false"
-              data-rank-all="77"
+              data-rank-all="85"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">77</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">85</td>
             <td class="lb-submitter"><a href="721527/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
@@ -1552,9 +1702,9 @@
               data-user="yhn112"
               data-id="721528"
               data-best="false"
-              data-rank-all="77"
+              data-rank-all="85"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">77</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">85</td>
             <td class="lb-submitter"><a href="721528/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
@@ -1569,9 +1719,9 @@
               data-user="yhn112"
               data-id="722653"
               data-best="false"
-              data-rank-all="79"
+              data-rank-all="87"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">79</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">87</td>
             <td class="lb-submitter"><a href="722653/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
@@ -1586,9 +1736,9 @@
               data-user="yhn112"
               data-id="736741"
               data-best="false"
-              data-rank-all="80"
+              data-rank-all="88"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">80</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">88</td>
             <td class="lb-submitter"><a href="736741/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">4.4%</td>
@@ -1603,9 +1753,9 @@
               data-user="yhn112"
               data-id="721525"
               data-best="false"
-              data-rank-all="81"
+              data-rank-all="89"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">81</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">89</td>
             <td class="lb-submitter"><a href="721525/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">1 / 34</td>
             <td class="lb-cell-num">4.0%</td>
@@ -1620,9 +1770,9 @@
               data-user="yhn112"
               data-id="721529"
               data-best="false"
-              data-rank-all="82"
+              data-rank-all="90"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">82</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">90</td>
             <td class="lb-submitter"><a href="721529/">yhn112</a><span class="lb-attempts">(9 attempts)</span></td>
             <td class="lb-cell-num">1 / 34</td>
             <td class="lb-cell-num">4.0%</td>
@@ -1637,9 +1787,9 @@
               data-user="shuwesley"
               data-id="739324"
               data-best="false"
-              data-rank-all="83"
+              data-rank-all="91"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">83</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">91</td>
             <td class="lb-submitter"><a href="739324/">shuwesley</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">6 / 34</td>
             <td class="lb-cell-num">2.4%</td>
@@ -1654,9 +1804,9 @@
               data-user="kpal002"
               data-id="782504"
               data-best="true"
-              data-rank-all="84"
-              data-rank-best="33">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">33</td>
+              data-rank-all="92"
+              data-rank-best="34">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">34</td>
             <td class="lb-submitter"><a href="782504/">kpal002</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">2 / 34</td>
             <td class="lb-cell-num">1.4%</td>
@@ -1671,9 +1821,9 @@
               data-user="sandeepsaluru"
               data-id="751384"
               data-best="false"
-              data-rank-all="85"
+              data-rank-all="93"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">85</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">93</td>
             <td class="lb-submitter"><a href="751384/">sandeepsaluru</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">1 / 34</td>
             <td class="lb-cell-num">1.0%</td>
@@ -1688,9 +1838,9 @@
               data-user="kpal002"
               data-id="782503"
               data-best="false"
-              data-rank-all="86"
+              data-rank-all="94"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">86</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">94</td>
             <td class="lb-submitter"><a href="782503/">kpal002</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">1 / 34</td>
             <td class="lb-cell-num">1.0%</td>
@@ -1705,9 +1855,9 @@
               data-user="kurone02"
               data-id="717745"
               data-best="true"
-              data-rank-all="87"
-              data-rank-best="34">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">34</td>
+              data-rank-all="95"
+              data-rank-best="35">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">35</td>
             <td class="lb-submitter"><a href="717745/">kurone02</a></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
@@ -1722,10 +1872,10 @@
               data-user="allenzhu"
               data-id="720140"
               data-best="false"
-              data-rank-all="88"
+              data-rank-all="96"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">88</td>
-            <td class="lb-submitter"><a href="720140/">allenzhu</a><span class="lb-attempts">(9 attempts)</span></td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">96</td>
+            <td class="lb-submitter"><a href="720140/">allenzhu</a><span class="lb-attempts">(12 attempts)</span></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
             <td class="lb-score">0 / 1000</td>
@@ -1739,10 +1889,10 @@
               data-user="allenzhu"
               data-id="727980"
               data-best="false"
-              data-rank-all="89"
+              data-rank-all="97"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">89</td>
-            <td class="lb-submitter"><a href="727980/">allenzhu</a><span class="lb-attempts">(9 attempts)</span></td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">97</td>
+            <td class="lb-submitter"><a href="727980/">allenzhu</a><span class="lb-attempts">(12 attempts)</span></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
             <td class="lb-score">0 / 1000</td>
@@ -1756,9 +1906,9 @@
               data-user="xvade"
               data-id="739585"
               data-best="false"
-              data-rank-all="90"
+              data-rank-all="98"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">90</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">98</td>
             <td class="lb-submitter"><a href="739585/">xvade</a><span class="lb-attempts">(2 attempts)</span></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
@@ -1773,9 +1923,9 @@
               data-user="manishacharya"
               data-id="755525"
               data-best="true"
-              data-rank-all="91"
-              data-rank-best="35">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">35</td>
+              data-rank-all="99"
+              data-rank-best="36">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">36</td>
             <td class="lb-submitter"><a href="755525/">manishacharya</a></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
@@ -1790,9 +1940,9 @@
               data-user="jasperdekoninck"
               data-id="730891"
               data-best="false"
-              data-rank-all="92"
+              data-rank-all="100"
               data-rank-best="" style="display:none">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">92</td>
+            <td class="lb-rank" data-medal-all="" data-medal-best="">100</td>
             <td class="lb-submitter"><a href="730891/">jasperdekoninck</a><span class="lb-attempts">(5 attempts)</span></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
@@ -1807,9 +1957,9 @@
               data-user="brendanlo"
               data-id="756984"
               data-best="true"
-              data-rank-all="93"
-              data-rank-best="36">
-            <td class="lb-rank" data-medal-all="" data-medal-best="">36</td>
+              data-rank-all="101"
+              data-rank-best="37">
+            <td class="lb-rank" data-medal-all="" data-medal-best="">37</td>
             <td class="lb-submitter"><a href="756984/">brendanlo</a></td>
             <td class="lb-cell-num">0 / 34</td>
             <td class="lb-cell-num">0.0%</td>
@@ -1892,6 +2042,13 @@
   var showAll = document.getElementById('lb-show-all');
   var allRows = Array.prototype.slice.call(document.querySelectorAll('table.lb-table tbody tr.lb-row'));
 
+  // Fixed summary, computed once and shown whenever there is no active
+  // search filter. Stays put regardless of the Show-all toggle state.
+  var totalSubmitters = allRows.filter(function(r) {
+    return r.getAttribute('data-best') === 'true';
+  }).length;
+  var summaryText = totalSubmitters + ' submitters (' + allRows.length + ' total submissions)';
+
   // Restore toggle state from localStorage (default = best only, unchecked)
   try {
     if (showAll && localStorage.getItem('lb-show-all') === '1') {
@@ -1940,10 +2097,8 @@
     if (searchCount) {
       if (terms.length) {
         searchCount.textContent = shown + ' of ' + visiblePool + ' shown';
-      } else if (viewBest) {
-        searchCount.textContent = visiblePool + ' submitters (' + allRows.length + ' total submissions)';
       } else {
-        searchCount.textContent = '';
+        searchCount.textContent = summaryText;
       }
     }
   }
