@@ -1176,6 +1176,13 @@ ul { list-style: none; }
 /* ============================================================
    Schedule
    ============================================================ */
+.schedule-note {
+  text-align: center;
+  margin: 22px 0 0;
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
 .schedule-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1253,6 +1260,9 @@ ul { list-style: none; }
 .schedule-item.panel { background: #EEF5FF; border-color: #D2E0F3; }
 .schedule-item.contributed { background: #F3F8F6; border-color: #D6E6DF; }
 .schedule-item.closing { background: #F1F5FA; border-color: #D6E0EB; }
+.schedule-item.transition { background: #FBFCFD; border-color: #EDF0F4; }
+.schedule-item.transition .schedule-time,
+.schedule-item.transition .schedule-title { color: #9aa4b2; font-weight: 500; }
 
 .schedule-time {
   flex-shrink: 0;
@@ -1287,6 +1297,7 @@ ul { list-style: none; }
 .schedule-tag.poster-tag { background: #EAF0F5; color: #4A6075; }
 .schedule-tag.panel-tag  { background: #DCEBFF; color: #2A5E9C; }
 .schedule-tag.contrib    { background: #E1F0E9; color: #336154; }
+.schedule-tag.transition { background: #EFF2F6; color: #97a1af; }
 
 .schedule-title {
   font-size: 16px;
