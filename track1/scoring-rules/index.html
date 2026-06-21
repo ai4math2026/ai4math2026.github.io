@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track 1 Scoring Rules - AI4Math @ ICML 2026</title>
+  <meta name="description" content="Scoring rules and final ranking criteria for Track 1 (Semantic Alignment Evaluation for Autoformalization, FormalRx) of the AI for Math 2026 challenge." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="icon" type="image/png" href="../../assets/images/logo_small.png" />
+  <link rel="apple-touch-icon" href="../../assets/images/logo_small.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+
+  <style>
+    .rules-section {
+      max-width: 820px;
+      margin: 28px auto 0;
+    }
+    .rules-section h3 {
+      margin-top: 36px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: var(--color-text);
+      font-weight: 600;
+    }
+    .rules-section p,
+    .rules-section li {
+      font-size: 15.5px;
+      color: var(--color-text);
+      line-height: 1.7;
+    }
+    .rules-section ul,
+    .rules-section ol {
+      padding-left: 22px;
+      margin: 8px 0 16px;
+    }
+    .rules-section li { margin-bottom: 6px; }
+    .rules-section code {
+      background: var(--color-bg-light);
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-family: "SFMono-Regular", "Menlo", "Consolas", monospace;
+      font-size: 14px;
+    }
+
+    .rules-cascade {
+      counter-reset: cascade;
+      list-style: none;
+      padding-left: 0;
+    }
+    .rules-cascade > li {
+      counter-increment: cascade;
+      padding: 16px 18px 16px 60px;
+      margin-bottom: 12px;
+      background: var(--color-surface);
+      box-shadow: var(--shadow-sm);
+      border-radius: var(--radius-md);
+      position: relative;
+    }
+    .rules-cascade > li::before {
+      content: counter(cascade);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      background: var(--color-primary);
+      color: white;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 13.5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .rules-cascade > li strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    .rules-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      background: var(--color-surface);
+      box-shadow: var(--shadow-sm);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .rules-table thead th {
+      background: var(--color-bg-tinted);
+      text-align: left;
+      padding: 12px 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .rules-table tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--color-border-light);
+      font-size: 14.5px;
+      color: var(--color-text);
+    }
+    .rules-table tbody tr:last-child td { border-bottom: none; }
+    .rules-table .num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .rules-actions {
+      max-width: 820px;
+      margin: 36px auto 0;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar" class="navbar">
+  <div class="nav-container">
+    <a class="nav-logo" href="../../index.html">
+      <img src="../../assets/images/logo_small.png" alt="AI4Math Workshop logo" />
+      <span>AI4Math @ ICML 2026</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../../index.html#about">About</a></li>
+      <li><a href="../../index.html#news">News</a></li>
+      <li><a href="../../index.html#speakers">Speakers</a></li>
+      <li><a href="../../index.html#schedule">Schedule</a></li>
+      <li><a href="../../index.html#cfp">Call for Papers</a></li>
+      <li><a href="../../index.html#challenge">Challenge</a></li>
+      <li><a href="../../index.html#committee">Committee</a></li>
+      <li><a href="../../index.html#sponsors">Partners</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="section section-white" style="padding-top: 140px;">
+  <div class="container">
+    <h2 class="section-title">Track 1 Scoring Rules</h2>
+    <p class="section-subtitle">How submissions are scored and how the final ranking is determined for the Semantic Alignment Evaluation for Autoformalization (FormalRx) track.</p>
+
+    <div class="rules-section">
+      <h3>Overview</h3>
+      <p>Each test sample gives an informal mathematical statement and a candidate Lean 4 formalization. For every sample the submission produces a four-part diagnostic output: a binary alignment <strong>verdict</strong>, an error <strong>category</strong> from the SCI taxonomy, the erroneous code <strong>segment</strong> (localization), and a <strong>corrected</strong> formal statement.</p>
+      <p>The test set <a href="https://huggingface.co/datasets/LARK-Lab/FormalRx-Test" target="_blank" rel="noopener">🤗 FormalRx-Test</a>, 7,030 informal and Lean 4 statement pairs annotated under the <strong>SCI Error Taxonomy</strong>, a hierarchical set of 28 categories covering <strong>S</strong>emantic, <strong>C</strong>onstraint, and <strong>I</strong>mplementation errors. Of the 7,030 samples, 1,791 (25.5%) are aligned and 5,239 (74.5%) are misaligned across all 28 categories.</p>
+    </div>
+
+    <div class="rules-section">
+      <h3>The four sub-tasks</h3>
+      <p>Each sub-task is scored on the samples where it applies. For an aligned formalization the three diagnosis fields must be left as N/A, and any filled value is penalized.</p>
+      <table class="rules-table">
+        <thead>
+          <tr><th>Sub-task</th><th>Scored on</th><th>Metric</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Verdict</td><td>All samples</td><td>Macro F1</td></tr>
+          <tr><td>Categorization</td><td>All (N/A on aligned)</td><td>Macro F1 (28 classes)</td></tr>
+          <tr><td>Localization</td><td>All (N/A on aligned)</td><td>Accuracy</td></tr>
+          <tr><td>Correction</td><td>All (N/A on aligned)</td><td>Accuracy</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rules-section">
+      <h3>Overall score: per-sample joint accuracy</h3>
+      <p>The headline metric that determines the ranking is the <strong>per-sample joint accuracy</strong>. A sample scores 1 only when all of its applicable sub-tasks are answered correctly, and 0 otherwise. The overall score is the fraction of samples that score 1.</p>
+      <ul>
+        <li>For an <strong>aligned</strong> sample, the verdict must be aligned and the categorization, localization, and correction fields must all be null. Filling any of them is wrong.</li>
+        <li>For a <strong>misaligned</strong> sample, the verdict must be misaligned and the category, localization, and correction must all be correct.</li>
+      </ul>
+      <p>The four per-sub-task scores in the table above are reported alongside the overall score as diagnostics, but only the overall joint accuracy is used for ranking.</p>
+    </div>
+
+    <div class="rules-section">
+      <h3>How each sub-task is judged</h3>
+      <p><strong>Verdict.</strong> Binary classification with misaligned as the positive class. Macro F1 is computed over both classes.</p>
+      <p><strong>Categorization.</strong> A 28-class classification over the SCI taxonomy. A misaligned sample must be assigned the exact ground-truth error type. An aligned sample must be predicted as N/A, and assigning any category to it counts as a false positive. The counts feeding the macro F1 are assigned as follows.</p>
+      <table class="rules-table">
+        <thead><tr><th>Prediction vs ground truth</th><th>GT = Misaligned</th><th>GT = Aligned</th></tr></thead>
+        <tbody>
+          <tr><td>Pred = Misaligned, correct type</td><td>TP</td><td>FP</td></tr>
+          <tr><td>Pred = Misaligned, wrong type</td><td>FN</td><td>FP</td></tr>
+          <tr><td>Pred = Aligned</td><td>FN</td><td>TN</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Localization and Correction</strong> are each scored by a two-stage protocol.</p>
+      <ol class="rules-cascade">
+        <li><strong>Step 1 &middot; Exact match.</strong>The prediction is compared to the reference by exact string match. If they match, the sample is counted correct and stops here.</li>
+        <li><strong>Step 2 &middot; LLM judge.</strong>Non-matching pairs go to a DeepSeek LLM judge (<code>deepseek-v4-flash</code>) that decides semantic equivalence. For <em>localization</em>, it checks whether the predicted and reference segments point to the same error location, allowing different wording or granularity. For <em>correction</em>, it checks whether the two Lean 4 statements express the same mathematical meaning, allowing syntactic variation and logically equivalent reformulations.</li>
+      </ol>
+      <p>"N/A" and JSON null are treated as equivalent in all comparisons.</p>
+    </div>
+
+    <div class="rules-section">
+      <h3>Final ranking</h3>
+      <ol class="rules-cascade">
+        <li><strong>Overall joint accuracy (descending).</strong>The submission that gets all four sub-tasks right on the largest fraction of samples wins.</li>
+        <li><strong>Submission time (ascending).</strong>On the rare exact tie, the earlier submission ranks first.</li>
+      </ol>
+    </div>
+
+    <div class="rules-section">
+      <h3>Why joint accuracy</h3>
+      <p>The point of FormalRx is actionable diagnosis, not a single yes or no. A system that flags a formalization as wrong but mislabels the error, points at the wrong line, or proposes a broken fix has not actually helped. Joint accuracy rewards only the cases where the whole diagnosis holds together, which is the behavior the track is trying to measure. The per-sub-task F1 and accuracy numbers stay on the leaderboard so teams can see where they lose points.</p>
+    </div>
+
+    <div class="rules-section">
+      <h3>Submission format and limits</h3>
+      <p>Predictions are submitted as a <code>.zip</code> containing a single <code>.jsonl</code> file, one JSON object per test sample, with these fields.</p>
+      <table class="rules-table">
+        <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>idx</code></td><td>string</td><td>Sample ID from the test set, e.g. <code>formalrx_0001</code></td></tr>
+          <tr><td><code>verdict</code></td><td>string</td><td><code>"aligned"</code> or <code>"misaligned"</code></td></tr>
+          <tr><td><code>error_category</code></td><td>string or null</td><td>One of the 28 SCI categories, or <code>null</code> if aligned</td></tr>
+          <tr><td><code>error_segment</code></td><td>string or null</td><td>The erroneous code fragment, or <code>null</code> if aligned</td></tr>
+          <tr><td><code>corrected_statement</code></td><td>string or null</td><td>The corrected Lean 4 statement, or <code>null</code> if aligned</td></tr>
+        </tbody>
+      </table>
+      <p>When the verdict is "aligned", the other three fields must be JSON null (the string "N/A" is treated as equivalent). All 7,030 test sample IDs must appear in every submission. The limit is 5 submissions per day and 100 in total.</p>
+    </div>
+
+    <div class="rules-section">
+      <h3>Eligibility and integrity rules</h3>
+      <p>These rules are checked when we review source code and technical reports. A violation leads to disqualification regardless of leaderboard position.</p>
+      <ul>
+        <li><strong>Reproducibility is required.</strong> Every submission must come with code or a clear description of the method. For the top 3 finalists, reproducibility is a condition for receiving the ranking and the prize. After the leaderboard closes we will re-run shortlisted submissions on a separate validation set to confirm that your reported results reproduce.</li>
+        <li><strong>No manual annotation of test samples.</strong> Hand labeling test rows is not a valid approach and leads to disqualification.</li>
+        <li><strong>No test input lookup at inference.</strong> Your method must not search for or retrieve the informal or formal statement of any test row, or pull from any source containing a copy of FormalRx or its derivatives. General lookups of Mathlib docs, Lean syntax, theorem references, and general mathematical knowledge are allowed.</li>
+        <li><strong>Each test row is predicted independently.</strong> A row's prediction must be computable from that row's input alone. No placing multiple test rows in one context, using one row to disambiguate another, or running cross row similarity or deduplication on the test set. Standard batched inference with an independent forward pass per row is fine.</li>
+        <li><strong>No leaderboard overfitting.</strong> The per sample results file shows which rows you got right or wrong. Iterating on it is allowed, but technical reports must be transparent about it, and gains explained only by repeated per sample probing rather than genuine method improvement lead to disqualification.</li>
+      </ul>
+      <p>If a rule is unclear for your setup, ask on the forum before the deadline rather than after.</p>
+    </div>
+
+    <div class="rules-section">
+      <h3>Questions</h3>
+      <p>Post on the <a href="https://www.codabench.org/competitions/16104/" target="_blank" rel="noopener">Codabench forum</a> for the track, or email <a href="mailto:ai4mathicml@gmail.com">ai4mathicml@gmail.com</a>.</p>
+    </div>
+
+    <div class="rules-actions">
+      <a href="https://www.codabench.org/competitions/16104/" target="_blank" rel="noopener" class="btn btn-small btn-primary">Open Track 1 challenge page</a>
+      <a href="https://huggingface.co/datasets/LARK-Lab/FormalRx-Test" target="_blank" rel="noopener" class="btn btn-small btn-outline">🤗 FormalRx-Test dataset</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>3rd AI for Math Workshop</h4>
+        <p>Toward Self-Evolving Scientific Agents<br/>
+          ICML 2026 &mdash; Saturday, July 11, 2026
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../../index.html#about">About</a></li>
+          <li><a href="../../index.html#speakers">Speakers</a></li>
+          <li><a href="../../index.html#cfp">Call for Papers</a></li>
+          <li><a href="../../index.html#challenge">Challenge</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>For inquiries, please contact:</p>
+        <p><a href="mailto:ai4mathicml@gmail.com">ai4mathicml@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AI for Math Workshop Organizers.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
