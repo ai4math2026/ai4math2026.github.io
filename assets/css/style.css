@@ -1094,6 +1094,7 @@ ul { list-style: none; }
   min-height: calc(1.6em * 3);
 }
 
+#speakers .container { max-width: 1240px; }
 #speakers .people-grid {
   display: flex;
   flex-wrap: wrap;
