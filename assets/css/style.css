@@ -1690,6 +1690,9 @@ ul { list-style: none; }
 .logo-wall-sponsors img[alt="Huawei"] {
   height: 56px;
 }
+.logo-wall-sponsors img[alt="Pramaan Labs"] {
+  height: 44px;
+}
 
 /* Institution Partners only: uniform height, capped width */
 .logo-wall:not(.logo-wall-sponsors) img {
