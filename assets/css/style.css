@@ -1565,6 +1565,50 @@ ul { list-style: none; }
   color: var(--color-text-muted);
 }
 
+.poster-info {
+  margin-top: 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 18px 24px;
+}
+.poster-info-tag {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+.poster-info-rows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 44px;
+}
+.poster-info-rows > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.pi-k {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-light);
+}
+.pi-v {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.pi-v em {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
 #schedule .section-subtitle { margin-bottom: 14px; }
 #schedule.section { padding-bottom: 48px; }
 
@@ -1629,7 +1673,7 @@ ul { list-style: none; }
 
 .schedule-item {
   display: flex;
-  gap: 14px;
+  gap: 10px;
   align-items: center;
   padding: 13px 15px;
   border-radius: var(--radius-md);
@@ -1657,7 +1701,7 @@ ul { list-style: none; }
 
 .schedule-meta {
   flex-shrink: 0;
-  width: 118px;
+  width: 100px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
