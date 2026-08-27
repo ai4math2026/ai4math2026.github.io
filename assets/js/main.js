@@ -43,6 +43,9 @@
   );
 
   function setActiveLink() {
+    if (!sections.length) {
+      return;
+    }
     let current = '';
     sections.forEach(function(section) {
       const top = section.getBoundingClientRect().top;
